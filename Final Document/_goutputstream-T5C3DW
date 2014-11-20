@@ -1,0 +1,662 @@
+% This file was created with JabRef 2.5.
+% Encoding: Cp1252
+
+@ARTICLE{alshamrani_reverse_2007,
+  author = {Ahmad Alshamrani and Kamlesh Mathur and Ronald H. Ballou},
+  title = {Reverse logistics: simultaneous design of delivery routes and returns
+	strategies},
+  journal = {Computers \& Operations Research},
+  year = {2007},
+  volume = {34},
+  pages = {595--619},
+  number = {2},
+  month = feb,
+  __markedentry = {[Andres Jaque]},
+  abstract = {A reverse logistics problem, motivated by blood distribution of the
+	American Red Cross, is examined where containers in which products
+	are delivered from a central processing point to customers (stops)
+	in one period are available for return to the central point in the
+	following period. Any container not picked up in the period following
+	its delivery incurs a penalty cost resulting primarily from operating
+	costs and customer dissatisfaction. The result is a dynamic logistics
+	planning problem where in each delivery period the vehicle dispatcher
+	needs to design a multi-stop vehicle route while determining the
+	container quantities to be picked up at each stop. This research
+	is unique in that route design and pickup strategies are developed
+	simultaneously, where stop volumes are known only probabilistically
+	over a planning horizon. A heuristic procedure is developed for treating
+	the route design-pickup strategy planning problem. Keywords: Reverse
+	logistics; Vehicle routing; Pickup and delivery },
+  doi = {10.1016/j.cor.2005.03.015},
+  keywords = {Pickup and delivery,Reverse logistics,Vehicle routing},
+  owner = {Andres Jaque},
+  review = {En este trabajo se trata un problema de dinámico de planeación de
+	logística reversa motivado por la distribución de sangre del American
+	Red Cross, en este problema los vehículos transportan contenedores
+	con el producto desde un depósito central a diferentes clientes (paradas),
+	para luego retornar al depósito recogiendo otros contenedores, evidenciando
+	un problema dinámico en el que en cada periodo de entrega el vehículo
+	despachador necesita diseñar una ruta de múltiples clientes, mientras
+	determina las cantidades a ser recogidas en cada cliente, en este
+	problema los volúmenes de clientes son estocásticos y se conocen
+	probabilísticamente sobre un horizonte de planeación.
+	
+	
+	Para solucionar este problema se propone un algoritmo heurístico Or-opt,
+	sin embargo se observo que la aplicación simple del problema tiene
+	un costo computacional muy alto, por lo que se proponen diferentes
+	reglas y estrategias heurísticas para hacer el algoritmo computacionalmente
+	viable, sin degradar la calidad de las soluciones.
+	
+	
+	El problema tratado es novedoso y no ha sido tratado suficientemente
+	con anterioridad, es complejo, dinámico, y presenta un interesante
+	desafío para las soluciones propuestas.},
+  timestamp = {2009.05.03},
+  url = {http://www.sciencedirect.com/science?\_ob=ArticleURL\&\_udi=B6VC5-4G0B751-3\&\_user=10\&\_coverDate=02\%2F28\%2F2007\&\_alid=803998645\&\_rdoc=142\&\_fmt=high\&\_orig=search\&\_cdi=5945\&\_st=13\&\_docanchor=\&view=c\&\_ct=543\&\_acct=C000050221\&\_version=1\&\_urlVersion=0\&\_userid=10\&md5=317b4bda2c7a58691fbae5c203270e6c}
+}
+
+@BOOK{Bellman_dynamicprog_1957,
+  title = {Dynamic Programming},
+  publisher = {Princeton University Press},
+  year = {1957},
+  author = {Richard Bellman},
+  owner = {andres},
+  timestamp = {2010.11.14}
+}
+
+@ARTICLE{Bertsekas,
+  author = {Dimitri Bertsekas},
+  title = {Dynamic programming and Stochastic Control},
+  journal = {Journal of the American Statical association},
+  year = {1979},
+  volume = {74},
+  pages = {510--511},
+  owner = {emily},
+  timestamp = {2009.10.18}
+}
+
+@ARTICLE{bertsimas_stochastic_1991,
+  author = {Dimitris J. Bertsimas and Garrett van Ryzin},
+  title = {A Stochastic and Dynamic Vehicle Routing Problem in the Euclidean
+	Plane},
+  journal = {Operations Research},
+  year = {1991},
+  volume = {39},
+  pages = {601--615},
+  number = {4},
+  month = aug,
+  note = {{ArticleType:} primary\_article / Full publication date: Jul. - Aug.,
+	1991 / Copyright © 1991 {INFORMS}},
+  abstract = {We propose and analyze a generic mathematical model for dynamic, stochastic
+	vehicle routing problems, the dynamic traveling repairman problem
+	{(DTRP).} The model is motivated by applications in which the objective
+	is to minimize the wait for service in a stochastic and dynamically
+	changing environment. This is a departure from classical vehicle
+	routing problems where one seeks to minimize total travel time in
+	a static, deterministic environment. Potential areas of application
+	include repair, inventory, emergency service and scheduling problems.
+	The {DTRP} is defined as follows: Demands for service arrive in time
+	according to a Poisson process, are independent and uniformly distributed
+	in a Euclidean service region, and require an independent and identically
+	distributed amount of on-site service by a vehicle. The problem is
+	to find a policy for routing the service vehicle that minimizes the
+	average time demands spent in the system. We propose and analyze
+	several policies for the {DTRP.} We find a provably optimal policy
+	in light traffic and several policies with system times within a
+	constant factor of the optimal policy in heavy traffic. We also show
+	that the waiting time grows much faster than in traditional queues
+	as the traffic intensity increases, yet the stability condition does
+	not depend on the system geometry.},
+  issn = {{0030364X}},
+  owner = {andres},
+  timestamp = {2009.11.21},
+  url = {http://www.bases.unal.edu.co:2065/stable/171167}
+}
+
+@ARTICLE{Chepuri,
+  author = {Chepuri K., Homem-De-Mello, T},
+  title = {Solving the vehicle routing problem with stochastic demands using
+	the cross entropy method},
+  journal = {Annals of Operations Research},
+  year = {2005},
+  volume = {55},
+  pages = {153--181},
+  owner = {emily},
+  timestamp = {2009.10.18}
+}
+
+@ARTICLE{cheung_dynamic_2008,
+  author = {Bernard {K.-S.} Cheung and {K.L.} Choy and {Chung-Lun} Li and Wenzhong
+	Shi and Jian Tang},
+  title = {Dynamic routing model and solution methods for fleet management with
+	mobile technologies},
+  journal = {International Journal of Production Economics},
+  year = {2008},
+  volume = {113},
+  pages = {694--705},
+  number = {2},
+  month = jun,
+  abstract = {We develop and analyze a mathematical model for dynamic fleet management
+	that captures the characteristics of modern vehicle operations. The
+	model takes into consideration dynamic data such as vehicle locations,
+	travel time, and incoming customer orders. The solution method includes
+	an effective procedure for solving the static problem and an efficient
+	re-optimization procedure for updating the route plan as dynamic
+	information arrives. Computational experiments show that our re-optimization
+	procedure can generate near-optimal solutions.},
+  doi = {10.1016/j.ijpe.2007.10.018},
+  issn = {0925-5273},
+  keywords = {Dynamic vehicle routing, Heuristics, Mobile technologies},
+  owner = {andres},
+  timestamp = {2009.11.21},
+  url = {http://www.bases.unal.edu.co:2053/science/article/B6VF8-4RV17J4-1/2/98644318e2f28e442e73c848a2794384}
+}
+
+@ARTICLE{christiansen_branch-and-price_2007,
+  author = {Christian H. Christiansen and Jens Lysgaard},
+  title = {A branch-and-price algorithm for the capacitated vehicle routing
+	problem with stochastic demands},
+  journal = {Operations Research Letters},
+  year = {2007},
+  volume = {35},
+  pages = {773--781},
+  number = {6},
+  month = nov,
+  abstract = {This article introduces a new exact algorithm for the capacitated
+	vehicle routing problem with stochastic demands {(CVRPSD).} The {CVRPSD}
+	can be formulated as a set partitioning problem and it is shown that
+	the associated column generation subproblem can be solved using a
+	dynamic programming scheme. Computational experiments show promising
+	results.},
+  doi = {10.1016/j.orl.2006.12.009},
+  issn = {0167-6377},
+  keywords = {Logistics, Routing, Stochastic programming},
+  owner = {andres},
+  timestamp = {2009.11.21},
+  url = {http://www.bases.unal.edu.co:2053/science/article/B6V8M-4N3P00V-2/2/726a98831ffd3d9464a139cf9936519a}
+}
+
+@BOOKLET{Dantzing1959,
+  title = {The Truck Dispatching Problem},
+  author = {G. B. Dantzing and J. H. Ramser},
+  month = {Oct},
+  year = {1959},
+  journal = {Management Science},
+  number = {1},
+  owner = {Andres},
+  pages = {80--91},
+  timestamp = {2009.10.18},
+  volume = {6}
+}
+
+@INCOLLECTION{dessouky_rapid_2006,
+  author = {Maged Dessouky and Fernando Ordonez and Hongzhong Jia and Zhihong
+	Shen},
+  title = {Rapid Distribution of Medical Supplies},
+  booktitle = {Patient Flow: Reducing Delay in Healthcare Delivery},
+  year = {2006},
+  pages = {309--338},
+  abstract = {Some important issues in the design of an efficient pharmaceutical
+	supply chain involve deciding where to place the warehouses/inventories
+	and how to route distribution vehicles. Solving appropriate facility
+	location and vehicle routing problems can ensure the design of a
+	logistic network capable of rapid distribution of medical supplies.
+	In particular, both these problems must be solved in coordination
+	to quickly disburse medical supplies in response to a large-scale
+	emergency. In this chapter, we present models to solve facility location
+	and vehicle routing problems in the context of a response to a large-scale
+	emergency. We illustrate the approach on a hypothetical anthrax emergency
+	in Los Angeles County.},
+  owner = {Andres},
+  timestamp = {2009.11.18}
+}
+
+@ARTICLE{dror_computational_1985,
+  author = {M. Dror and M. Ball and B. Golden},
+  title = {A computational comparison of algorithms for the inventory routing
+	problem},
+  journal = {Annals of Operations Research},
+  year = {1985},
+  volume = {4},
+  pages = {1--23},
+  number = {1},
+  month = dec,
+  abstract = {The inventory routing problem is a distribution problem in which each
+	customer maintains a local inventory of a product such as heating
+	oil and consumes a certain amount of that product each day. Each
+	day a fleet of trucks is dispatched over a set of routes to resupply
+	a subset of the customers. In this paper, we describe and compare
+	algorithms for this problem defined over a short planning period,
+	e.g. one week. These algorithms define the set of customers to be
+	serviced each day and produce routes for a fleet of vehicles to service
+	those customers. Two algorithms are compared in detail, one which
+	first allocates deliveries to days and then solves a vehicle routing
+	problem and a second which treats the multi-day problem as a modified
+	vehicle routing problem. The comparison is based on a set of real
+	data obtained from a propane distribution firm in Pennsylvania. The
+	solutions obtained by both procedures compare quite favorably with
+	those in use by the firm.},
+  doi = {{10.1007/BF02022035}},
+  owner = {Andres},
+  timestamp = {2009.11.18},
+  url = {http://dx.doi.org/10.1007/BF02022035}
+}
+
+@INPROCEEDINGS{jianhua_fan_multiple_2006,
+  author = {Jianhua Fan and Xiufeng Wang and Hongyun Ning},
+  title = {A Multiple Vehicles Routing Problem Algorithm with Stochastic Demand},
+  booktitle = {Intelligent Control and Automation, 2006. {WCICA} 2006. The Sixth
+	World Congress on},
+  year = {2006},
+  volume = {1},
+  pages = {1688--1692},
+  abstract = {A heuristic algorithm for multiple vehicles routing problem with stochastic
+	demand is proposed and the goal is to minimize the total traveling
+	cost. Two-phase method is adopted to deal with this problem. In the
+	first phase, an algorithm is proposed to partition customers into
+	clusters, and the main task of the second phase is to design an effective
+	routing through each cluster of customers to minimize the total expected
+	traveling cost. Both the a priori strategy and the reoptimization
+	strategy are used to obtain the optimal routing. The experiment results
+	indicate that this method can produce solutions of good quality and
+	is an effective algorithm for the multiple vehicles routing problem
+	with stochastic demand},
+  doi = {{10.1109/WCICA.2006.1712640}},
+  keywords = {a priori strategy, heuristic algorithm, multiple vehicles routing,
+	optimal routing, optimisation, reoptimization, reoptimization strategy,
+	stochastic demand, stochastic processes, stochastic vehicle routing
+	problem, transportation, traveling cost, vehicles, {VRPSD}},
+  owner = {Andres},
+  timestamp = {2009.11.19}
+}
+
+@ARTICLE{gendreau_stochastic_1996,
+  author = {Michel Gendreau and Gilbert Laporte and RenÃ© SÃ©guin},
+  title = {Stochastic vehicle routing},
+  journal = {European Journal of Operational Research},
+  year = {1996},
+  volume = {88},
+  pages = {3--12},
+  number = {1},
+  doi = {{10.1016/0377-2217(95)00050-X}},
+  owner = {Andres},
+  timestamp = {2009.11.18},
+  url = {http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6VCT-3VWPNM7-M&_user=10&_rdoc=1&_fmt=&_orig=search&_sort=d&_docanchor=&view=c&_searchStrId=1060092995&_rerunOrigin=scholar.google&_acct=C000050221&_version=1&_urlVersion=0&_userid=10&md5=bedf5fccb4e6613b5daeec589f15d9ce}
+}
+
+@ARTICLE{haghani_dynamic_2005,
+  author = {Ali Haghani and Soojung Jung},
+  title = {A dynamic vehicle routing problem with time-dependent travel times},
+  journal = {Computers \& Operations Research},
+  year = {2005},
+  volume = {32},
+  pages = {2959--2986},
+  number = {11},
+  month = nov,
+  abstract = {In this paper we present a formulation for the dynamic vehicle routing
+	problem with time-dependent travel times. We also present a genetic
+	algorithm to solve the problem. The problem is a pick-up or delivery
+	vehicle routing problem with soft time windows in which we consider
+	multiple vehicles with different capacities, real-time service requests,
+	and real-time variations in travel times between demand nodes. The
+	performance of the genetic algorithm is evaluated by comparing its
+	results with exact solutions and lower bounds for randomly generated
+	test problems. For small size problems with up to 10 demands, the
+	genetic algorithm provides almost the same results as the exact solutions,
+	while its computation time is less than 10\% of the time required
+	to produce the exact solutions. For the problems with 30 demand nodes,
+	the genetic algorithm results have less than 8\% gap with lower bounds.
+	This research also shows that as the uncertainty in the travel time
+	information increases, a dynamic routing strategy that takes the
+	real-time traffic information into account becomes increasingly superior
+	to a static one. This is clear when we compare the static and dynamic
+	routing strategies in problem scenarios that have different levels
+	of uncertainty in travel time information. In additional tests on
+	a simulated network, the proposed algorithm works well in dealing
+	with situations in which accidents cause significant congestion in
+	some part of the transportation network.},
+  doi = {10.1016/j.cor.2004.04.013},
+  issn = {0305-0548},
+  keywords = {Genetic algorithm, Network, Optimization, Time dependent, Travel time,
+	Vehicle routing},
+  owner = {andres},
+  timestamp = {2009.11.21},
+  url = {http://www.bases.unal.edu.co:2053/science/article/B6VC5-4CS4J13-2/2/6f96cb8477764df992523cb7ed91de7f}
+}
+
+@INPROCEEDINGS{Markovic_2005,
+  author = {Hrvoje Markovi?, Ivana ?avar, Ton?i Cari?},
+  title = {Using data mining to forecast uncertain demands in stochastic vehicle
+	routing problem},
+  booktitle = {13th International Symposium on Elecronics in Transport (ISEP), Slovenia},
+  year = {2005},
+  owner = {Andres},
+  timestamp = {2009.11.19}
+}
+
+@BOOK{Gerd_sp_state_2011,
+  title = {Stochastic Programming: The State of the Art in Honor of George B.
+	Dantzig},
+  publisher = {Springer, International Series in Operations Research and Management
+	Science},
+  year = {2011},
+  editor = {Gerd Infanger},
+  author = {Gerd Infanger and George B. Dantzig},
+  owner = {andres},
+  timestamp = {2012.02.27}
+}
+
+@ARTICLE{jothi_approximatingk-traveling_2007,
+  author = {Raja Jothi and Balaji Raghavachari},
+  title = {Approximating the k-traveling repairman problem with repairtimes},
+  journal = {Journal of Discrete Algorithms},
+  year = {2007},
+  volume = {5},
+  pages = {293--303},
+  number = {2},
+  month = jun,
+  abstract = {Given an undirected graph {G=(V,E)} and a source vertex s[set membership,
+	{variant]V,} the k-traveling repairman {(KTR)} problem, also known
+	as the minimum latency problem, asks for k tours, each starting at
+	s and together covering all the vertices (customers) such that the
+	sum of the latencies experienced by the customers is minimum. The
+	latency of a customer p is defined to be the distance traveled (time
+	elapsed) before visiting p for the first time. Previous literature
+	on the {KTR} problem has considered the version of the problem in
+	which the repairtime of a customer is assumed to be zero for latency
+	calculations. We consider a generalization of the problem in which
+	each customer has an associated repairtime. For a fixed k, we present
+	a ([beta]+2)-approximation algorithm for this problem, where [beta]
+	is the best achievable approximation ratio for the {KTR} problem
+	with zero repairtimes (currently [beta]=6). For arbitrary k, we obtain
+	a -approximation ratio. When the repairtimes of the customers are
+	all the same, we present an approximation algorithm with a better
+	ratio.2 We also introduce the bounded-latency problem, a complementary
+	version of the {KTR} problem, in which we are given a latency bound
+	L and are asked to find the minimum number of repairmen required
+	to service all the customers such that the latency of no customer
+	is more than L. For this problem, we present a simple bicriteria
+	approximation algorithm that finds a solution with at most 2/[rho]
+	times the number of repairmen required by an optimal solution, with
+	the latency of no customer exceeding {(1+[rho])L,} [rho]{\textgreater}0.},
+  doi = {10.1016/j.jda.2006.03.023},
+  issn = {1570-8667},
+  keywords = {Approximation algorithms, Combinatorial optimization},
+  owner = {andres},
+  timestamp = {2009.11.21},
+  url = {http://www.bases.unal.edu.co:2053/science/article/B758J-4KGG1TF-1/2/3653dbb5b223af051c60949d92893e5d}
+}
+
+@ARTICLE{Moretti,
+  author = {Rodrigo Moretti},
+  title = {Adaptive granular local search heuristic for a dynamic vehicle routing
+	problem},
+  journal = {Computers \& Operations Research},
+  year = {2009},
+  volume = {36},
+  pages = {2955--2968},
+  owner = {emily},
+  timestamp = {2009.10.18}
+}
+
+@ARTICLE{novoa_approximate_2009,
+  author = {Clara Novoa and Robert Storer},
+  title = {An approximate dynamic programming approach for the vehicle routing
+	problem with stochastic demands},
+  journal = {European Journal of Operational Research},
+  year = {2009},
+  volume = {196},
+  pages = {509--515},
+  number = {2},
+  month = jul,
+  abstract = {This paper examines approximate dynamic programming algorithms for
+	the single-vehicle routing problem with stochastic demands from a
+	dynamic or reoptimization perspective. The methods extend the rollout
+	algorithm by implementing different base sequences (i.e. a priori
+	solutions), look-ahead policies, and pruning schemes. The paper also
+	considers computing the cost-to-go with Monte Carlo simulation in
+	addition to direct approaches. The best new method found is a two-step
+	lookahead rollout started with a stochastic base sequence. The routing
+	cost is about 4.8\% less than the one-step rollout algorithm started
+	with a deterministic sequence. Results also show that Monte Carlo
+	cost-to-go estimation reduces computation time 65\% in large instances
+	with little or no loss in solution quality. Moreover, the paper compares
+	results to the perfect information case from solving exact a posteriori
+	solutions for sampled vehicle routing problems. The confidence interval
+	for the overall mean difference is (3.56\%, 4.11\%).},
+  doi = {10.1016/j.ejor.2008.03.023},
+  issn = {0377-2217},
+  keywords = {Approximate dynamic programming, Stochastic vehicle routing, Transportation},
+  owner = {andres},
+  timestamp = {2009.11.21},
+  url = {http://www.bases.unal.edu.co:2053/science/article/B6VCT-4S4JYPK-1/2/e02ef985fd85d60bd61909d8029ea963}
+}
+
+@ARTICLE{parragh_surveypickup_2008,
+  author = {Sophie Parragh and Karl Doerner and Richard Hartl},
+  title = {A survey on pickup and delivery problems},
+  journal = {Journal fÃ¼r Betriebswirtschaft},
+  year = {2008},
+  volume = {58},
+  pages = {21--51},
+  number = {1},
+  month = apr,
+  abstract = {Abstract This paper is the first part of a comprehensive survey on
+	pickup and delivery problems. Basically, two problem classes can
+	be distinguished. The first class, discussed in this paper, deals
+	with the transportation of goods from the depot to linehaul customers
+	and from backhaul customers to the depot. This class is denoted as
+	Vehicle Routing Problems with Backhauls {(VRPB).} Four subtypes can
+	be considered, namely the Vehicle Routing Problem with Clustered
+	Backhauls {(VRPCB} â€“ all linehauls before backhauls), the Vehicle
+	Routing Problem with Mixed linehauls and Backhauls {(VRPMB} â€“ any
+	sequence of linehauls and backhauls permitted), the Vehicle Routing
+	Problem with Divisible Delivery and Pickup {(VRPDDP} â€“ customers
+	demanding delivery and pickup service can be visited twice), and
+	the Vehicle Routing Problem with Simultaneous Delivery and Pickup
+	{(VRPSDP} â€“ customers demanding both services have to be visited
+	exactly once). The second class, dealt with in the second part of
+	this survey, refers to all those problems where goods are transported
+	between pickup and delivery locations. These are the Pickup and Delivery
+	Vehicle Routing Problem {(PDVRP} â€“ unpaired pickup and delivery
+	points), the classical Pickup and Delivery Problem {(PDP} â€“ paired
+	pickup and delivery points), and the {Dial-A-Ride} Problem {(DARP}
+	â€“ passenger transportation between paired pickup and delivery points
+	and user inconvenience taken into consideration). Single as well
+	as multi vehicle versions of the mathematical problem formulations
+	are given for all four {VRPB} types, the corresponding exact, heuristic,
+	and metaheuristic solution methods are discussed.},
+  doi = {10.1007/s11301-008-0033-7},
+  owner = {Andres Jaque},
+  timestamp = {2009.05.10},
+  url = {http://dx.doi.org/10.1007/s11301-008-0033-7}
+}
+
+@ARTICLE{repoussis_web-based_????,
+  author = {P.P. Repoussis and D.C. Paraskevopoulos and G. Zobolas and C.D. Tarantilis
+	and G. Ioannou},
+  title = {A web-based decision support system for waste lube oils collection
+	and recycling},
+  journal = {European Journal of Operational Research},
+  abstract = {This paper presents a web-based decision support system (DSS) that
+	enables schedulers to tackle reverse supply chain management problems
+	interactively. The focus is on the efficient and effective management
+	of waste lube oils collection and recycling operations. The emphasis
+	is given on the systemic dimensions and modular architecture of the
+	proposed DSS. The latter incorporates intra- and inter-city vehicle
+	routing with real-life operational constraints using shortest path
+	and sophisticated hybrid metaheuristic algorithms. It is also integrated
+	with an Enterprise Resource Planning system allowing the utilization
+	of particular functional modules and the combination with other peripheral
+	planning tools. Furthermore, the proposed DSS provides a framework
+	for on-line monitoring and reporting to all stages of the waste collection
+	processes. The system is developed using a web architecture that
+	enables sharing of information and algorithms among multiple sites,
+	along with wireless telecommunication facilities. The application
+	to an industrial environment showed improved productivity and competitiveness,
+	indicating its applicability on realistic reverse logistical planning
+	problems. Keywords: Decision support systems; Vehicle routing; Waste
+	management },
+  doi = {10.1016/j.ejor.2007.11.004},
+  keywords = {Decision support systems,Vehicle routing,Waste management},
+  owner = {Andres Jaque},
+  timestamp = {2009.05.03},
+  url = {http://www.sciencedirect.com/science?\_ob=ArticleURL\&\_udi=B6VCT-4R3C04G-2\&\_user=10\&\_coverDate=11\%2F09\%2F2007\&\_alid=803992512\&\_rdoc=88\&\_fmt=high\&\_orig=search\&\_cdi=5963\&\_sort=d\&\_docanchor=\&view=c\&\_ct=543\&\_acct=C000050221\&\_version=1\&\_urlVersion=0\&\_userid=10\&md5=3ac92ff9efc19d48e17297980aaf73de}
+}
+
+@BOOK{ruszczynski_handbooks_2003,
+  title = {Handbooks in Operations Research and Management Science},
+  publisher = {Elsevier},
+  year = {2003},
+  author = {Ruszczynski},
+  pages = {700},
+  month = jun,
+  isbn = {0444508546, 9780444508546},
+  owner = {andres},
+  timestamp = {2010.04.20}
+}
+
+@ARTICLE{secomandi_comparing_2000,
+  author = {Nicola Secomandi},
+  title = {Comparing neuro-dynamic programming algorithms for the vehicle routing
+	problem with stochastic demands},
+  journal = {Computers \& Operations Research},
+  year = {2000},
+  volume = {27},
+  pages = {1201--1225},
+  number = {11-12},
+  month = sep,
+  abstract = {The paper considers a version of the vehicle routing problem where
+	customers' demands are uncertain. The focus is on dynamically routing
+	a single vehicle to serve the demands of a known set of geographically
+	dispersed customers during real-time operations. The goal consists
+	of minimizing the expected distance traveled in order to serve all
+	customers' demands. Since actual demand is revealed upon arrival
+	of the vehicle at the location of each customer, fully exploiting
+	this feature requires a dynamic approach. This work studies the suitability
+	of the emerging field of neuro-dynamic programming {(NDP)} in providing
+	approximate solutions to this difficult stochastic combinatorial
+	optimization problem. The paper compares the performance of two {NDP}
+	algorithms: optimistic approximate policy iteration and a rollout
+	policy. While the former improves the performance of a nearest-neighbor
+	policy by 2.3\%, the computational results indicate that the rollout
+	policy generates higher quality solutions. The implication for the
+	practitioner is that the rollout policy is a promising candidate
+	for vehicle routing applications where a dynamic approach is {required.Scope}
+	and purpose Recent years have seen a growing interest in the development
+	of vehicle routing algorithms to cope with the uncertain and dynamic
+	situations found in real-world applications (see the recent survey
+	paper by Powell et al. [1]). As noted by Psaraftis [2], dramatic
+	advances in information and communication technologies provide new
+	possibilities and opportunities for vehicle routing research and
+	applications. The enhanced capability of capturing the information
+	that becomes available during real-time operations opens up new research
+	directions. This informational availability provides the possibility
+	of developing dynamic routing algorithms that take advantage of the
+	information that is dynamically revealed during operations. Exploiting
+	such information presents a significant challenge to the operations
+	research/management science community. The single vehicle routing
+	problem with stochastic demands [3] provides an example of a simple,
+	yet very difficult to solve exactly, dynamic vehicle routing problem
+	[2, p. 157]. The problem can be formulated as a stochastic shortest
+	path problem [4] characterized by an enormous number of states. Neuro-dynamic
+	programming [5 and 6] is a recent methodology that can be used to
+	approximately solve very large and complex stochastic decision and
+	control problems. In this spirit, this paper is meant to study the
+	applicability of neuro-dynamic programming algorithms to the single-vehicle
+	routing problem with stochastic demands.},
+  doi = {{10.1016/S0305-0548(99)00146-X}},
+  issn = {0305-0548},
+  keywords = {Heuristics, Neuro-dynamic programming, Rollout policies, Stochastic
+	vehicle routing},
+  owner = {Andres},
+  timestamp = {2009.11.18},
+  url = {http://www.bases.unal.edu.co:2053/science/article/B6VC5-40797G7-C/2/47fa588b8d2fa6587b568f7a6ec7ff4c}
+}
+
+@ARTICLE{slater_specification_2002,
+  author = {Alan Slater},
+  title = {Specification for a dynamic vehicle routing and scheduling system},
+  journal = {International Journal of Transport Management},
+  year = {2002},
+  volume = {1},
+  pages = {29--40},
+  number = {1},
+  month = feb,
+  doi = {{10.1016/S1471-4051(01)00004-0}},
+  issn = {1471-4051},
+  keywords = {{GPS} tracking and tracing, Heuristics, Parallel insertion algorithms,
+	Parallel tour-building Algorithms, Time Windows, Transport planning,
+	Vehicle routing and scheduling},
+  owner = {andres},
+  timestamp = {2009.11.21},
+  url = {http://www.bases.unal.edu.co:2053/science/article/B6W83-458P7KM-3/2/d13c03217ac8d1243fea00ac92701be0}
+}
+
+@ARTICLE{Tapas,
+  author = {Tapas K. Das, Martin A. Wortman},
+  title = {Analysis of asymmetric patrolling repairman systems},
+  journal = {European Journal of Operational Research},
+  year = {1993},
+  volume = {64},
+  pages = {45--60},
+  owner = {emily},
+  timestamp = {2009.10.18}
+}
+
+@ARTICLE{Timon,
+  author = {Timon C. Du, Eldon Y. Li and Defrose Chouc},
+  title = {Dynamic vehicle routing for online B2C delivery},
+  journal = {The international journal of management science},
+  year = {2004},
+  volume = {33},
+  pages = {33--45},
+  owner = {emily},
+  timestamp = {2009.10.18}
+}
+
+@BOOK{toth_vehicle_2001,
+  title = {The vehicle routing problem},
+  publisher = {{SIAM}},
+  year = {2001},
+  author = {Paolo Toth and Daniele Vigo},
+  pages = {385},
+  isbn = {0898715792, 9780898715798},
+  owner = {Andres Jaque},
+  timestamp = {2009.07.30}
+}
+
+@BOOK{toth_vehicle_1987,
+  title = {The vehicle routing problem},
+  publisher = {Society for Industrial Mathematics},
+  year = {1987},
+  author = {P. Toth and D. Vigo},
+  owner = {Andres},
+  timestamp = {2009.10.18}
+}
+
+@ARTICLE{yang_stochastic_2000,
+  author = {{Wen-Huei} Yang and Kamlesh Mathur and Ronald H. Ballou},
+  title = {Stochastic Vehicle Routing Problem with Restocking},
+  journal = {{TRANSPORTATION} {SCIENCE}},
+  year = {2000},
+  volume = {34},
+  pages = {99--112},
+  number = {1},
+  month = feb,
+  abstract = {In this paper, a stochastic vehicle routing problem is considered.
+	In particular, customer demand is assumed to be uncertain, and actual
+	demand is revealed only upon the visit to the customer. Instead of
+	adopting the simple recourse action of returning to the depot whenever
+	the vehicle runs out of stock, the points along the route at which
+	restocking is to occur are designed into the route. The restocking
+	points may be before a stockout actually occurs. Two heuristic algorithms
+	are developed to construct both single and multiple routes that minimize
+	total travel cost. The computational results show that the heuristic
+	procedures produce quality solutions and are efficient.},
+  doi = {10.1287/trsc.34.1.99.12278},
+  owner = {Andres},
+  timestamp = {2009.11.18},
+  url = {http://transci.journal.informs.org/cgi/content/abstract/34/1/99}
+}

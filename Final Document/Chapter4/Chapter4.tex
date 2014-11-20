@@ -1,0 +1,200 @@
+\chapter{Stochastic Dynamic programming solution}
+\label{chap:dp_methodology}
+%\minitoc
+
+
+\section{Dynamic approach for VRPSD}
+
+Dynamic programming is based on principle of optimality formuled by Bellman ~\cite{bellman_theory_1954}
+
+\begin{quote}
+ \textit{An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.}
+\end{quote}
+
+Following to Bertsekas ~\cite{bertsekas_dynamic_1995} the principle of optimality point out that an optimal policy can be constructed backward, first finding an optimal policy for the \textit{tail subproblem} involving the last stage, then extending the optimal policy to the problem regard with the last two stages, and continuing until cover the whole problem in the first stage, hence a optimal policy is constructed for the entire problem.
+
+\begin{multline}
+ J^*(x_0) = \min\limits_{u_k^*\in U_k(x_k)}E_{w_k}\biggr\{g_k(x_k,u_k^*,w_k)+J^*_{k+1}(f(x_k,u_k^*,w_k))\biggr\},\\
+\forall k=0,1,\ldots,N-1
+\end{multline}
+
+However, the exact assesing of $J^*$ is computationally imposible given the size of the state space. Therefore, is necesary approximate it function for generate good, but not necessarily optimal policies.
+
+Let $\tilde{J}_k$ be an approximation of $J^*_k$, then a control can $\tilde{u}_k$ be assesed
+
+\begin{equation}\label{eq:control_aprox}
+\tilde{u}_k=\tilde{\mu}_k(x_k)=\arg \min\limits_{u\in U_k(x_k)} \biggr\{ g(x_k,u_k,x_{k+1}) + \sum_{x_{k+1}\in S}p_{x_kx_{k+1}}\biggr\}
+\end{equation}
+
+The following section \ref{sec:expecteddistance} discuss the computation of $\tilde{J}_k$
+
+\subsection{Expected distance}\label{sec:expecteddistance}
+
+The expected distance or \textit{cost-to-go} is computed based on the algorithm propossed by Secomandi ~\cite{secomandi_rollout_2001}, the implementation developed by us is represent in the algorithm $\Gamma$ below \ref{algo:expecteddistance}
+
+\begin{algorithm}
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+ \Input{tour $\tau_{1\times n+2}$, $d_{n+1\times n+1}$ distance, $x$ state}
+\Output{$E$ expected distance of an apriori solution (base sequence)}
+$l = x_1$\;
+$q_l = x_2$\;
+\If(is the last customer on $\tau$){ $l = n$ }{%if l == tau(instance.n+1)
+  $E = d(\tau(l+1)+1,1)$\;%d(n,0)
+}
+\Else{
+  \If(is the first node \textit{depot} in the tour $\tau$){l=0}{
+    E = $\Gamma ( \tau, l+1, q_l)$\;
+  }
+  \Else{
+    $E_0 = d(\tau(l+1), \tau(l))+$%\;%d(i+1,i)    
+    $\sum_{j=0}^{\min\{q_l, \bar{D}_{\tau(l+1)}\}}\Gamma(\tau,l+1,q_l-j)*p^{\tau(l+1)}(j) +$%\;
+    $\sum_{j=q_l+1}^{\bar{D}_{\tau(l+1)}}2 * d(0,\tau(l+1))+ %d(0,i+1)
+                \Gamma(\tau,l+1,Q + q_l-j))*p^{\tau(l+1)}(j)$\;
+    %
+    $E_1 = d(0,\tau(l)) + d(0, \tau(l+1)) + $%\;%d(0,i)+d(0,i+1)
+    $\sum_{j=0}^{\bar{D}(\tau(l+1))} \Gamma(\tau,l+1,Q-j)*p^{\tau(l+1)}(j)$\;
+    $E=\min\{E_0,E_1\}$\;
+  }  
+}
+
+\caption{Expected distance algorithm $E = \Gamma(\tau,l,q_i)$}\label{algo:expecteddistance}
+\end{algorithm}
+
+In the section \ref{sec:test_expecteddistance} we experimentally validate the algorithm with a monte carlo simulation to asses the average travel distance of a given policy.
+
+The expected distance is computed in $O(nRQ)$ time 
+
+\subsection{Defining initial policy}\label{sec:initial_policy}
+
+
+\begin{theorem}\label{th:proactive_restocking}%check redaction
+ if $q_l=0$ then the vehicle must go first to the depot for replenishment and later visit the next customer on the route, it is better than it visit the next customer to know its demand and go to the depot for replanishment after.
+\end{theorem}
+
+\begin{proof}
+Given the current state $x_k=(l,0,r_1,\ldots, r_n)$ where the vehicle capacity is depleted, i.e. $q_l = 0$, assume that the next customer to be visited on the route is $l'$. If the customer is visited first, then the vehicle must go to depot for replenishment and go back to $l'$ to satisfy its demand, so the distance is $\delta(l,l')+2\delta(l',0)$. Otherwise, if a proactive restocking of the vehicle is performed then the total distance is $\delta(l,0)+\delta(0,l')$.
+Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triangular inequality $\delta(l,0) \leq \delta(l,l')+\delta(l',0)$ proving \ref{th:proactive_restocking}
+\end{proof}
+
+\begin{lemma}%chech redaction
+ The theorem \ref{th:proactive_restocking} can be generalized for all $q_l\geq D_i'$ where $D_i'$ is the demand of the customer $i$ who is the next on the tour.
+\end{lemma}
+
+
+cyclic heuristic propossed by Bertsimas 92  and improved by himsel 95 and later used by a lot of authors because it is simple 
+
+cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, then $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$
+
+
+%\section{Probabilistic policy}
+
+%Use probability distribution to determine the apriori tour $\tau$ which should be followed
+
+%1- Is possible use un TSP solution method and combine with probability distribution function.
+
+%2- Heuristic based on distance and probabilities
+
+%3- Greedy algorithm with probabilities information to define replanishments
+
+\section{Policy iteration}
+
+The policy iteration algorithm find the optimal policy
+It's composed of two parts:
+\begin{enumerate}
+ \item Value-determination operation
+ \item Policy-improvement routine
+\end{enumerate}
+
+
+\section{Neuro-Dynamic programming}
+
+Neuro Dynamic programming has been designed to deal with dynamic programming problems where the number of states is too large or is unknowed completely.
+
+\cite{Bertsekas_1996}
+
+\section{Approximate policy iteration}
+
+\section{Optimistic Approximate policy iteration}
+
+\section{Rollout policy}
+
+\cite{Bertsekas_1997}
+
+
+\subsection{Rollout algorithm}
+%\subsection{One-step rollout algorithm}
+
+RA require a base policy
+The rollout algorithm build a policy $\pi$ starting from any given state and following an \textit{a priori} solution to VRPSD
+
+%(Solution alternatives for following \tau in rollout algorithm)
+%This is a topic that must be discussed with the group
+%Option 1 
+For changing $\tau$ after the first state, when there are a transition of $x_0$ state to $x_l$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$.
+
+The shift (cyclic heuristi)c is perfomed to partial tour not included at the policy.
+
+%Option 2
+
+
+\begin{algorithm}
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+ \Input{tour $\tau_{1\times n+2}$, state $x_{1 \times n+2}$}
+\Output{$\pi$ policy}
+$\bar\tau = \tau$\;
+$i=1$\;
+\While{$x \neq x_f$}{
+$\tau = \bar\tau$\;
+  \For{$j \in SN$}{
+    \If(is the first node in the tour $\tau$, i.e. l=0){i=1}{
+      $\tilde{J} = \Gamma(\tau,0,q_l)$\;
+      $a_{min} = 0$\;
+    }
+    \Else{%General case
+      $J^0 = g^0(i, \tau_{i+1}, x)$\;
+      $J^1 = g^1(i, \tau_{i+1}, x)$\;
+      $\tilde{J} = \min\{J^0,J^1\}$\;
+      $a = \arg\min\{J^0,J^1\} - 1$\;
+    }
+    %Evaluate minimization
+    \If{$\tilde{J}_{min} > \tilde{J}$}{
+      $\tilde{J}_{min} = \tilde{J}$\;
+      $a_{min} = a$\;
+      $\bar\tau = \tau$\;
+      $\tau = sh(\tau,i)$\;
+    }
+  }
+  $l=\bar\tau_{i+1}$\;
+  $\pi\leftarrow u=(l,a_{min})$\;
+  $x=\Upsilon(x,u)$\;
+  \If{$r_l=0$}{
+    $SN = SN-l$\;
+  }
+  $i=i+1$\;
+}
+\caption{Rollout algorithm}\label{algo:rollout1step}
+\end{algorithm}
+
+where SN is the set of nodes that still need to be visited, i.e. $\forall l \in N, D_l > 0$, 
+$x_f$ is the final state, where the vehicle comeback to depot and each customer was visited and its demand is $0$, $x=(0,Q,0,\ldots,0)$, $\bar\tau$ is the minimum $\tau$ selected in each algorithm iteration.
+$q_l = x_2$, $l=x_1$ and $r_l=x_{l+2}$\\
+When $l=0$ or $i=1$ in the algorithm, $q_l = Q$
+$sh(\tau,i)$ shift sub $\tau$ vector from position $i$ to the final position. 
+
+The $g^a(l,m,x)$ function is the expected distance from $l$ to $m$ given the state $x$, where $a=1$ if earlier replanishment is specified or $a=0$ in otherwise. The function is described below.
+\begin{equation}\label{ra:Cost2Go0}
+ g^0(l,m,x)=d(\tau_l,m)+\sum_{k=0}^{q_l}p_m(k)\Gamma(\tau,l+1,q_l-k)+\sum_{k=q_l+1}^{K_m}2d(0,m)p_m(k)\Gamma(\tau,l+1,q_l+Q-k)%Review if \Gamma(\tau,l+1,q_l+Q-k) or \Gamma(\tau,l+1,Q-k)
+\end{equation}
+
+\begin{equation}\label{ra:Cost2Go1}
+ g^1(l,m,x)=d(0,\tau_l)+d(0,m)+\sum_{k=0}^{K_m}p_m(k)\Gamma(\tau,l+1,Q-k)
+\end{equation}
+
+
+$x_l = \Upsilon(x,u)$ represent the transition of the state $x$ to state $x_l$ given that the control $u$ is realized.
+
+%\subsection{Two-step rollout algorithm}
+
+
+
+
