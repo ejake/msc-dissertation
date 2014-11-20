@@ -1,0 +1,165 @@
+\documentclass[tesis,reqno]{unaltesis2}
+
+%reqno es para q los numeros de las ecuaciones salgan a la derecha leqno es para la izquierda
+
+%unaltesis 2 lines
+\makeatletter
+%\deactivatetilden
+\makeatother
+
+\usepackage{listings}
+\usepackage{amsmath,amssymb,setspace}
+\usepackage{graphicx}
+\usepackage{stackrel}
+\usepackage[bookmarks]{hyperref}
+\usepackage{setspace}
+%\usepackage[ruled, vlined,boxed,commentsnumbered,shortend]{algorithm2e}
+\usepackage{algorithm2e}
+%\usepackage[ruled,vlined]{algorithm2e}
+%\usepackage{minitoc}
+%\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{amsthm}
+% \usepackage{epstopdf}
+
+%%Es mejor usar \newcommand que \def. El primero hace ciertas validaciones
+\newcommand\deq{\stackrel{{}_{\delta}{}}{\raisebox{-0.4ex}[+0.5ex][-8.2ex]{$=$}}}
+\newcommand\g{\stackrel{{}_{\gamma}{}}{\raisebox{-0.4ex}[+0.5ex][-8.2ex]{$=$}}}
+\newcommand\dg{\stackrel[]{\delta\gamma}{=}}
+%\def\dg{\stackrel{{}_{\delta}{}_{\gamma}}{\raisebox{-0.4ex}[-0.4ex][-8.2ex]{$=$}}}
+\newcommand\pd{\stackrel{{}_{\delta}}{\raisebox{0.6ex}[-0.4ex][-8.2ex]{$\leadsto$}}}
+\newcommand\pg{\stackrel{{}_{\gamma}}{\raisebox{0.6ex}[-0.4ex][-8.2ex]{$\leadsto$}}}
+\newcommand\pdg{\stackrel{{}_{\delta}{}_{\gamma}}{\raisebox{0.6ex}[-0.4ex][-8.2ex]{$\leadsto$}}}
+
+%% Enviroment to theorems
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Title page
+
+\Titulo{An hybrid evolutionary algorithm for stochastic vehicle routing problem with stochastic demands}
+
+\Autor{Robinson A. Jaque P.}
+
+\CodigoAutor{299800}
+
+\AnoGrado{2011}
+
+\MesGrado{Junio}
+
+\Grado{Master of Sciences}
+
+\Programa{Computer Science}
+
+\Facultad{Engineering}
+
+\Departamento{Computer and Industrial Engineering}
+
+\Sede{Bogota D.C.}
+
+\Tutor{Germ\'an Hern\'andez, Ph.D.}
+
+\TituloTutor{Associated Professor}
+
+\JuradoA{1, Ph.D.}
+
+\JuradoB{2, Ph.D.}
+
+\JuradoC{Member 3 of the Jury}
+
+\NumeroDeJurados{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%PRELIMINARY PAGES
+\maketitle \Preliminares \PaginaDeAprobacion
+
+\onehalfspacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%ABSTRACT
+% \begin{resumen}
+% Abstract here
+% \\
+% \end{resumen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%ACKNOWLEDGEMENTS
+% \begin{Reconocimientos}
+% Last thing to do :-)\\
+
+% \end{Reconocimientos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DEDICATION
+\begin{Dedicatoria}
+To Hari
+\end{Dedicatoria}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TABLE OF CONTENTS
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LIST OF FIGURES
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LIST OF TABLES
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LIST OF SYMBOLS
+\include{Tab_Symbols/Notation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Document body
+\CuerpoDeLaTesis
+
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% \include{Chapter1/Chapter1}
+
+%Outline
+%1. Introduction
+%2. Preliminars
+%3. Stochastic dynamic programming algorithms
+%4. Memetic algorithm
+%5. Results 
+%6. Conclusions and open problems
+%7. Bibliography
+
+%//Preliminars
+% \include{Chapter2/Preliminars}
+
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+%Stochastic dynamic programming
+% \include{Chapter4/Chapter4}
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+%hybrid GA
+% \include{Chapter3/Chapter3}
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+%Results
+% \include{Chapter5/Results}
+
+%Discussion of results, conclussion and future works
+% \include{Chapter6/Conclusions}
+
+
+%---------------------------------------------------------------------------------------------------------------
+%Bibliography---------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------------
+
+{
+%\footnotesize
+%\nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{officialbiblio}
+% }
+%FIN DEL DOC
+
+\end{document}

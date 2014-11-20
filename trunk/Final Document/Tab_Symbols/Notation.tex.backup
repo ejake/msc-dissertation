@@ -1,0 +1,17 @@
+\chapter*{Notation}
+\label{chap:notation}
+
+\begin{table}
+ \begin{tabular}{|c|l|}
+  \hline
+  \textbf{Symbol} & \textbf{Definition}\\
+  \hline
+  $n$ & Number of customers\\
+  $E$ & Expected distance of an apriori solution (base sequence)\\
+  $l$ & Location of vehicle\\
+  $q_l$ & Vehicle capacity when customer $l$ has already been served.\\
+  $p^i(j)$ & Probability of customer $i$ take the demand value $j$\\
+  \hline
+ \end{tabular}
+
+\end{table}

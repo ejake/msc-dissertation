@@ -1,0 +1,58 @@
+\select@language {english}
+\select@language {english}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{vii}{Doc-Start}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{viii}{Doc-Start}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Notation}}{ix}{chapter*.1}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{1}{chapter.1}
+\contentsline {section}{\tocsection {}{1.1}{Introduction}}{1}{section.1.1}
+\contentsline {section}{\tocsection {}{1.2}{Proposal}}{3}{section.1.2}
+\contentsline {section}{\tocsection {}{1.3}{Objective}}{3}{section.1.3}
+\contentsline {subsection}{\tocsubsection {}{1.3.1}{Specifics Objectives}}{3}{subsection.1.3.1}
+\contentsline {section}{\tocsection {}{1.4}{Contributions}}{3}{section.1.4}
+\contentsline {section}{\tocsection {}{1.5}{Outline}}{4}{section.1.5}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Background}}{5}{chapter.2}
+\contentsline {section}{\tocsection {}{2.1}{A Review of Vehicle Routing Problem with Stochastic Demands}}{5}{section.2.1}
+\contentsline {subsection}{\tocsubsection {}{2.1.1}{Application cases}}{5}{subsection.2.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{The traveling repairman Problem (TRP)}}{6}{section*.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Currier mail services}}{6}{section*.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Emergency services}}{7}{section*.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Taxi cab services}}{7}{section*.5}
+\contentsline {subsection}{\tocsubsection {}{2.1.2}{Solution methods}}{7}{subsection.2.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.1}{Exact methods}}{7}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.2}{Aproximate methods}}{8}{subsubsection.2.1.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.3}{Neuro-Dynamic programming}}{8}{subsubsection.2.1.2.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.4}{Hybrid methods}}{9}{subsubsection.2.1.2.4}
+\contentsline {section}{\tocsection {}{2.2}{Formulation of VRPSD}}{9}{section.2.2}
+\contentsline {subsection}{\tocsubsection {}{2.2.1}{Stochastic programming}}{10}{subsection.2.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1.1}{Chance-constrained programming}}{10}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1.2}{Stochastic programming with resources}}{11}{subsubsection.2.2.1.2}
+\contentsline {subsection}{\tocsubsection {}{2.2.2}{Stochastic Dynamic Programming}}{12}{subsection.2.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.2.1}{Finite-Stage Models}}{14}{subsubsection.2.2.2.1}
+\contentsline {subsection}{\tocsubsection {}{2.2.3}{Stochastic Dynamic Programming approach for VRPSD}}{14}{subsection.2.2.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.3.1}{Types of policies}}{15}{subsubsection.2.2.3.1}
+\contentsline {section}{\tocsection {}{2.3}{Summary}}{17}{section.2.3}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Stochastic Dynamic programming solution}}{18}{chapter.3}
+\contentsline {section}{\tocsection {}{3.1}{Dynamic approach for VRPSD}}{18}{section.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.1}{Expected distance}}{18}{subsection.3.1.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.2}{Defining initial policy}}{19}{subsection.3.1.2}
+\contentsline {section}{\tocsection {}{3.2}{Policy iteration}}{20}{section.3.2}
+\contentsline {section}{\tocsection {}{3.3}{Neuro-Dynamic programming}}{20}{section.3.3}
+\contentsline {section}{\tocsection {}{3.4}{Approximate policy iteration}}{20}{section.3.4}
+\contentsline {section}{\tocsection {}{3.5}{Optimistic Approximate policy iteration}}{20}{section.3.5}
+\contentsline {section}{\tocsection {}{3.6}{Rollout policy}}{20}{section.3.6}
+\contentsline {subsection}{\tocsubsection {}{3.6.1}{Rollout algorithm}}{20}{subsection.3.6.1}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Hybrid Evolutionary approach}}{23}{chapter.4}
+\contentsline {section}{\tocsection {}{4.1}{Hybrid Genetic Algorithm}}{23}{section.4.1}
+\contentsline {subsection}{\tocsubsection {}{4.1.1}{A basic genetic algorithm for vehicle routing problem with stochastic demands}}{23}{subsection.4.1.1}
+\contentsline {subsection}{\tocsubsection {}{4.1.2}{Genetic operators}}{25}{subsection.4.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.1.2.1}{Crossover - EAX}}{25}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Mutation}}{25}{section*.6}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{local search}}{25}{section*.7}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithm}}{25}{section*.8}
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Experiments and Numerical Results}}{26}{chapter.5}
+\contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{26}{section.5.1}
+\contentsline {subsection}{\tocsubsection {}{5.1.1}{Instance generation}}{26}{subsection.5.1.1}
+\contentsline {section}{\tocsection {}{5.2}{Assess the expected distance for a given policy}}{26}{section.5.2}
+\contentsline {subsection}{\tocsubsection {}{5.2.1}{Expected distance algorithm}}{27}{subsection.5.2.1}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Results discussions, conclusions and future works}}{29}{chapter.6}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{30}{chapter*.9}
