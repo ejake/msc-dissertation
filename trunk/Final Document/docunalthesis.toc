@@ -26,35 +26,31 @@
 \contentsline {subsection}{\tocsubsection {}{2.2.1}{Stochastic programming}}{10}{subsection.2.2.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.2.1.1}{Chance-constrained programming}}{10}{subsubsection.2.2.1.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.2.1.2}{Stochastic programming with resources}}{11}{subsubsection.2.2.1.2}
-\contentsline {subsection}{\tocsubsection {}{2.2.2}{Stochastic Dynamic Programming}}{12}{subsection.2.2.2}
+\contentsline {subsection}{\tocsubsection {}{2.2.2}{Stochastic Dynamic Programming}}{13}{subsection.2.2.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.2.2.1}{Finite-Stage Models}}{14}{subsubsection.2.2.2.1}
-\contentsline {subsection}{\tocsubsection {}{2.2.3}{Stochastic Dynamic Programming approach for VRPSD}}{14}{subsection.2.2.3}
+\contentsline {subsection}{\tocsubsection {}{2.2.3}{Stochastic Dynamic Programming approach for VRPSD}}{15}{subsection.2.2.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.2.3.1}{Types of policies}}{15}{subsubsection.2.2.3.1}
-\contentsline {section}{\tocsection {}{2.3}{Summary}}{17}{section.2.3}
-\contentsline {chapter}{\tocchapter {Chapter}{3}{Stochastic Dynamic programming solution}}{18}{chapter.3}
-\contentsline {section}{\tocsection {}{3.1}{Dynamic approach for VRPSD}}{18}{section.3.1}
-\contentsline {subsection}{\tocsubsection {}{3.1.1}{Expected distance}}{18}{subsection.3.1.1}
-\contentsline {section}{\tocsection {}{3.2}{Policy iteration}}{20}{section.3.2}
-\contentsline {section}{\tocsection {}{3.3}{Neuro-Dynamic programming}}{20}{section.3.3}
-\contentsline {section}{\tocsection {}{3.4}{Approximate policy iteration}}{20}{section.3.4}
-\contentsline {section}{\tocsection {}{3.5}{Optimistic Approximate policy iteration}}{20}{section.3.5}
-\contentsline {section}{\tocsection {}{3.6}{Rollout policy}}{20}{section.3.6}
-\contentsline {subsection}{\tocsubsection {}{3.6.1}{Rollout algorithm}}{20}{subsection.3.6.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{3.6.1.1}{Defining initial policy}}{21}{subsubsection.3.6.1.1}
-\contentsline {chapter}{\tocchapter {Chapter}{4}{Hybrid Evolutionary approach}}{23}{chapter.4}
-\contentsline {section}{\tocsection {}{4.1}{Hybrid Genetic Algorithm}}{23}{section.4.1}
-\contentsline {subsection}{\tocsubsection {}{4.1.1}{A basic genetic algorithm for vehicle routing problem with stochastic demands}}{23}{subsection.4.1.1}
-\contentsline {subsection}{\tocsubsection {}{4.1.2}{Genetic operators}}{25}{subsection.4.1.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.1.2.1}{Crossover - EAX}}{25}{subsubsection.4.1.2.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Mutation}}{25}{section*.6}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{local search}}{25}{section*.7}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithm}}{25}{section*.8}
-\contentsline {chapter}{\tocchapter {Chapter}{5}{Experiments and Numerical Results}}{26}{chapter.5}
-\contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{26}{section.5.1}
-\contentsline {subsection}{\tocsubsection {}{5.1.1}{Instance generation}}{26}{subsection.5.1.1}
-\contentsline {section}{\tocsection {}{5.2}{Assess the expected distance for a given policy}}{27}{section.5.2}
-\contentsline {subsection}{\tocsubsection {}{5.2.1}{Expected distance algorithm}}{27}{subsection.5.2.1}
-\contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{30}{chapter.6}
-\contentsline {section}{\tocsection {}{6.1}{Conclusions}}{30}{section.6.1}
-\contentsline {section}{\tocsection {}{6.2}{Perspectives}}{30}{section.6.2}
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{31}{chapter*.9}
+\contentsline {section}{\tocsection {}{2.3}{Summary}}{18}{section.2.3}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Stochastic Dynamic programming solution}}{19}{chapter.3}
+\contentsline {section}{\tocsection {}{3.1}{Dynamic approach for VRPSD}}{19}{section.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.1}{Expected distance}}{19}{subsection.3.1.1}
+\contentsline {section}{\tocsection {}{3.2}{Policy iteration}}{21}{section.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.2.1}{Rollout algorithm}}{21}{subsection.3.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.1.1}{Defining initial policy}}{21}{subsubsection.3.2.1.1}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Hybrid Evolutionary approach}}{24}{chapter.4}
+\contentsline {section}{\tocsection {}{4.1}{Hybrid Genetic Algorithm}}{24}{section.4.1}
+\contentsline {subsection}{\tocsubsection {}{4.1.1}{A basic genetic algorithm for vehicle routing problem with stochastic demands}}{24}{subsection.4.1.1}
+\contentsline {subsection}{\tocsubsection {}{4.1.2}{Genetic operators}}{26}{subsection.4.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.1.2.1}{Crossover - EAX}}{26}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Mutation}}{26}{section*.6}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{local search}}{26}{section*.7}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithm}}{26}{section*.8}
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Experiments and Numerical Results}}{27}{chapter.5}
+\contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{27}{section.5.1}
+\contentsline {subsection}{\tocsubsection {}{5.1.1}{Instance generation}}{27}{subsection.5.1.1}
+\contentsline {section}{\tocsection {}{5.2}{Assess the expected distance for a given policy}}{28}{section.5.2}
+\contentsline {subsection}{\tocsubsection {}{5.2.1}{Expected distance algorithm}}{28}{subsection.5.2.1}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{31}{chapter.6}
+\contentsline {section}{\tocsection {}{6.1}{Conclusions}}{31}{section.6.1}
+\contentsline {section}{\tocsection {}{6.2}{Perspectives}}{31}{section.6.2}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{32}{chapter*.9}

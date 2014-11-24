@@ -85,6 +85,19 @@ A genetic algorithm is another option used to solve this kind of problems, Hagha
 
 The dynamic programming is one of the techniques most used to solve this kind of problems, Bertsekas ~\cite{Bertsekas} proposed efficient methods like Markov decision analysis, linear control model with quadratic cost, policies in the stochastic inventory problem, and so on. Secomandi~\cite{secomandi_comparing_2000} compare neuro-dynamic programming algorithms for VRPSD.
 
+%\subsubsection{Neuro-Dynamic programming}
+Neuro Dynamic programming has been designed to deal with dynamic programming problems where the number of states is too large or is unknowed completely \cite{Bertsekas_1996}
+
+\section{Approximate policy iteration}
+
+\section{Optimistic Approximate policy iteration}
+
+\section{Rollout policy}
+
+\cite{Bertsekas1997}
+
+
+
 Bertsekas ~\cite{Bertsekas1997} present the \textit{rollout algorithm} (RA) applied to combinatorial optimization problems, later Secomandi (~\cite{Secomandi_1998}, \cite{secomandi_rollout_2001}) show up it applied to VRPSD.
 
 Novoa and Storer~\cite{novoa_approximate_2009} proposed a solution for the VRPSD using dynamic programing algorithms, they also consider the cost-of-go with the help of Monte Carlo simulation, the showed that in that king of problems the best method found is the one-step roll-out that started with a stochastic base sequence.
