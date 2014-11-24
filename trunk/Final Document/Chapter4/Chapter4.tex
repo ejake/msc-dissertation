@@ -18,7 +18,7 @@ Following to Bertsekas ~\cite{bertsekas_dynamic_1995} the principle of optimalit
 \forall k=0,1,\ldots,N-1
 \end{multline}
 
-However, the exact assesing of $J^*$ is computationally imposible given the size of the state space. Therefore, is necesary approximate it function for generate good, but not necessarily optimal policies.
+However, the exact assesing of $J^*$ is computationally imposible given the size of the state space. Therefore, is necessary approximate it function for generate good, but not necessarily optimal policies.
 
 Let $\tilde{J}_k$ be an approximation of $J^*_k$, then a control can $\tilde{u}_k$ be assesed
 
@@ -30,12 +30,12 @@ The following section \ref{sec:expecteddistance} discuss the computation of $\ti
 
 \subsection{Expected distance}\label{sec:expecteddistance}
 
-The expected distance or \textit{cost-to-go} is computed based on the algorithm propossed by Secomandi ~\cite{secomandi_rollout_2001}, the implementation developed by us is represent in the algorithm $\Gamma$ below \ref{algo:expecteddistance}
+The expected distance $\tilde{J}$ or \textit{cost-to-go} is computed based on the algorithm propossed by Secomandi ~\cite{secomandi_rollout_2001}. We implemented the algorithm $\Gamma$ represented below \ref{algo:expecteddistance} to compute expected distance in $O(nRQ)$ time and $O(nQ)$ space.
 
 \begin{algorithm}
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
  \Input{tour $\tau_{1\times n+2}$, $d_{n+1\times n+1}$ distance, $x$ state}
-\Output{$E$ expected distance of an apriori solution (base sequence)}
+\Output{$E$ expected distance of an apriori solution $\tau$ (base sequence)}
 $l = x_1$\;
 $q_l = x_2$\;
 \If(is the last customer on $\tau$){ $l = n$ }{%if l == tau(instance.n+1)
@@ -60,12 +60,9 @@ $q_l = x_2$\;
 \caption{Expected distance algorithm $E = \Gamma(\tau,l,q_i)$}\label{algo:expecteddistance}
 \end{algorithm}
 
-In the section \ref{sec:test_expecteddistance} we experimentally validate the algorithm with a monte carlo simulation to asses the average travel distance of a given policy.
+This algorithm was validated comparing the outcomes with the expected distance computed by an exhaustive algorithm applied to small instances. In addition, larger instances was benchmarked using monte carlo simulation to asses expected distance.
 
-The expected distance is computed in $O(nRQ)$ time 
-
-\subsection{Defining initial policy}\label{sec:initial_policy}
-
+If the vehicle capacity is depleted, the methods used to compute the expected distance take into account that the vehicle can go to the depot for proactive restocking with less cost than to visit the customer first which makes the route fail, as we show in \ref{th:proactive_restocking}.
 
 \begin{theorem}\label{th:proactive_restocking}%check redaction
  if $q_l=0$ then the vehicle must go first to the depot for replenishment and later visit the next customer on the route, it is better than it visit the next customer to know its demand and go to the depot for replanishment after.
@@ -77,13 +74,12 @@ Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triang
 \end{proof}
 
 \begin{lemma}%chech redaction
- The theorem \ref{th:proactive_restocking} can be generalized for all $q_l\geq D_i'$ where $D_i'$ is the demand of the customer $i$ who is the next on the tour.
+ The theorem \ref{th:proactive_restocking} can be generalized for all $q_l \geq D_i'$ where $D_i'$ is the demand of the customer $i$ who is the next on the tour.
 \end{lemma}
 
 
-cyclic heuristic propossed by Bertsimas 92  and improved by himsel 95 and later used by a lot of authors because it is simple 
 
-cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, then $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$
+
 
 
 %\section{Probabilistic policy}
@@ -133,6 +129,15 @@ The rollout algorithm build a policy $\pi$ starting from any given state and fol
 For changing $\tau$ after the first state, when there are a transition of $x_0$ state to $x_l$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$.
 
 The shift (cyclic heuristi)c is perfomed to partial tour not included at the policy.
+
+
+\subsubsection{Defining initial policy}\label{sec:initial_policy}
+
+
+cyclic heuristic propossed by Bertsimas 92  and improved by himsel 95 and later used by a lot of authors because it is simple 
+
+cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, then $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$
+
 
 %Option 2
 
