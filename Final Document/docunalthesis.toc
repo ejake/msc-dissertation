@@ -52,7 +52,9 @@
 \contentsline {chapter}{\tocchapter {Chapter}{5}{Experiments and Numerical Results}}{26}{chapter.5}
 \contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{26}{section.5.1}
 \contentsline {subsection}{\tocsubsection {}{5.1.1}{Instance generation}}{26}{subsection.5.1.1}
-\contentsline {section}{\tocsection {}{5.2}{Assess the expected distance for a given policy}}{26}{section.5.2}
+\contentsline {section}{\tocsection {}{5.2}{Assess the expected distance for a given policy}}{27}{section.5.2}
 \contentsline {subsection}{\tocsubsection {}{5.2.1}{Expected distance algorithm}}{27}{subsection.5.2.1}
-\contentsline {chapter}{\tocchapter {Chapter}{6}{Results discussions, conclusions and future works}}{29}{chapter.6}
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{30}{chapter*.9}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{30}{chapter.6}
+\contentsline {section}{\tocsection {}{6.1}{Conclusions}}{30}{section.6.1}
+\contentsline {section}{\tocsection {}{6.2}{Perspectives}}{30}{section.6.2}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{31}{chapter*.9}
