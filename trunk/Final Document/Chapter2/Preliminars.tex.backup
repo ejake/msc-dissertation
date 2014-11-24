@@ -65,7 +65,7 @@ The relevant exacts methods are \textit{branch-and-bound} algorithms, the proble
 
 Bernard et al~\cite{cheung_dynamic_2008},  present a Dantzing and Wolf decomposition to resolve a dynamic model analyzing multi-periodic vehicles fleet size and modeling the fleet size, of each one. At the end the authors obtain optimal solutions for different demand distribution.
 
-In 2007 Christian H et al~\cite{christiansen_branch-and-price_2007}, presented a Branch and price algorithm for the capacitated vehicle routing problem with stochastic demands, they used dynamic programing for to solve a subproblem.
+In 2007 Christian H et al~\cite{christiansen_branch-and-price_2007}, presented a Branch and price algorithm for the capacitated vehicle routing problem with stochastic demands, they used dynamic programming for to solve a subproblem.
 
 \subsubsection{Aproximate methods}
 
@@ -79,7 +79,7 @@ Moretti et. al. ~\cite{Moretti} (2009) implemented an algorithm to solve the DVR
 
 A genetic algorithm is another option used to solve this kind of problems, Haghani and Jung~\cite{haghani_dynamic_2005} presented a formulation for the DVRP with pick up and delivery and soft time windows  where there is multiple vehicles with different capacities, the real time service and and travel times are variant they proposed a genetic algorithm and their results were compared with exact methods.
 
-\subsubsection{Neuro-Dynamic programming}
+\subsubsection{Dynamic programming}
 
 %Review
 
@@ -99,7 +99,7 @@ Mendoza et. al. ~\cite{mendoza_memetic_2010} proposse a memetic algorithm for th
 
 Defined a graph $G(V,E)$, as $V = \{0, 1, 2,\ldots,n\}$, where the node 0 denote the starting point for vehicles (depot), and the remaining nodes represent individual customers, the set $E$ of edges in the graph represents the roads or paths between a pair of customers $(i,j)$ and $d_{ij}$ is the distance between them, which is assumed to be known, symmetric and satisfies the triangle inequality.
 
-A vehicle (only one) with fixed capacity $Q < \infty$ starts from the depot and executes deliveries (or pickups only) of a product to different customers, $D_i$ denotes the random variable representing the demand of customer $i$, the probability distribution $D_i$ is discrete and known and is denoted by $p_i(k)= Pr\{D_i=k\}, k=0,1,\ldots,K \leq R$. The customer demands are assumed to be independent and its exact value is known only when the vehicle arrives to the customer location, if customer demand exceeds the available capacity of the vehicle, i.e. a \textit{route failure}, the vehicle must return to the depot to restore its original capacity. Hence, the depot must have a capacity at least equal to $nR$. 
+A vehicle (only one) with fixed capacity $Q < \infty$ starts from the depot and executes deliveries (or pickups only) of a product to different customers, $D_i$ denotes the random variable representing the demand of customer $i$, the probability distribution $D_i$ is discrete and known and is denoted by $p_i(k)= Pr\{D_i=k\}, k=0,1,\ldots,K \leq R$. The customer demands are assumed to be independent and its exact value is known only when the vehicle arrives to the customer location, if customer demand exceeds the available capacity of the vehicle, i.e. a \textit{route failure}, the vehicle must return to the depot to restore its original capacity. Hence, the depot must have a capacity at least equal to $nR$. %be carefull with k in the notation can be used different above.
 
 Yang, et. al. ~\cite{yang_stochastic_2000} proposse a simple resource action for early replenishment where the vehicle come back to the depot even whenever it haven't depleted its stock to restore the capacity to $Q$, allowing proactive depot trips to avoid route failures. Hence, considering proactive restocking of the vehicle is not necesary to consider multiple routes, in fact, Yang, et. al. ~\cite{yang_stochastic_2000} point out that a single route is more efficient than multiple vehicle route system, assuming that only distance constrain the route, ommitting for example time duration.
 
@@ -174,7 +174,7 @@ A extended review of models presented above and others for VRPSD is presented by
 
 \subsection{Stochastic Dynamic Programming}
 
-Stochastic Dynamic Programming (SDP) provide a frame-work where decisions are made in an finite number of stages under uncertainty, in these problems there are a set of states $S$, decions variables $U$ and the uncertainty is represented by a set of random variables $W$, the dynamic system is of the form
+Stochastic Dynamic Programming (SDP) provide a frame-work where decisions are made in an finite number of stages under uncertainty, in these problems there are a set of states $S$, decisions variables $U$ and the uncertainty is represented by a set of random variables $W$, the dynamic system is of the form
 
 \[f: U\times W \times S \rightarrow S\]
 
@@ -276,7 +276,7 @@ Mixed policies not only following a sequence $\tau$ of customers but also prescr
     \caption{static and mixed routing policies}\label{fig:routing_policies}
 \end{figure}
 
-To represent the system state at stage $k$, the vector $x_k$ is defined as $x_k=(l,q_l, r_1,\ldots,r_n)$ of size $n+2$, where $l \in \{0,1,\ldots,n\}$, is the current location of the vehicle and $q_l \leq Q$ is its capacity available \textit{after} delivery to customer $l$; the elements $r_i$ represents the remaining demand to satisfy to the costumer $i$. A unknown demand is denoted as ?, if customer $i$ is visited and its demand has been satisfied completely $r_i$ will take the value 0, otherwise, take any value between 1 and $R$. The initial state of the system $x_0$ is $(0,Q,-,-,\ldots,-)$ and the final state occurs when the vehicle returns to the depot after serving the demands of customers, represented as $(0,Q,0,0,\ldots,0)$. Thus, the number of states in the system is $O(nQR^n)$
+To represent the system state at stage $k$, the vector $x_k$ is defined as $x_k=(l,q_l, r_1,\ldots,r_n)$ of size $n+2$, where $l \in \{0,1,\ldots,n\}$, is the current location of the vehicle and $q_l \leq Q$ is its capacity available \textit{after} delivery to customer $l$; the elements $r_i$ represents the remaining demand to satisfy to the costumer $i$. A unknown demand is denoted as -, if customer $i$ is visited and its demand has been satisfied completely $r_i$ will take the value 0, otherwise, take any value between 1 and $R$. The initial state of the system $x_0$ is $(0,Q,-,-,\ldots,-)$ and the final state occurs when the vehicle returns to the depot after serving the demands of customers, represented as $(0,Q,0,0,\ldots,0)$. Thus, the number of states in the system is $O(nQR^n)$
 
 Let $N$ be a random variable representing the number of stages or transitions from initial state to the end, the vector $\pi = {\mu_0, \mu_1,\ldots, \mu_{N-1}}$ is the policy or sequence of functions to optimize, where $\mu_k$ is a function that associates a decision or control $u_k=\mu_k(x_k)$ for each state, $u_k \in U_k(x_k)$ and $U_k(x_k) = \{\{m \in \{1,\ldots,n\}\}|r_m\neq0\}\cup 0\} \times \{a:a \in \{0,1\}\}$. Control $u_k$ is represented as ordered pairs $(m,a)$, $m$ is any costumer not yet served, $m$ is 0 when all demands have been satisfied and the system enters its completion stage, $a$ is 0 if the vehicle visits customers directly and 1 if the vehicle stops first at the depot for resupply.
 
@@ -291,7 +291,7 @@ Given a state $x_k=(l,q_l,r_1,\ldots,r_m,\ldots,r_n)$ and a control $u_k$ in whi
 
 and
 
-\begin{equation}\label{eq:q_m}
+\begin{equation}\label{eq:r_m}
     r'_m = \left \{ \begin{array}{ll}
     min(0,r_m - q_l), & \text{whether } u_k(m,0)=\mu_k(x_k)\\
     0, & \text{whether } u_k(m,1)=\mu_k(x_k)
@@ -330,9 +330,8 @@ If $J_N^*(x)$ is known for all stages, the optimal control $u_k^*$ at each stage
 \sum_{x_{k+1}\in S}p_{x_kx_{k+1}}(u_k)J_N^*(x_{k+1})|x_k=x, \forall x\in S
 \end{multline}
 
-The problem is that $J_N^*(x)$ is unknown and its calculation is a computationally intractable problem given the size of state space. Secomandi ~\cite{secomandi_rollout_2001} point out that compute an optimal policy becomes quickly intractable when $n$ grows beyond 10. The chapter \ref{chap:dp_methodology} deal with approximate this function through of neuro-dynamic-programming.
+The problem is that $J_N^*(x)$ is unknown and its calculation is a computationally intractable problem given the size of state space. Secomandi ~\cite{secomandi_rollout_2001} point out that compute an optimal policy becomes quickly intractable when $n$ grows beyond 10. The chapter \ref{chap:dp_methodology} deal with approximate this function through of dynamic-programming method efficiently computable.
 
 \section{Summary}
 
-The VRPSD have been studied by more than 20 years, with important progress in 90's and 00's and wide areas of application in logistics
-following the conclusions of ~\cite{Dror_2005} the mos promessing approach is modeling the problem as a Markov decision process, Therefore, a stochastic programming model is selected, it's a methodology for sequential decisions making under uncertainty based on dynamic system, the main idea is to use a approximate a function $J$ to make decisions in complex dynamic systems allowing deal with instances considered intractable for their size. In the next section the dynamic programming solution is addressed.
+The VRPSD have been studied by more than 20 years, with important progress in 90's and 00's and wide areas of application in logistics following the conclusions of ~\cite{Dror_2005} the mos promessing approach is modeling the problem as a Markov decision process, Therefore, a stochastic programming model is selected, it's a methodology for sequential decisions making under uncertainty based on dynamic system, the main idea is to use a approximate a function $J$ to make decisions in complex dynamic systems allowing deal with instances considered intractable for their size. In the next section the dynamic programming solution is addressed.

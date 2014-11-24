@@ -94,27 +94,22 @@ Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triang
 
 \section{Policy iteration}
 
-The policy iteration algorithm find the optimal policy
-It's composed of two parts:
+The policy iteration algorithm generates a sequence of stationary policies, each with improved cost over the preceding one.
+
 \begin{enumerate}
- \item Value-determination operation
- \item Policy-improvement routine
+ \item Initialization
+ \item Policy evaluation
+ \item Policy improvement
 \end{enumerate}
 
+\begin{algorithm}
+ \textbf{Step 1:} Guess an initial stationary policy $\pi_0$\\
+ \textbf{Step 2:} Given the stationary policy $\pi_k$ compute the corresponding cost function $J_{\pi_k}$\\
+ \textbf{Step 3:} Obtain a new stationary policy $\pi_{k+1}$\\
+ \caption{Policy iteration algorithm}\label{algo:policy_iteration_general}
+\end{algorithm}
 
-\section{Neuro-Dynamic programming}
 
-Neuro Dynamic programming has been designed to deal with dynamic programming problems where the number of states is too large or is unknowed completely.
-
-\cite{Bertsekas_1996}
-
-\section{Approximate policy iteration}
-
-\section{Optimistic Approximate policy iteration}
-
-\section{Rollout policy}
-
-\cite{Bertsekas_1997}
 
 
 \subsection{Rollout algorithm}

@@ -77,13 +77,9 @@ Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triang
  The theorem \ref{th:proactive_restocking} can be generalized for all $q_l \geq D_i'$ where $D_i'$ is the demand of the customer $i$ who is the next on the tour.
 \end{lemma}
 
-\subsection{Defining initial policy}\label{sec:initial_policy}
 
-To perform policy iteration algorithm is necessary 
 
-cyclic heuristic propossed by Bertsimas 92  and improved by himsel 95 and later used by a lot of authors because it is simple 
 
-cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, then $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$
 
 
 %\section{Probabilistic policy}
@@ -98,12 +94,22 @@ cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and foll
 
 \section{Policy iteration}
 
-The policy iteration algorithm find the optimal policy
-It's composed of two parts:
+The policy iteration algorithm generates a sequence of stationary policies, each with improved cost over the preceding one.
+
 \begin{enumerate}
- \item Value-determination operation
- \item Policy-improvement routine
+ \item Initialization
+ \item Policy evaluation
+ \item Policy improvement
 \end{enumerate}
+
+\begin{algorithm}
+ \textbf{Step 1:} Guess an initial stationary policy $\pi_0$\\
+ \textbf{Step 2:} Given the stationary policy $\pi_k$ compute the corresponding cost function $J_{\pi_k}$\\
+ \textbf{Step 3:} Obtain a new stationary policy $\pi_{k+1}$\\
+ \caption{Policy iteration algorithm}\label{algo:policy_iteration_general}
+\end{algorithm}
+
+
 
 
 \section{Neuro-Dynamic programming}
@@ -133,6 +139,15 @@ The rollout algorithm build a policy $\pi$ starting from any given state and fol
 For changing $\tau$ after the first state, when there are a transition of $x_0$ state to $x_l$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$.
 
 The shift (cyclic heuristi)c is perfomed to partial tour not included at the policy.
+
+
+\subsubsection{Defining initial policy}\label{sec:initial_policy}
+
+
+cyclic heuristic propossed by Bertsimas 92  and improved by himsel 95 and later used by a lot of authors because it is simple 
+
+cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, then $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$
+
 
 %Option 2
 
