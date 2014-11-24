@@ -7,11 +7,11 @@
 \contentsline {section}{\tocsection {}{1.1}{Introduction}}{1}{section.1.1}
 \contentsline {section}{\tocsection {}{1.2}{Proposal}}{3}{section.1.2}
 \contentsline {section}{\tocsection {}{1.3}{Objective}}{3}{section.1.3}
-\contentsline {subsection}{\tocsubsection {}{1.3.1}{Specifics Objectives}}{3}{subsection.1.3.1}
+\contentsline {subsection}{\tocsubsection {}{1.3.1}{Specifics objectives}}{3}{subsection.1.3.1}
 \contentsline {section}{\tocsection {}{1.4}{Contributions}}{3}{section.1.4}
 \contentsline {section}{\tocsection {}{1.5}{Outline}}{4}{section.1.5}
 \contentsline {chapter}{\tocchapter {Chapter}{2}{Background}}{5}{chapter.2}
-\contentsline {section}{\tocsection {}{2.1}{A Review of Vehicle Routing Problem with Stochastic Demands}}{5}{section.2.1}
+\contentsline {section}{\tocsection {}{2.1}{A review of Vehicle Routing Problem with Stochastic Demands}}{5}{section.2.1}
 \contentsline {subsection}{\tocsubsection {}{2.1.1}{Application cases}}{5}{subsection.2.1.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{The traveling repairman Problem (TRP)}}{6}{section*.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Currier mail services}}{6}{section*.3}

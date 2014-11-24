@@ -2,20 +2,19 @@
 \label{chap:backgroud}
 %\minitoc
 
-In this chapter we carry out a literature review of VRPSD, applications and methodologies used to deal with it are point out.
-Moreover, we examine modeling approaches to this problem in order to exploit the structure and solution properties following the methodology proposed, focusing on the stochastic dynamic programming (SDP) approach where first we show a dynamic programming background before of present the SDP formulation for VRPSD.
+In this chapter, we carry out a specialized literature review of VRPSD, and point out applications and methodologies used to deal with it. Moreover, we examine modeling approaches to this problem in order to exploit the structure and solution properties following the methodology proposed, focusing on the stochastic dynamic programming (SDP) approach, where we first show a dynamic programming background before presenting the SDP formulation for VRPSD.
 
 %\minitoc %mini table of contets for the chapter
 
-\section{A Review of Vehicle Routing Problem with Stochastic Demands}
+\section{A review of Vehicle Routing Problem with Stochastic Demands}
 
-In recent years the literature related to the stochastic vehicle routing problem has been growth owing to its application to the real life problems, as well as the academic interest in treat with the theoretical problem.Consequently, a number of solutions approach have been proposed to deal with these problems.
+In recent years the literature related to the stochastic vehicle routing problem has grown du to its application to real life problems, as well as to the academic interest in studying the problem theoretically. Consequently, a number of solutions have been proposed to deal with these problems.
 
 \subsection{Application cases}
 
-There are many applications of the VRPSD, in a huge number of real situations the customer demand is unknown and only can be estimated its probability distribution. Even, in spite of that the demand can be known in many cases, when the vehicle arrives to the customer the demand value changes. e.g. Delivering petroleum products or industrial gases (Chepuri and Homem-De-Mello~\cite{Chepuri}). To ilustrate these cases we regard the problem where gas stations are placed geographically dispersed and a fuel transport vehicle is entrusted to deliver a fuel quantity determined when the vehicle arrives at the customer location, the demand is unknown because spite of that the remaining fuel was known at the time to make the order, when the vehicle arrive a time after the fuel stock is lesser.
+There are many applications of the VRPSD. In a huge number of real situations, the customer demand is unknown and its probability distribution can only be estimated. Eventhough, in spite of the fact that the demand can be known in many cases, when the vehicle arrives to the customer, the demand value changes, e.g., delivering petroleum products or industrial gases (Chepuri and Homem-De-Mello~\cite{Chepuri}). To ilustrate these cases, we focus on the problem where gas stations are placed geographically dispersed and a fuel transport vehicle is entrusted to deliver a fuel quantity determined when the vehicle arrives at the customer location; the demand is unknown since despite the remaining fuel was known at the time to make the order, when the vehicle arrives after this time, the fuel stock has decreased.
 
-In the case of ATM (automatic teller machines) not only the daily demand for cash is uncertain, but also the maximal amount of cash that may be picked up by trucks for money transportation is limited for security and insurance reasons.
+In the case of Automatic Teller Machines (ATM), not only the daily demand for cash is uncertain, but the maximal amount of cash that may be picked up by trucks for money transportation is also limited for security and insurance reasons.
 
 \subsubsection*{The traveling repairman Problem (TRP)} 
 
