@@ -13,7 +13,7 @@
 \contentsline {chapter}{\tocchapter {Chapter}{2}{Background}}{5}{chapter.2}
 \contentsline {section}{\tocsection {}{2.1}{A review of Vehicle Routing Problem with Stochastic Demands}}{5}{section.2.1}
 \contentsline {subsection}{\tocsubsection {}{2.1.1}{Application cases}}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{The traveling repairman Problem (TRP)}}{6}{section*.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{The Traveling Repairman Problem (TRP)}}{6}{section*.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Currier mail services}}{6}{section*.3}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Emergency services}}{7}{section*.4}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Taxi cab services}}{7}{section*.5}
@@ -36,7 +36,7 @@
 \contentsline {subsection}{\tocsubsection {}{3.1.1}{Expected distance}}{19}{subsection.3.1.1}
 \contentsline {section}{\tocsection {}{3.2}{Policy iteration}}{21}{section.3.2}
 \contentsline {subsection}{\tocsubsection {}{3.2.1}{Rollout algorithm}}{21}{subsection.3.2.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{3.2.1.1}{Defining initial policy}}{21}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.1.1}{Defining initial policy}}{22}{subsubsection.3.2.1.1}
 \contentsline {chapter}{\tocchapter {Chapter}{4}{Hybrid Evolutionary approach}}{24}{chapter.4}
 \contentsline {section}{\tocsection {}{4.1}{Hybrid Genetic Algorithm}}{24}{section.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.1.1}{A basic genetic algorithm for vehicle routing problem with stochastic demands}}{24}{subsection.4.1.1}

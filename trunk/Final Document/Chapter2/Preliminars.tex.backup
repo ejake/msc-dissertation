@@ -2,52 +2,51 @@
 \label{chap:backgroud}
 %\minitoc
 
-In this chapter we carry out a literature review of VRPSD, applications and methodologies used to deal with it are point out.
-Moreover, we examine modeling approaches to this problem in order to exploit the structure and solution properties following the methodology proposed, focusing on the stochastic dynamic programming (SDP) approach where first we show a dynamic programming background before of present the SDP formulation for VRPSD.
+In this chapter, we carry out a specialized literature review of VRPSD, and point out applications and methodologies used to deal with it. Moreover, we examine modeling approaches to this problem in order to exploit the structure and solution properties following the methodology proposed, focusing on the stochastic dynamic programming (SDP) approach, where we first show a dynamic programming background before presenting the SDP formulation for VRPSD.
 
 %\minitoc %mini table of contets for the chapter
 
-\section{A Review of Vehicle Routing Problem with Stochastic Demands}
+\section{A review of Vehicle Routing Problem with Stochastic Demands}
 
-In recent years the literature related to the stochastic vehicle routing problem has been growth owing to its application to the real life problems, as well as the academic interest in treat with the theoretical problem.Consequently, a number of solutions approach have been proposed to deal with these problems.
+In recent years the literature related to the stochastic vehicle routing problem has grown du to its application to real life problems, as well as to the academic interest in studying the problem theoretically. Consequently, a number of solutions have been proposed to deal with these problems.
 
 \subsection{Application cases}
 
-There are many applications of the VRPSD, in a huge number of real situations the customer demand is unknown and only can be estimated its probability distribution. Even, in spite of that the demand can be known in many cases, when the vehicle arrives to the customer the demand value changes. e.g. Delivering petroleum products or industrial gases (Chepuri and Homem-De-Mello~\cite{Chepuri}). To ilustrate these cases we regard the problem where gas stations are placed geographically dispersed and a fuel transport vehicle is entrusted to deliver a fuel quantity determined when the vehicle arrives at the customer location, the demand is unknown because spite of that the remaining fuel was known at the time to make the order, when the vehicle arrive a time after the fuel stock is lesser.
+There are many applications of the VRPSD. In a huge number of real situations, the customer demand is unknown and its probability distribution can only be estimated. Eventhough, in spite of the fact that the demand can be known in many cases, when the vehicle arrives to the customer, the demand value changes, e.g., delivering petroleum products or industrial gases (Chepuri and Homem-De-Mello~\cite{Chepuri}). To ilustrate these cases, we focus on the problem where gas stations are placed geographically dispersed and a fuel transport vehicle is entrusted to deliver a fuel quantity determined when the vehicle arrives at the customer location; the demand is unknown since despite the remaining fuel was known at the time to make the order, when the vehicle arrives after this time, the fuel stock has decreased.
 
-In the case of ATM (automatic teller machines) not only the daily demand for cash is uncertain, but also the maximal amount of cash that may be picked up by trucks for money transportation is limited for security and insurance reasons.
+In the case of Automatic Teller Machines (ATM), not only the daily demand for cash is uncertain, but the maximal amount of cash that may be picked up by trucks for money transportation is also limited for security and insurance reasons.
 
-\subsubsection*{The traveling repairman Problem (TRP)} 
+\subsubsection*{The Traveling Repairman Problem (TRP)} 
 
-That problem was introduced by Bertsimas and Van Ryzin~\cite{bertsimas_stochastic_1991} in 1991, they analyzed the mathematical model for dynamic and stochastic VRP with the dynamic TRP. In that model the objective is to minimize the average time demands in the system. 
+This problem was introduced by Bertsimas and Van Ryzin~\cite{bertsimas_stochastic_1991} in 1991; they analyzed the mathematical model for dynamic and stochastic VRP with the dynamic TRP. In that model, the objective is to minimize the average time demands in the system. 
 
-That problem is presented when a machine breaks down and must be repaired, for to get that objective is important  to know the distance between the starting point and the arrival point, the urgency of the situation (it could be hight or low), the availability of the repairman etc. A real example of that problem is the electric power company, that has to travel point by point  to fix the problems that can arise suddenly, that problem has the characteristics of increased costumer, and the time fixing the problems variate according to the particular environment.
+That problem is presented when a machine breaks down and must be repaired, in order to achieve such objective, it is important  to know the distance between the starting point and the arrival point, the urgency of the situation (hight or low), the availability of the repairman, etc. A real example of that problem is on electric power company, which has to travel point by point  to fix the problems that can suddenly arise; the problem has the characteristics of increased costumer, and the time spent in fixing the problems variates according to the particular environment.
 
-Many authors have studied the problem, Jothi and Raghavachari~\cite{jothi_approximatingk-traveling_2007} analyze two algorithms to solve the problem, in 1993 Das and Wortman~\cite{Tapas} studied the TRP with a single repairman, they  proposed a probability model that is useful for evaluating the system performance measures, like the inactivity time, the availability of a machine and of the repairman.  
+Many authors have studied the problem; Jothi and Raghavachari~\cite{jothi_approximatingk-traveling_2007} analyze two algorithms to solve the problem; in 1993 Das and Wortman~\cite{Tapas} studied the TRP with a single repairman, and they  proposed a probability model that is useful for evaluating the system performance measures, such as the inactivity time, the availability of a machine and of the repairman.  
 
 \subsubsection*{Currier mail services} 
 
-Now there are many companies that offer the service of pick-up packages or mail and delivery that goods at the point where the costumer indicates, that problems returns dynamic because the driver doesn't know where will be the next pick-up or quantity or volume of goods.
+Nowadays, there are many companies that offer the service of pick-up packages or mail and delivery of goods to the point where the costumer indicates; this problem, becomes dynamic because the driver unknow where will the next pick-up or quantity or volume of goods take place.
 
-In 2004 Timon et al~\cite{Timon}, investigated the DVRP (Dynamic VRP) applied to electronic commerce (EC), they say that the  environment of the EC has voluminous, unpredictable, and dynamically changing customer orders, They studied the problem Business to Costumer (B2C), in an EC environment, and the purpose was a solution in three phases: initial-routes formation, inter-routes improvement, and intra-route improvement. 
+In 2004 Timon \textit{et.al.}~\cite{Timon}, investigated the DVRP (Dynamic VRP) applied to electronic commerce (e-commerce), they say that the  environment of the e-commerce has voluminous, unpredictable, and dynamically changing customer orders. They studied the problem Business to Costumer (B2C) in an e-commerce environment, and the purpose was a solution in three phases: initial-routes formation, inter-routes improvement, and intra-routes improvement.
 
-Alan Slater~\cite{slater_specification_2002} purpose and routing and scheduling method for the e-commerce environment, and allows to the costumers select their own delivery time windows. The methodology that he used is based in parallel tour-building and parallel insertion algorithms, the confirmation to the costumers is realized using GPS tracking and tracing.
+Alan Slater~\cite{slater_specification_2002} proposes a routing and scheduling method for the e-commerce environment, which allows the costumers to select their own delivery time windows. The methodology that he used is based in parallel tour-building and parallel insertion algorithms, and the confirmation to the costumers is realized using GPS tracking and tracing.
 
 \subsubsection*{Emergency services}
 
-Some services that arise into our society, are ``emergency services'', when a person is sick and needs and ambulance, when a person is robed and needs the police, in the case of a fire and a person has to call the firefighters, these are examples of services that can arise suddenly in any moment, in that problem is important to minimize the distance between the origin and arrival point, the availability of the resources (cars, tracks etc.), the level of the urgency. 
+Some services that arise into our society are ``emergency services''. These occur when, for instance, a person is sick and needs and ambulance, a person is robed and needs the police, in the case when there is a fire and a person has to call the firefighters. These are examples of services that can arise suddenly in any moment; in such case it is important to minimize the distance between the origin and arrival point, the availability of the resources (cars, tracks etc.), and the level of the urgency. 
 
 \subsubsection*{Taxi cab services}
 
-The taxi service is another application of the DVRP, is difficult to planning the taxi route before the taxi get out of the taxi's central, because suddenly the costumers need the service , that problem of assign a taxi route is more complex depending of the number of costumers, the positions of the taxi, the time and the arrival point.
+The taxi service is another application of the DVRP. It is difficult to plan the taxi route before the taxi leave the central, since the costumers can  suddenly need the service; such problem of assigning a taxi route is more complex depending on the number of costumers, the positions of the taxi, the time and the arrival point.
 
-Other VRPSD arise in delivering the post to large customers ~\cite{Markovic_2005}, vending machines ~\cite{yang_stochastic_2000} or delivering medical supplies in response to large-scale emergency (Dessouky et al., 2005~\cite{dessouky_rapid_2006}), also is possible view the features of the problem in recycling and waste management, among others.
+Other VRPSD arise in delivering the post to large customers ~\cite{Markovic_2005}, vending machines ~\cite{yang_stochastic_2000} or delivering medical supplies in response to a large-scale emergency ~\cite{dessouky_rapid_2006}. It is also possible to view the features of the problem in recycling and waste management, among others.
 
 \subsection{Solution methods}
 
-There are two different ways for dealing with VRPSD, either with fixed routes or a dynamic approach called often reoptimization. The methodology used to solve it depends of the type of model used for represent the problem, in the section \ref{sec:Form_VRPSD} we point out some mainly formulations useds to address the problem. 
+There are two different ways for dealing with VRPSD, either with fixed routes or a dynamic approach often called reoptimization. The methodology used to solve it depends on the type of model used to represent the problem; in section \ref{sec:Form_VRPSD} we point out some main formulations used to address the problem. 
 
-Some solution methods find the optimal solution, however the use of these techniques is limited to small sizes problems. Therefore, others methods have been proposed to aproximate optimal solutions.
+Some solution methods find the optimal solution, but however, the use of these techniques is limited to small size problems. Therefore, other methods have been proposed to aproximate optimal solutions.
 %Fixed routes
 %Reoptimization - dynamic approach.
 
@@ -61,33 +60,33 @@ Some solution methods find the optimal solution, however the use of these techni
 
 \subsubsection{Exact methods}
 
-The relevant exacts methods are \textit{branch-and-bound} algorithms, the problem can be formulated as a lineal model, Laporte et. al ~\cite{laporte_integer_2002} proposse a \textit{L-shape method} for solve VRPSD, it is an \textit{branch-and-cut} algorithm.
+The relevant exact methods are \textit{branch-and-bound} algorithms where the problem can be formulated as a lineal model. Laporte \textit{et.al.} ~\cite{laporte_integer_2002} proposed an \textit{L-shape method} for solve VRPSD, a \textit{branch-and-cut} algorithm.
 
-Bernard et al~\cite{cheung_dynamic_2008},  present a Dantzing and Wolf decomposition to resolve a dynamic model analyzing multi-periodic vehicles fleet size and modeling the fleet size, of each one. At the end the authors obtain optimal solutions for different demand distribution.
+Bernard \textit{et.al.} ~\cite{cheung_dynamic_2008},  present a Dantzing and Wolf decomposition to resolve a dynamic model analyzing multi-periodic vehicles fleet size and modeling the fleet size of each one. At the end, the authors obtained optimal solutions for different demand distribution.
 
-In 2007 Christian H et al~\cite{christiansen_branch-and-price_2007}, presented a Branch and price algorithm for the capacitated vehicle routing problem with stochastic demands, they used dynamic programming for to solve a subproblem.
+In 2007 Christian H \textit{et.al.}~\cite{christiansen_branch-and-price_2007}, presented a Branch and price algorithm for the capacitated vehicle routing problem with stochastic demands; they used dynamic programming to solve a subproblem.
 
 \subsubsection{Aproximate methods}
 
-The cyclic heuristic was proposed by Bertsimas ~\cite{bertsimas_vehicle_1992}, it is a simple and inexpensive algorithm that guarantee to reach the final state. We explain it in the section \ref{sec:initial_policy} where is used in our methodology. Gans and Ryzin ~\cite{Gans_1999} have studied the dynamic vehicle dispatching systems where the congestion is the main measure of performance, they used a lower and upper bound, basing in a simple batching heuristic, they found stability conditions for the optimal work in heavy traffic.
+The cyclic heuristic was proposed by Bertsimas ~\cite{bertsimas_vehicle_1992}, it is a simple and inexpensive algorithm that guarantee to reach the final state. We explain it in the section \ref{sec:initial_policy} where in our methodology is used. Gans and Ryzin ~\cite{Gans_1999} have studied the dynamic vehicle dispatching systems where the congestion is the main measure of performance. They used a lower and upper bound; based in a simple batching heuristic, they found stability conditions for the optimal work in heavy traffic.
 
-Yang et. al. ~\cite{yang_stochastic_2000} test two heuristic algorithms which solve the problem in two stages, the \textit{route-first-cluster-next} and \textit{cluster-first-route-next}, they cluster the customers  first and finding the best route for each cluster after. Furthermore, Cross-entropy heuristic method is propossed by Chepuri and Homem-de-Mello \cite{Chepuri} and to estimate the expected distance they use monte carlo sampling.
+Yang \textit{et.al.} ~\cite{yang_stochastic_2000} tested two heuristic algorithms which solve the problem in two stages: the \textit{route-first-cluster-next} and \textit{cluster-first-route-next}; they cluster the customers  first and find the best route for each cluster after that. Furthermore, the cross-entropy heuristic method is proposed by Chepuri and Homem-de-Mello \cite{Chepuri}, to estimate the expected distance they used monte carlo sampling.
 
-Local search heuristic commonly used for TSP have been used to solve VRPSD as OrOpt (~\cite{yang_stochastic_2000}, ~\cite{bianchi_hybrid_2006}), Yang et. al. used the 3-opt local search algorithm too.
+Local search heuristics commonly used for TSP have been used to solve VRPSD as OrOpt (~\cite{yang_stochastic_2000}, ~\cite{bianchi_hybrid_2006}). Yang et. al. used the 3-opt local search algorithm as well.
 
-Moretti et. al. ~\cite{Moretti} (2009) implemented an algorithm to solve the DVRP, they consider the demand and the location a stochastic variables, and the time windows are soft, their objective is define a set of routes that are dynamically updated, taking into account the new costumers, to solve they used a constructive algorithm with an adaptive tabu search framework.
+Moretti \textit{et.al.} ~\cite{Moretti} implemented an algorithm to solve the DVRP. They consider the demand and the location as stochastic variables, and the time windows as soft. Their objective is to define a set of routes that are dynamically updated, taking into account the new costumers. To solve they used a constructive algorithm with an adaptive tabu search framework.
 
-A genetic algorithm is another option used to solve this kind of problems, Haghani and Jung~\cite{haghani_dynamic_2005} presented a formulation for the DVRP with pick up and delivery and soft time windows  where there is multiple vehicles with different capacities, the real time service and and travel times are variant they proposed a genetic algorithm and their results were compared with exact methods.
+A genetic algorithm is another option used to solve this kind of problems, Haghani and Jung~\cite{haghani_dynamic_2005} presented a formulation for the DVRP with pick up and delivery and soft time windows,  multiple vehicles with different capacities, variant real time service and and travel times. They proposed a genetic algorithm and their results were compared with exact methods.
 
 \subsubsection{Dynamic programming}
 
 %Review
 
-The dynamic programming is one of the techniques most used to solve this kind of problems, Bertsekas ~\cite{Bertsekas} proposed efficient methods like Markov decision analysis, linear control model with quadratic cost, policies in the stochastic inventory problem, and so on. Furthermore, Secomandi~\cite{secomandi_comparing_2000} compare neuro-dynamic programming algorithms for VRPSD.
+The dynamic programming is one of the techniques most used to solve this kind of problems. Bertsekas ~\cite{Bertsekas} proposed efficient methods such as Markov decision analysis, linear control model with quadratic cost, policies in the stochastic inventory problem, and so on. Furthermore, Secomandi~\cite{secomandi_comparing_2000} compared neuro-dynamic programming algorithms for VRPSD.
 
 %\subsubsection{Neuro-Dynamic programming}
-Neuro Dynamic programming has been designed to deal with dynamic programming problems where the number of states is too large or is unknowed completely \cite{Bertsekas_1996}, Many authors have been followed this approach applying approximate policy iteration methods to deal with VRPSD. 
-Bertsekas ~\cite{Bertsekas1997} present the \textit{rollout algorithm} (RA) applied to combinatorial optimization problems, later Secomandi (~\cite{Secomandi_1998}, \cite{secomandi_rollout_2001}) show up it applied to VRPSD. Novoa and Storer ~\cite{novoa_approximate_2009} proposed a solution for the VRPSD using dynamic programing algorithms, they also consider the cost-of-go with the help of Monte Carlo simulation, the showed that in that king of problems the best method found is the one-step roll-out that started with a stochastic base sequence. In addition, (jC Goodson, 2013) proposed rollout policies for dynamic solutions to the multivehicle routing problem with stochastic demands and constrained times.
+Neuro Dynamic programming has been designed to deal with dynamic programming problems where the number of states is too large or is completely unknowed \cite{Bertsekas_1996}, Many authors have followed this approach applying approximate policy iteration methods to deal with VRPSD. 
+Bertsekas ~\cite{Bertsekas1997} presents the \textit{rollout algorithm} (RA) applied to combinatorial optimization problems; later, Secomandi (~\cite{Secomandi_1998}, \cite{secomandi_rollout_2001}) showed how to apply it to VRPSD. Novoa and Storer ~\cite{novoa_approximate_2009} proposed a solution for the VRPSD using dynamic programing algorithms; they also considered the cost-of-go with the help of Monte Carlo simulation, which showed that in that kind of problems the best method found is the one-step roll-out that started with a stochastic base sequence. In addition, (jC Goodson, 2013) proposed rollout policies for dynamic solutions to the multivehicle routing problem with stochastic demands and constrained times.
 
 
 
@@ -104,17 +103,17 @@ Bertsekas ~\cite{Bertsekas1997} present the \textit{rollout algorithm} (RA) appl
 
 \subsubsection{Hybrid methods}
 
-Bianchi et. al. ~\cite{bianchi_hybrid_2006} implement a simulated annealing, tabu search, iterated local search, ant colony optimization and evolutionary algorithms, and combine these with 2 local search tecniques OrOpt and 3-opt, the second local search has been used with good results in TSP.
+Bianchi \textit{et.al.} ~\cite{bianchi_hybrid_2006} implemented a simulated annealing, tabu search, iterated local search, ant colony optimization and evolutionary algorithms, and combined these with 2 local search tecniques: OrOpt and 3-opt. The second local search has been used with good results in TSP.
 
-Mendoza et. al. ~\cite{mendoza_memetic_2010} proposse a memetic algorithm for the multi-comparment vehicle routing problem with stochastic demands (MC-VRPSD), it's modeled as stochastic programming with resource and under each iteration of the genetic algorithm a 2-opt local search is performed, the results are compared with the deterministic version of the problem.
+Mendoza \textit{et.al.} ~\cite{mendoza_memetic_2010} proposed a memetic algorithm for the multi-comparment vehicle routing problem with stochastic demands (MC-VRPSD). It is modeled as stochastic programming with resource and under each iteration of the genetic algorithm, a 2-opt local search is performed. The results are compared with the deterministic version of the problem.
 
 \section{Formulation of VRPSD}\label{sec:Form_VRPSD}
 
-Defined a graph $G(V,E)$, as $V = \{0, 1, 2,\ldots,n\}$, where the node 0 denote the starting point for vehicles (depot), and the remaining nodes represent individual customers, the set $E$ of edges in the graph represents the roads or paths between a pair of customers $(i,j)$ and $d_{ij}$ is the distance between them, which is assumed to be known, symmetric and satisfies the triangle inequality.
+Given a graph $G(V,E)$, where $V = \{0, 1, 2,\ldots,n\}$ and the node 0 denotes the starting point for vehicles (depot), and the remaining nodes represent individual customers. The set $E$ of edges in the graph represents the roads or paths between a pair of customers $(i,j)$ and $d_{ij}$ is the distance between them, which is assumed to be known, symmetric and satisfies the triangle inequality.
 
-A vehicle (only one) with fixed capacity $Q < \infty$ starts from the depot and executes deliveries (or pickups only) of a product to different customers, $D_i$ denotes the random variable representing the demand of customer $i$, the probability distribution $D_i$ is discrete and known and is denoted by $p_i(k)= Pr\{D_i=k\}, k=0,1,\ldots,K \leq R$. The customer demands are assumed to be independent and its exact value is known only when the vehicle arrives to the customer location, if customer demand exceeds the available capacity of the vehicle, i.e. a \textit{route failure}, the vehicle must return to the depot to restore its original capacity. Hence, the depot must have a capacity at least equal to $nR$. %be carefull with k in the notation can be used different above.
+A vehicle (only one) with fixed capacity $Q < \infty$ starts from the depot and executes deliveries (or pickups only) of a product to different customers, $D_i$ denotes the random variable representing the demand of customer $i$, and the probability distribution $D_i$ is discrete and known and is denoted by $p_i(k)= Pr\{D_i=k\}, k=0,1,\ldots,K \leq R$. The customer demands are assumed to be independent and their exact value is known only when the vehicle arrives to the customer location. If a customer demand exceeds the available capacity of the vehicle, i.e. a \textit{route failure}, the vehicle must return to the depot to restore its original capacity. Hence, the depot must have a capacity at least equal to $nR$. %be carefull with k in the notation can be used different above.
 
-Yang, et. al. ~\cite{yang_stochastic_2000} proposse a simple resource action for early replenishment where the vehicle come back to the depot even whenever it haven't depleted its stock to restore the capacity to $Q$, allowing proactive depot trips to avoid route failures. Hence, considering proactive restocking of the vehicle is not necesary to consider multiple routes, in fact, Yang, et. al. ~\cite{yang_stochastic_2000} point out that a single route is more efficient than multiple vehicle route system, assuming that only distance constrain the route, ommitting for example time duration.
+Yang, et. al. ~\cite{yang_stochastic_2000} propose a simple resource action for early replenishment where the vehicle come back to the depot even whenever it haven't depleted its stock to restore the capacity to $Q$, allowing proactive depot trips to avoid route failures. Hence, considering proactive restocking of the vehicle is not necesary to consider multiple routes, in fact, Yang, et. al. ~\cite{yang_stochastic_2000} point out that a single route is more efficient than multiple vehicle route system, assuming that only distance constrain the route, ommitting for example time duration.
 
 The objective is minimize the expected distance finding out a routing solution, maybe in the form of routing rules, such that demand
 at each customer is satisﬁed. Thus, VRPSDs are usually modeled as mixed or pure integer stochastic programs, or as Markov decision process.
@@ -145,7 +144,7 @@ These models are based about the premise of stochastic optimization problems are
 In SPRs, the aim is to determine a first stage solution that minimizes the expected cost of the second stage solution: this cost is made up of the cost of the first stage solution, plus the expected net cost of recourse. SPRs are typically more difficult to solve than are CCPs, but their objective function is more meaningful ~\cite{gendreau_stochastic_1996}.
 
 
-Yang ~\cite{yang_stochastic_2000} proposse two heuristic methods to solve the problem and Laporte et. al. ~\cite{laporte_integer_2002} and Gendrau et. al. ~\cite{gendreau_exact_1995} proposse a \textit{L-shape} method to find optimal solutions, i.e. an branch-and-cut algorithm adjusted for the stochastic approach. Below we present the model formuled by ~\cite{Dror_2005} based on Laporte model although allowing proactive replenishments of the vehicle in a single route, supported on Yang's affirmation of it is more efficient than multiple routes.
+Yang ~\cite{yang_stochastic_2000} propose two heuristic methods to solve the problem and Laporte et. al. ~\cite{laporte_integer_2002} and Gendrau et. al. ~\cite{gendreau_exact_1995} propose a \textit{L-shape} method to find optimal solutions, i.e. an branch-and-cut algorithm adjusted for the stochastic approach. Below we present the model formuled by ~\cite{Dror_2005} based on Laporte model although allowing proactive replenishments of the vehicle in a single route, supported on Yang's affirmation of it is more efficient than multiple routes.
 
 %Is possible close the paragraphs below
 Let $T(\hat{x},D) =\sum_i^n\sum_j^nd_{ij}x_{ij}$ be the costo of the routing solution where $\hat{x}=\{x_{ij}\},i\in V,j\in V$ is the vector of routing decisions, $\hat{x}_{ij} =1$ if the vehicle visits directly the node $i$ from $j$ node and $0$ otherwise, $D$ is a vector of the customer demands disclosed one ath a time when the vehicle arrive at customer location. Both $\hat{x}$ and $D$ are random variables
