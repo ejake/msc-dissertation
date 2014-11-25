@@ -18,7 +18,7 @@ Following to Bertsekas ~\cite{bertsekas_dynamic_1995} the principle of optimalit
 \forall k=0,1,\ldots,N-1
 \end{multline}
 
-However, the exact assesing of $J^*$ is computationally imposible given the size of the state space. Therefore, is necessary approximate it function for generate good, but not necessarily optimal policies.
+However, the exact assesing of $J^*$ is computationally infeasible given the size of the state space. Therefore, is necessary approximate it function for generate good, but not necessarily optimal policies.
 
 Let $\tilde{J}_k$ be an approximation of $J^*_k$, then a control can $\tilde{u}_k$ be assesed
 
@@ -94,29 +94,30 @@ Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triang
 
 \section{Policy iteration}
 
-The policy iteration algorithm generates a sequence of stationary policies, each with improved cost over the preceding one. The algorithm describe the following sequence of steps described in the algorithm \ref{algo:policy_iteration_general}:
-
-\begin{enumerate}
- \item Initialization
- \item Policy evaluation
- \item Policy improvement
-\end{enumerate}
+The policy iteration algorithm is an dynamic programming technnique, it generates a sequence of stationary policies, each with improved cost over the preceding one. The algorithm describe the following sequence of steps \ref{algo:policy_iteration_general}:
 
 \begin{algorithm}
- \textbf{Step 1:} Guess an initial stationary policy $\pi_0$\\
- \textbf{Step 2:} Given the stationary policy $\pi_k$ compute the corresponding cost function $J_{\pi_k}$\\
- \textbf{Step 3:} Obtain a new stationary policy $\pi_{k+1}$\\
+ \textbf{1. Initialization:} Guess an initial stationary policy $\pi_0$\\
+ \textbf{2. Policy evaluation:} Given the stationary policy $\pi_k$ compute the corresponding cost function $J_{\pi_k}$\\
+ \textbf{3. Policy improvement:} Obtain a new stationary policy $\pi_{k+1}$\\
  Repeat step 2 to 3\\
  \caption{Policy iteration algorithm}\label{algo:policy_iteration_general}
 \end{algorithm}
 
-The rollout algorithm is a policy iteration technnique
+If the policy evaluation step compute $J_{\pi_k}(x)$ for all states $x \in S$ and the algorithm runs until  $J_{\pi_m} = J_{\pi_{m+1}}$, $\forall x \in S$ then the algorithm finds the optimal policy $\pi^*$. In contrast, when $|S|$ is too large this algorithm is inpractical; although these steps can be approximated to deal with large-scale systems despite that convergence to optimal solution is not guaranteed.
 
 
 \subsection{Rollout algorithm}
 %\subsection{One-step rollout algorithm}
 
+The rollout algorithm is an approximate policy iteration technnique
+
+Rollout policies aim to increase the effectiveness of a heuristic by iteratively applying it, or rolling it out, at each decision stage (Goodson, 2010).
+
 RA require a base policy
+
+``Assume that a given heuristic base policy $\mu$ for the problem is known. Also assume that the cost-to-go of this p ''(Secomandi, 2000)
+
 The rollout algorithm build a policy $\pi$ starting from any given state and following an \textit{a priori} solution to VRPSD
 
 %(Solution alternatives for following \tau in rollout algorithm)
@@ -131,6 +132,8 @@ The shift (cyclic heuristi)c is perfomed to partial tour not included at the pol
 
 
 cyclic heuristic propossed by Bertsimas 92  and improved by himsel 95 and later used by a lot of authors because it is simple 
+
+cyclic heuristic is a permutation shift cyclic order
 
 cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, then $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$
 
