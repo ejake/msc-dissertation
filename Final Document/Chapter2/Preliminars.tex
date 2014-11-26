@@ -146,7 +146,7 @@ In SPRs, the aim is to determine a first stage solution that minimizes the expec
 Yang ~\cite{yang_stochastic_2000} propose two heuristic methods to solve the problem and Laporte et. al. ~\cite{laporte_integer_2002} and Gendrau et. al. ~\cite{gendreau_exact_1995} propose a \textit{L-shape} method to find optimal solutions, i.e. an branch-and-cut algorithm adjusted for the stochastic approach. Below we present the model formuled by ~\cite{Dror_2005} based on Laporte model although allowing proactive replenishments of the vehicle in a single route, supported on Yang's affirmation of it is more efficient than multiple routes.
 
 %Is possible close the paragraphs below
-Let $T(\hat{x},D) =\sum_i^n\sum_j^nd_{ij}x_{ij}$ be the costo of the routing solution where $\hat{x}=\{x_{ij}\},i\in V,j\in V$ is the vector of routing decisions, $\hat{x}_{ij} =1$ if the vehicle visits directly the node $i$ from $j$ node and $0$ otherwise, $D$ is a vector of the customer demands disclosed one ath a time when the vehicle arrive at customer location. Both $\hat{x}$ and $D$ are random variables
+Let $T(\hat{x},D) =\sum_i^n\sum_j^nd_{ij}x_{ij}$ be the cost of the routing solution where $\hat{x}=\{x_{ij}\},i\in V,j\in V$ is the vector of routing decisions, $\hat{x}_{ij} =1$ if the vehicle visits directly the node $i$ from $j$ node and $0$ otherwise, $D$ is a vector of the customer demands disclosed one ath a time when the vehicle arrive at customer location. Both $\hat{x}$ and $D$ are random variables
 
 \begin{align}\label{eq:SPR}
   & \min\limits_{\hat{x}} E_D[T(\hat{x},D)]\\ 
@@ -287,7 +287,7 @@ Mixed policies not only following a sequence $\tau$ of customers but also prescr
     \caption{static and mixed routing policies}\label{fig:routing_policies}
 \end{figure}
 
-To represent the system state at stage $k$, the vector $x_k$ is defined as $x_k=(l,q_l, r_1,\ldots,r_n)$ of size $n+2$, where $l \in \{0,1,\ldots,n\}$, is the current location of the vehicle and $q_l \leq Q$ is its capacity available \textit{after} delivery to customer $l$; the elements $r_i$ represents the remaining demand to satisfy to the costumer $i$. A unknown demand is denoted as -, if customer $i$ is visited and its demand has been satisfied completely $r_i$ will take the value 0, otherwise, take any value between 1 and $R$. The initial state of the system $x_0$ is $(0,Q,-,-,\ldots,-)$ and the final state occurs when the vehicle returns to the depot after serving the demands of customers, represented as $(0,Q,0,0,\ldots,0)$. Thus, the number of states in the system is $O(nQR^n)$
+To represent the system state at stage $k$, the vector $x_k$ is defined as $x_k=(l,q_l, r_1,\ldots,r_n)$ of size $n+2$, where $l \in \{0,1,\ldots,n\}$, is the current location of the vehicle and $q_l \leq Q$ is its capacity available \textit{after} delivery to customer $l$; the elements $r_i$ represents the remaining demand to satisfy to the costumer $i$. A unknown demand is denoted as -, if customer $i$ is visited and its demand has been satisfied completely $r_i$ will take the value 0, otherwise, take any value between 1 and $R$. The initial state of the system $x_0$ is $(0,Q,-,-,\ldots,-)$ and the final state $x_N$ occurs when the vehicle returns to the depot after serving the demands of customers, represented as $(0,Q,0,0,\ldots,0)$. Thus, the number of states in the system is $O(nQR^n)$
 
 Let $N$ be a random variable representing the number of stages or transitions from initial state to the end, the vector $\pi = {\mu_0, \mu_1,\ldots, \mu_{N-1}}$ is the policy or sequence of functions to optimize, where $\mu_k$ is a function that associates a decision or control $u_k=\mu_k(x_k)$ for each state, $u_k \in U_k(x_k)$ and $U_k(x_k) = \{\{m \in \{1,\ldots,n\}\}|r_m\neq0\}\cup 0\} \times \{a:a \in \{0,1\}\}$. Control $u_k$ is represented as ordered pairs $(m,a)$, $m$ is any costumer not yet served, $m$ is 0 when all demands have been satisfied and the system enters its completion stage, $a$ is 0 if the vehicle visits customers directly and 1 if the vehicle stops first at the depot for resupply.
 
@@ -341,7 +341,7 @@ If $J_N^*(x)$ is known for all stages, the optimal control $u_k^*$ at each stage
 \sum_{x_{k+1}\in S}p_{x_kx_{k+1}}(u_k)J_N^*(x_{k+1})|x_k=x, \forall x\in S
 \end{multline}
 
-The problem is that $J_N^*(x)$ is unknown and its calculation is a computationally intractable problem given the size of state space. Secomandi ~\cite{secomandi_rollout_2001} point out that compute an optimal policy becomes quickly intractable when $n$ grows beyond 10. The chapter \ref{chap:dp_methodology} deal with approximate this function through of dynamic-programming method efficiently computable.
+The problem is that $J_N^*(x)$ is unknown and its calculation is a computationally intractable problem given the size of state space. Secomandi ~\cite{secomandi_rollout_2001} point out that compute an optimal policy becomes quickly intractable when $n$ grows beyond 10. The chapter \ref{chap:dp_methodology} deal with approximate this function through of an aproximate dynamic-programming method efficiently computable.
 
 \section{Summary}
 
