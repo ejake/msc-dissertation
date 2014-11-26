@@ -110,36 +110,42 @@ If the policy evaluation step compute $J_{\pi_k}(x)$ for all states $x \in S$ an
 \subsection{Rollout algorithm}
 %\subsection{One-step rollout algorithm}
 
-The rollout algorithm is an approximate policy iteration technnique
-
-Rollout policies aim to increase the effectiveness of a heuristic by iteratively applying it, or rolling it out, at each decision stage (Goodson, 2010).
-
-RA require a base policy
-
-The rollout algorithm build a policy $\pi$ starting from any given state and following an \textit{a priori} solution to VRPSD
-
-%(Solution alternatives for following \tau in rollout algorithm)
-%This is a topic that must be discussed with the group
-%Option 1 
-For changing $\tau$ after the first state, when there are a transition of $x_0$ state to $x_l$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$.
-
-The shift (cyclic heuristi)c is perfomed to partial tour not included at the policy.
+The rollout algorithm is an approximate policy iteration technnique, used to to increase the effectiveness of a heuristic by iteratively applying it, or rolling it out, at each decision stage (Goodson, 2010). The algorithm require to know a base policy $\pi$ for the problem. Also assume that the cost-to-go of this base policy from any given state $x$ can be easily computed (Secomandi, 2000). Thus, it build a policy $\pi$ starting from any given state and following an \textit{a priori} solution to VRPSD.
 
 
 \subsubsection{Defining initial policy}\label{sec:initial_policy}
 
 
-cyclic heuristic propossed by Bertsimas 92  and improved by himsel 95 and later used by a lot of authors because it is simple 
+Cyclic heuristic $\mathcal{C}$ shift $\tau$ to obtain an permutation keeping an cyclic order. It builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, so, $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$. Cyclic heuristic was propossed by Bertsimas 92  and improved by himsel 95 and later used by a many authors because it is simple, inexpensive and sequentially consistent (Secomandi dissertation, 1998)
 
-cyclic heuristic is a permutation shift cyclic order
+Following cyclic heuristic the rollout algorithm describe a fixed number of iterations given an instance of the problem changing $\tau$ after the first state. Since there are a transition of $x_l$ state to $x_{l+1}$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$. Since that already fully served customers are assumed to be skipped in $\tau^\mathcal{C}_l$.
 
-cyclic heuristic $\mathcal{C}$ builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, then $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$
+%(Solution alternatives for following \tau in rollout algorithm)
+%This is a topic that must be discussed with the group
+%Option 1 
 
 
 %Option 2
 
 
 \begin{algorithm}
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\SetKwRepeat{Repeat}{repeat}{until}
+\Input{$\pi_0$, state $x_0$}
+\Output{$\tilde{\pi}$ policy} 
+Given a initial policy $\pi_0=u_1,u_2,\ldots u_{N-1}$ and initial state $x_0$ \\
+$\tilde{\pi} = \emptyset$\\
+\Repeat{the final state $x_N$ is reached}{
+$\tilde{\mu_k} = \arg\min\limits_{u_k \in U_k(x_k)} \{\min\{\tilde{J}^0(x_k),tilde{J}^1(x_k)\}\}$\\
+Add 
+}
+
+ 
+\end{algorithm}
+
+
+\begin{algorithm}
+
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
  \Input{tour $\tau_{1\times n+2}$, state $x_{1 \times n+2}$}
 \Output{$\pi$ policy}
@@ -195,7 +201,10 @@ The $g^a(l,m,x)$ function is the expected distance from $l$ to $m$ given the sta
 
 $x_l = \Upsilon(x,u)$ represent the transition of the state $x$ to state $x_l$ given that the control $u$ is realized.
 
-%\subsection{Two-step rollout algorithm}
+%complexity
+
+Rollout explore $\frac{1}{2}n(n+1)$ different policies with an computational cost of $O(nRQ)$ evaluating the expected distance for each policy, hence, the rollout algorithm runs in $O(n^3RQ)$ time.
+
 
 
 
