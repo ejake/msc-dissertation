@@ -94,7 +94,7 @@ Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triang
 
 \section{Policy iteration}
 
-The policy iteration algorithm is an dynamic programming technnique, it generates a sequence of stationary policies, each with improved cost over the preceding one. The algorithm describe the following sequence of steps \ref{algo:policy_iteration_general}:
+The policy iteration algorithm is a dynamic programming technnique, it generates a sequence of stationary policies, each with improved cost over the preceding one. The algorithm describe the following sequence of steps \ref{algo:policy_iteration_general}:
 
 \begin{algorithm}
  \textbf{1. Initialization:} Guess an initial stationary policy $\pi_0$\\
@@ -116,9 +116,9 @@ The rollout algorithm is an approximate policy iteration technnique, used to to 
 \subsubsection{Defining initial policy}\label{sec:initial_policy}
 
 
-Cyclic heuristic $\mathcal{C}$ shift $\tau$ to obtain an permutation keeping an cyclic order. It builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, so, $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$. Cyclic heuristic was propossed by Bertsimas 92  and improved by himsel 95 and later used by a many authors because it is simple, inexpensive and sequentially consistent (Secomandi dissertation, 1998)
+Cyclic heuristic $\mathcal{C}$ shifts $\tau$ to obtain an permutation keeping an cyclic order. It builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, so, $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$. Cyclic heuristic was propossed by Bertsimas 92  and improved by himsel 95 and later used by a many authors because it is simple, inexpensive and sequentially consistent (Secomandi dissertation, 1998)
 
-Following cyclic heuristic the rollout algorithm describe a fixed number of iterations given an instance of the problem changing $\tau$ after the first state. Since there are a transition of $x_l$ state to $x_{l+1}$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$. Since that already fully served customers are assumed to be skipped in $\tau^\mathcal{C}_l$.
+Following cyclic heuristic the rollout algorithm \ref{algo:rollout} describe a fixed number of iterations given an instance of the problem changing $\tau$ after the first state. Since there are a transition of $x_l$ state to $x_{l+1}$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$. Since that already fully served customers are assumed to be skipped in $\tau^\mathcal{C}_l$.
 
 %(Solution alternatives for following \tau in rollout algorithm)
 %This is a topic that must be discussed with the group
@@ -126,18 +126,24 @@ Following cyclic heuristic the rollout algorithm describe a fixed number of iter
 
 
 %Option 2
+In order to compute rollout policy controls, the control which define the first customer $l_1$ to be visited by $\tilde{\pi}^\mathcal{C}$ is found as:
+
+\[\mu_0(x_0) = u_0 = (l_1,0) = \arg\min\limits_{l \in V-\{0\}} \{\tilde{J}_{\pi_0}(x_0)\}\]
+
+where the expected length $\tilde{J}_{\pi_0}(x_0)$ of ${\pi_0}$ which follow the cylcic tour $\tau^\mathcal{C}_l=(0,l,l+1,\ldots,1,n,\ldots,l-1,0)$, in the initial state $x_0$, is computed using the algorithm $\Gamma$ \ref{algo:expecteddistance}. Hence, the system moves to next state visiting the customer $l_1$ directrly who is fully served since $q_0 = Q$ and $r_l \leq Q$.
 
 
+ 
 \begin{algorithm}
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
 \SetKwRepeat{Repeat}{repeat}{until}
 \Input{$\pi_0$, state $x_0$}
-\Output{$\tilde{\pi}$ policy} 
+\Output{$\tilde{\pi}^\mathcal{C}$ policy} 
 Given a initial policy $\pi_0=u_1,u_2,\ldots u_{N-1}$ and initial state $x_0$ \\
-$\tilde{\pi} = \emptyset$\\
+$\tilde{\pi}^\mathcal{C} = \emptyset$\\
 \Repeat{the final state $x_N$ is reached}{
-$\tilde{\mu_k} = \arg\min\limits_{u_k \in U_k(x_k)} \{\min\{\tilde{J}^0_{pi_k}(x_k),\tilde{J}^1_{pi_k}(x_k)\}\}$\\
-Add $\tilde{\mu_k}$ to $\tilde{\pi}$\\
+$\tilde{\mu_k} = \arg\min\limits_{u_k \in U_k(x_k)} \{\min\{\tilde{J}^0_{\pi_k}(x_k),\tilde{J}^1_{\pi_k}(x_k)\}\}$\\
+Add $\tilde{\mu_k}$ to $\tilde{\pi}^\mathcal{C}$\\
 Apply the control $\tilde{\mu_k}$ to the state $x_k$.i.e.
 $x_{k+1} = f_k(x_k,\tilde{\mu_k}(x_k),D)$\\
 Roll out $\pi_k$ since $\tilde{\mu_k}$ to $\mu_{N-1}$ following cyclic heuristic\\
@@ -145,22 +151,36 @@ Roll out $\pi_k$ since $\tilde{\mu_k}$ to $\mu_{N-1}$ following cyclic heuristic
 \caption{Rollout algorithm}\label{algo:rollout}
 \end{algorithm}
 
-The $g^a(l,m,x)$ function is the expected distance from $l$ to $m$ given the state $x$, where $a=1$ if earlier replanishment is specified or $a=0$ in otherwise. The function is described below.
 
-\begin{equation}\label{ra:Cost2Go0}
- g^0(l,m,x)=d(\tau_l,m)+\sum_{k=0}^{q_l}p_m(k)\Gamma(\tau,l+1,q_l-k)+\sum_{k=q_l+1}^{K_m}2d(0,m)p_m(k)\Gamma(\tau,l+1,q_l+Q-k)%Review if \Gamma(\tau,l+1,q_l+Q-k) or \Gamma(\tau,l+1,Q-k)
+For some state $x_k = (k,q_k,r_1,\ldots,r_n)$, $\tilde{J}^0_{\pi_k}(x_k)$ compute the expected distance of move the vehicle directly to the next customer following the policy ${\pi_k}$ thereafter.
+
+\begin{equation}\label{ra:Cost2Go0}%Review notation
+ \tilde{J}^0_{\pi_k}(x_k)=d(\tau_l,m)+\sum_{k=0}^{q_l}p_m(k)\Gamma(\tau,l+1,q_l-k)+\sum_{k=q_l+1}^{K_m}2d(0,m)p_m(k)\Gamma(\tau,l+1,q_l+Q-k)%Review if \Gamma(\tau,l+1,q_l+Q-k) or \Gamma(\tau,l+1,Q-k)
 \end{equation}
 
-\begin{equation}\label{ra:Cost2Go1}
- g^1(l,m,x)=d(0,\tau_l)+d(0,m)+\sum_{k=0}^{K_m}p_m(k)\Gamma(\tau,l+1,Q-k)
+While $\tilde{J}^1_{\pi_k}(x_k)$ assess the expected distance performing an proactive replanishment before of move the vehicle to the next customer following the policy ${\pi_k}$ thereafter.
+
+\begin{equation}\label{ra:Cost2Go1}%Review notation
+ \tilde{J}^1_{\pi_k}(x_k)=d(0,\tau_l)+d(0,m)+\sum_{k=0}^{K_m}p_m(k)\Gamma(\tau,l+1,Q-k)
 \end{equation}
 
+Thus, the control $\tilde{\mu_k}$ which decides to visit the customer $l$ is computed as follows depending on the smaller cost:
 
-$x_l = \Upsilon(x,u)$ represent the transition of the state $x$ to state $x_l$ given that the control $u$ is realized.
+\begin{equation}\label{eq:costg}
+    \tilde{\mu_k} = \left \{ \begin{array}{ll}
+    (l,0), & \text{if } \tilde{J}^0_{\pi_k}(x_k) \leq \tilde{J}^1_{\pi_k}(x_k)\\
+    (l,1), & \text{in other case}
+    \end{array} \right.
+ \end{equation}
+
 
 %complexity
 
-Rollout explore $\frac{1}{2}n(n+1)$ different policies with an computational cost of $O(nRQ)$ evaluating the expected distance for each policy, hence, the rollout algorithm runs in $O(n^3RQ)$ time.
+Rollout explore $\frac{1}{2}n(n+1)$ different policies with an computational cost of $O(nRQ)$ in order to evaluate the expected distance for each one, hence, the rollout algorithm runs in $O(n^3RQ)$ time.
+
+\section{Summary}
+
+Rollout algorithm is an approximate atochastic dynamic programming technnique implemented to improve a \textit{a priori} policy. We use cyclic heuristic as base policy since it is simple, inexpensive and sequentially consistent. Finally. we describe the rollout algorithm and point out the computational complexity to perform it.
 
 
 

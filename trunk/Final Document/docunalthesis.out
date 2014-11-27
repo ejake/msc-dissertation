@@ -22,18 +22,19 @@
 \BOOKMARK [2][-]{subsection.3.1.1}{3.1.1. Expected distance}{section.3.1}% 22
 \BOOKMARK [1][-]{section.3.2}{3.2. Policy iteration}{chapter.3}% 23
 \BOOKMARK [2][-]{subsection.3.2.1}{3.2.1. Rollout algorithm}{section.3.2}% 24
-\BOOKMARK [0][-]{chapter.4}{Chapter 4. Hybrid Evolutionary approach}{}% 25
-\BOOKMARK [1][-]{section.4.1}{4.1. Hybrid Genetic Algorithm}{chapter.4}% 26
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1. A basic genetic algorithm for vehicle routing problem with stochastic demands}{section.4.1}% 27
-\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2. Genetic operators}{section.4.1}% 28
-\BOOKMARK [0][-]{chapter.5}{Chapter 5. Experiments and Numerical Results}{}% 29
-\BOOKMARK [1][-]{section.5.1}{5.1. Instances of VRPSD}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1. Instance generation}{section.5.1}% 31
-\BOOKMARK [1][-]{section.5.2}{5.2. Assess the expected distance for a given policy}{chapter.5}% 32
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1. Expected distance algorithm}{section.5.2}% 33
-\BOOKMARK [0][-]{chapter.6}{Chapter 6. Conclusions}{}% 34
-\BOOKMARK [1][-]{section.6.1}{6.1. Conclusions}{chapter.6}% 35
-\BOOKMARK [1][-]{section.6.2}{6.2. Perspectives}{chapter.6}% 36
-\BOOKMARK [0][-]{chapter.7}{Chapter 7. Appendix A}{}% 37
-\BOOKMARK [1][-]{section.7.1}{7.1. Algorithms detaileds}{chapter.7}% 38
-\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 39
+\BOOKMARK [1][-]{section.3.3}{3.3. Summary}{chapter.3}% 25
+\BOOKMARK [0][-]{chapter.4}{Chapter 4. Hybrid Evolutionary approach}{}% 26
+\BOOKMARK [1][-]{section.4.1}{4.1. Hybrid Genetic Algorithm}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1. A basic genetic algorithm for vehicle routing problem with stochastic demands}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2. Genetic operators}{section.4.1}% 29
+\BOOKMARK [0][-]{chapter.5}{Chapter 5. Experiments and Numerical Results}{}% 30
+\BOOKMARK [1][-]{section.5.1}{5.1. Instances of VRPSD}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1. Instance generation}{section.5.1}% 32
+\BOOKMARK [1][-]{section.5.2}{5.2. Assess the expected distance for a given policy}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1. Expected distance algorithm}{section.5.2}% 34
+\BOOKMARK [0][-]{chapter.6}{Chapter 6. Conclusions}{}% 35
+\BOOKMARK [1][-]{section.6.1}{6.1. Conclusions}{chapter.6}% 36
+\BOOKMARK [1][-]{section.6.2}{6.2. Perspectives}{chapter.6}% 37
+\BOOKMARK [0][-]{appendix.A}{Appendix A. Appendix A}{}% 38
+\BOOKMARK [1][-]{section.A.1}{A.1. Algorithms detaileds}{appendix.A}% 39
+\BOOKMARK [0][-]{appendix*.9}{Bibliography}{}% 40
