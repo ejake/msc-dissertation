@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.20)  27 NOV 2014 10:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.20)  29 NOV 2014 07:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,15 +636,7 @@ File: Images/Chapter2/exIns4a-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Images/Chapter2/exIns4a-eps-converted-to.pdf used on i
 nput line 285.
 (pdftex.def)             Requested size: 443.86299pt x 138.02484pt.
-
-Overfull \hbox (14.7834pt too wide) in paragraph at lines 290--291
-[]\T1/cmr/m/n/12 To rep-re-sent the sys-tem state at stage $\OML/cmm/m/it/12 k$
-\T1/cmr/m/n/12 , the vec-tor $\OML/cmm/m/it/12 x[]$ \T1/cmr/m/n/12 is de-fined 
-as $\OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 l; q[]; r[]; [] ; 
-r[]\OT1/cmr/m/n/12 )$
- []
-
-[15] [16 <./Images/Chapter2/exIns4a-eps-converted-to.pdf>]
+ [15] [16 <./Images/Chapter2/exIns4a-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter2/System_SDP.eps>
 (epstopdf)                    date: 2014-11-20 04:12:28
 (epstopdf)                    size: 51185 bytes
@@ -664,6 +656,9 @@ File: Images/Chapter2/System_SDP-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Images/Chapter2/System_SDP-eps-converted-to.pdf used o
 n input line 316.
 (pdftex.def)             Requested size: 443.86299pt x 121.45035pt.
+
+Underfull \vbox (badness 3219) has occurred while \output is active []
+
  [17 <./Images/Chapter2/System_SDP-eps-converted-to.pdf>]) [18]
 \openout2 = `Chapter4/Chapter4.aux'.
 
@@ -698,27 +693,27 @@ pdf>
 (epstopdf)                    size: 17095 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter3/ga_basic-e
 ps-converted-to.pdf Images/Chapter3/ga_basic.eps>
-(epstopdf)             \includegraphics on input line 32.
+(epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
 
 <Images/Chapter3/ga_basic-eps-converted-to.pdf, id=561, 485.815pt x 367.3725pt>
 File: Images/Chapter3/ga_basic-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Chapter3/ga_basic-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter3/ga_basic-eps-converted-to.pdf used on 
-input line 32.
+input line 37.
 (pdftex.def)             Requested size: 266.3205pt x 201.38841pt.
  [25 <./Images/Chapter3/ga_basic-eps-converted-to.pdf>]
 
 LaTeX Warning: Reference `fig:customer_n10_f1_s1' on page 26 undefined on input
- line 75.
+ line 80.
 
 
 LaTeX Warning: Reference `fig:tour_n10_f1_s1' on page 26 undefined on input lin
-e 85.
+e 90.
 
 
 LaTeX Warning: Reference `fig:improve_n10_f1_s1' on page 26 undefined on input 
-line 94.
+line 99.
 
 ) [26]
 \openout2 = `Chapter5/Results.aux'.
@@ -862,7 +857,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
 Package rerunfilecheck Info: File `docunalthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1B8405B814FEF786F7229497534BFAC9;2922.
+(rerunfilecheck)             Checksum: 7A3A1424FBAFD69668415F694F2F848C;2922.
 
 
 LaTeX Warning: There were undefined references.
@@ -900,7 +895,7 @@ ublic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1
 200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/
 texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sfti1200.pfb>
-Output written on docunalthesis.pdf (46 pages, 577689 bytes).
+Output written on docunalthesis.pdf (46 pages, 577795 bytes).
 PDF statistics:
  759 PDF objects out of 1000 (max. 8388607)
  670 compressed objects within 7 object streams

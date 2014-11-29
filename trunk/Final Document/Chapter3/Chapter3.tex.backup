@@ -6,9 +6,12 @@
 
 \section{Hybrid Genetic Algorithm}
 
-A evolutionary algorithm is a technique bio-inspired in the evolution of some structures, it was proposed in first time by John Holland in the 60's, this algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection, the population generated in each iteration is evaluated and then the individuals that had a better fitness are chosen for the next generation with more probability.
+A evolutionary algorithm is a technique bio-inspired by the espicies evolution. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more probability.
 
 A hybrid evolutionary algorithm or hybrid genetic algorithm are very popular techniques that offers practical advantages to deal with complex and hardly optimization problems. (Grosan, 2007) present a review of hybrid genetic architectures frecuently used.
+
+
+
 
 ``Evolutionary algorithm behavior is determined by the exploitation (improve solution - local search) and exploration (avoid local optimum extending the search space) relationship kept throughout the run''
 
@@ -34,6 +37,8 @@ A example of a basic GA used to find solutions to VRPSD is showed in general for
     \caption{Basic genetic algorithm}\label{fig:ga_basic}
 \end{figure}
 
+Often hybridazation is included in inicialization and reproduction operators.
+
 What is The fitness function? %answer
 
 The crossover operator consist in selecting two different individuals $I_1$ and $I_2$ with probability dependently of their fitness value respectively, in contrast a random cut point $\gamma$ is selected uniformly $\gamma \in [1,n]$, then a new individual raise of concatenate the part $I_1$ sequence of 1 to the cut point with the part of sequence $I_2$ of cut point to $n$, at some times this process can be inverted, e.g. $I_1 = \{2, 3, 4, 5, 1\}$, $I_2= \{2, 3, 4, 1, 5\}$, then $I_1\times I_2 = \{2, 3, 4, 1, 5\}$. When a element in the crossover process can be generate a unfeasible sequence is corrected.
@@ -50,7 +55,7 @@ We represents individuals as a policy tour
 Size of population:
 
 Deprecated:
-Size of population is $\lfloor \alpha \log n \rfloor$ where $\alpha$ is a tuneable parameter which should be fixed depending of computational resources
+Size of population is $\lfloor \alpha \log n \rfloor$ where $\alpha$ is a tuneable parameter which should be fixed depending of computational resources 
 
 Used:
 Size of population is $\lfloor \max \{ n+\alpha(n\Delta_{E'}), n/4 \} \rfloor$ where $\alpha$ is a tuneable parameter which should be fixed depending of computational resources, it reward a offspring that improve the quality of the solutions regard to theirs parents increasing the population size, otherwise, when the quality of the solutions decrease the size of population is punished.

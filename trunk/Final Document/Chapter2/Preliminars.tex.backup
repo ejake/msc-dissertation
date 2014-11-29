@@ -113,20 +113,19 @@ Given a graph $G(V,E)$, where $V = \{0, 1, 2,\ldots,n\}$ and the node 0 denotes 
 
 A vehicle (only one) with fixed capacity $Q < \infty$ starts from the depot and executes deliveries (or pickups only) of a product to different customers, $D_i$ denotes the random variable representing the demand of customer $i$, and the probability distribution $D_i$ is discrete and known and is denoted by $p_i(k)= Pr\{D_i=k\}, k=0,1,\ldots,K \leq R$. The customer demands are assumed to be independent and their exact value is known only when the vehicle arrives to the customer location. If a customer demand exceeds the available capacity of the vehicle, i.e. a \textit{route failure}, the vehicle must return to the depot to restore its original capacity. Hence, the depot must have a capacity at least equal to $nR$. %be carefull with k in the notation can be used different above.
 
-Yang, et. al. ~\cite{yang_stochastic_2000} propose a simple resource action for early replenishment where the vehicle come back to the depot even whenever it haven't depleted its stock to restore the capacity to $Q$, allowing proactive depot trips to avoid route failures. Hence, considering proactive restocking of the vehicle is not necesary to consider multiple routes, in fact, Yang, et. al. ~\cite{yang_stochastic_2000} point out that a single route is more efficient than multiple vehicle route system, assuming that only distance constrain the route, ommitting for example time duration.
+Yang, \textit{et.al.} ~\cite{yang_stochastic_2000} propose a simple resource action for early replenishment, where the vehicle come back to the depot even when it has not depleted its stock, in order to restore the capacity to $Q$, allowing proactive depot trips to avoid route failures. Hence, considering proactive restocking of the vehicle is not necesary to consider multiple routes, in fact, Yang, \textit{et.al.} ~\cite{yang_stochastic_2000} point out that a single route is more efficient than multiple vehicle route system, assuming that only distance constrain the route, ommitting for example time duration.
 
-The objective is minimize the expected distance finding out a routing solution, maybe in the form of routing rules, such that demand
-at each customer is satisﬁed. Thus, VRPSDs are usually modeled as mixed or pure integer stochastic programs, or as Markov decision process.
+The objective is to minimize the expected distance by finding out a routing solution, probably in the form of routing rules, so that demand of each customer is satisfied. Thus, VRPSDs are usually modeled as mixed or pure integer stochastic programs, or as Markov decision processes.
 
 
 \subsection{Stochastic programming}
 
-The stochastic programming goal is to find an optimal decision in problems that involve uncertainty in the data. Stochastic VRPs can be cast within the frame-work of stochastic programming ~\cite{gendreau_stochastic_1996}. Stochastic programs are modeled in two stages. In a first stage, \textit{a priori} solution is determined, the realizations of the random variables are then disclosed and, in a second stage, a recourse or corrective action is then applied to the first stage solution. The recourse usually generates a cost or a saving that may have to be considered when designing the first stage solution. A stochastic program is usually modeled either as a chance constrained program (CCP) or as a stochastic program with recourse (SPR). 
+The stochastic programming goal is to find an optimal decision in problems that involve uncertainty in the data. Stochastic VRPs can be cast within the frame-work of stochastic programming ~\cite{gendreau_stochastic_1996}. Stochastic programs are modeled in two stages. In a first stage, an \textit{a priori} solution is determined and the realizations of the random variables are then disclosed; in a second stage, a recourse or corrective action is then applied to the first stage solution. The recourse usually generates a cost or a saving that may have to be considered when designing the first stage solution. A stochastic program is usually modeled either as a Chance Constrained Program (CCP) or as a stochastic program with recourse (SPR). 
 
  
 \subsubsection{Chance-constrained programming}
 
-In CCPs, one seeks a first stage solution for which the probability of failure is constrained to be below a certain threshold. A CCP solution does not take into account the cost of corrective actions in case of failure. Mainly, for a given customer demands parameters, i.e. demands parameters (means, variances), one subjectively especifies a control probability looking for avoid that a \textit{route fail}, following ~\cite{Dror_2005} a VRPSD is formulated as
+In CCPs, one seeks a first stage solution for which the probability of failure is constrained to be below a certain threshold. A CCP solution does not take into account the cost of corrective actions in case of failure. Mainly, for a given customer demands parameters, e.g., means, variances. One subjectively especifies a control probability looking for avoid that a \textit{route fail}. Following to Dror ~\cite{Dror_2005}, a VRPSD is formulated as:
 
 \begin{align}\label{eq:CCP}
  \text{minimize } & \sum_v\sum_{i,j}d_{ij}x_{ij}^v\\
@@ -134,20 +133,20 @@ In CCPs, one seeks a first stage solution for which the probability of failure i
   & x = [x_{ij}^v] \in S_{NV}
 \end{align}
 
-where $x_ij^v$ is a binary decision variable that takes the value $1$ if vehicle $v$ travels directly from customer $i$ to $j$ and $0$ otherwise, $S_{NV}$ is the set of feasible routes for the traveling salesman problem (TSP) with $NV$ salesmen.
+where $x_ij^v$ is a binary decision variable that takes the value $1$ if vehicle $v$ travels directly from customer $i$ to $j$ and $0$ otherwise, and $S_{NV}$ is the set of feasible routes for the traveling salesman problem (TSP) with $NV$ salesmen.
 
-These models are based about the premise of stochastic optimization problems are transformable to deterministic problems controlling the probability of route failure events occur. Nevertheless, this artifitial control might result in bad routing decissions.
+These models are based on the premise that stochastic optimization problems are transformable to deterministic problems controlling the probability of route failure events occurring. Nevertheless, this artificial control might result in bad routing decisions.
 
 
 \subsubsection{Stochastic programming with resources}
 
-In SPRs, the aim is to determine a first stage solution that minimizes the expected cost of the second stage solution: this cost is made up of the cost of the first stage solution, plus the expected net cost of recourse. SPRs are typically more difficult to solve than are CCPs, but their objective function is more meaningful ~\cite{gendreau_stochastic_1996}.
+In SPRs, the aim is to determine a first stage solution that minimizes the expected cost of the second stage solution: this is made up of the cost of the first stage solution, plus the expected net recourse cost. SPRs are typically more difficult to solve than CCPs, but their objective function is more meaningful ~\cite{gendreau_stochastic_1996}.
 
 
-Yang ~\cite{yang_stochastic_2000} propose two heuristic methods to solve the problem and Laporte et. al. ~\cite{laporte_integer_2002} and Gendrau et. al. ~\cite{gendreau_exact_1995} propose a \textit{L-shape} method to find optimal solutions, i.e. an branch-and-cut algorithm adjusted for the stochastic approach. Below we present the model formuled by ~\cite{Dror_2005} based on Laporte model although allowing proactive replenishments of the vehicle in a single route, supported on Yang's affirmation of it is more efficient than multiple routes.
+Yang ~\cite{yang_stochastic_2000} propose two heuristic methods to solve the problem and Laporte \textit{et.al.}  ~\cite{laporte_integer_2002} and Gendrau \textit{et.al.} ~\cite{gendreau_exact_1995} propose an \textit{L-shape} method to find optimal solutions, i.e. a branch-and-cut algorithm adjusted for the stochastic approach. Below, we present the model formulated by ~\cite{Dror_2005} based on the Laporte model ,although allowing proactive replenishments of the vehicle in a single route, supported on Yang's affirmation, this is more efficient than multiple routes.
 
 %Is possible close the paragraphs below
-Let $T(\hat{x},D) =\sum_i^n\sum_j^nd_{ij}x_{ij}$ be the costo of the routing solution where $\hat{x}=\{x_{ij}\},i\in V,j\in V$ is the vector of routing decisions, $\hat{x}_{ij} =1$ if the vehicle visits directly the node $i$ from $j$ node and $0$ otherwise, $D$ is a vector of the customer demands disclosed one ath a time when the vehicle arrive at customer location. Both $\hat{x}$ and $D$ are random variables
+Let $T(\hat{x},D) =\sum_i^n\sum_j^nd_{ij}x_{ij}$ be the cost of the routing solution where $\hat{x}=\{x_{ij}\},i\in V,j\in V$ is the vector of routing decisions, $\hat{x}_{ij} =1$ if the vehicle directly visits the node $i$ from $j$ node and $0$ otherwise; $D$ is a vector of the customer demands disclosed one a time when the vehicle arrive at customer location. Both $\hat{x}$ and $D$ are random variables.
 
 \begin{align}\label{eq:SPR}
   & \min\limits_{\hat{x}} E_D[T(\hat{x},D)]\\ 
@@ -157,22 +156,22 @@ Let $T(\hat{x},D) =\sum_i^n\sum_j^nd_{ij}x_{ij}$ be the costo of the routing sol
   & \hat{x}_{ij} \in {0,1}, i,j \forall i,j \in V
 \end{align}
 
-$T(\hat{x},D)$ can be divided in two parts, in the first part we have the term $cx$ denoting the cost (distance) of the \textit{a priori} sequence represented by $x$, and at the second part $\mathcal{Q}(x,D)$, would be the cost of recourse given $x$ and a realization of $D$. $\mathcal{Q}(x,D)$ represent the cost of return trips incurred by route failures, minus some resulting savings.
-$T(\hat{x},D) = cx+\mathcal{Q}(x,D)$ where $x$ represents an TSP route and $\hat{x}$ is the binary routing vector which includes all the resources decissions. For keeping $\hat{x}$ as binary is assumed that the probability of a node demand to be greater than capacity of an vehicle is zero as well as the probability that a vehicle, upon failure, returning to a node to complete its delivery after visit the depot is also zero.
+$T(\hat{x},D)$ can be divided in two parts; in the first part we have the term $cx$ denoting the cost (distance) of the \textit{a priori} sequence represented by $x$, and in the second part $\mathcal{Q}(x,D)$, would be the recourse cost given $x$ and a realization of $D$. $\mathcal{Q}(x,D)$ represents the cost of return trips incurred by route failures, minus some resulting savings.
+$T(\hat{x},D) = cx+\mathcal{Q}(x,D)$ where $x$ represents a TSP route and $\hat{x}$ is the binary routing vector which includes all the resource decisions. In order to keep $\hat{x}$ as binary, it is assumed that the probability of a node demand greater than capacity of an vehicle, is zero, as well as the probability that a vehicle, upon failure, returning to a node to complete its delivery after visiting the depot, is also zero.
 
-Setting the expectation $\mathcal{Q}(x) = E_D[\mathcal{Q}(x,D)]$ the objective function becomes in
+Setting the expectation $\mathcal{Q}(x) = E_D[\mathcal{Q}(x,D)]$ the objective function becomes:
 
 \begin{equation}\label{eq:SPR_objective}
  \min\limits_x{cx+\mathcal{Q}(x)} \min\limits_x{cx+E_D[\mathcal{Q}(x,D)]}
 \end{equation}
 
-In the standard modeling of the Two-Stage Stochastic Linear Programs, in the secon stage the suctomers deliveries are represented as
+In the standard modeling of the Two-Stage Stochastic Linear Programs, customers deliveries in the secon stage are represented as follows:
 
 \begin{equation}\label{eq:SPR_second_stage}
  \mathcal{Q}(x,D)=\min\limits_y\{cy|Wy=h(D)-T(D)x, y \in Y\}
 \end{equation}
 
-Where $y$ is the binary vector representing the recourse initiated trips to the depot, $T(D)$ represents the deliveries made by the $x$ vector given $D$ and $h(D)$ is the demand realization fro $D$ which has to be met (delivered) either by $x$ or the resource $y$. Below we show the model used by ~\cite{laporte_integer_2002} for the L-shape method
+Where $y$ is the binary vector representing the recourse initiated trips to the depot, $T(D)$ represents the deliveries made by the $x$ vector given that $D$ and $h(D)$ is the demand realization for $D$ which has to be met (delivered) either by $x$ or the resource $y$. Below, we show the model used by ~\cite{laporte_integer_2002} for the L-shape method:
 
 \begin{align}\label{eq:SPR_lshape}
   & \min\limits_{x} \{cx+\mathcal{Q}(x)\}\\ 
@@ -182,11 +181,11 @@ Where $y$ is the binary vector representing the recourse initiated trips to the 
   & \hat{x}_{ij} \in {0,1}, i,j \forall i,j \in V
 \end{align}
 
-A extended review of models presented above and others for VRPSD is presented by ~\cite{Dror_2005} and ~\cite{Dror1993432}
+An extended review of the models presented above, and others for VRPSD is presented by ~\cite{Dror_2005} and ~\cite{Dror1993432}
 
 \subsection{Stochastic Dynamic Programming}
 
-Stochastic Dynamic Programming (SDP) provide a frame-work where decisions are made in an finite number of stages under uncertainty, in these problems there are a set of states $S$, decisions variables $U$ and the uncertainty is represented by a set of random variables $W$, the dynamic system is of the form
+Stochastic Dynamic Programming (SDP) provides a frame-work where decisions are made in an finite number of stages under uncertainty. In these problems there is a set of states $S$, decisions variables $U$ and the uncertainty is represented by a set of random variables $W$; the dynamic system is of the form:
 
 \[f: U\times W \times S \rightarrow S\]
 
@@ -197,7 +196,7 @@ x_{k+1}=f_k(x_k,u_k,w_k), k=0,1,\ldots,N-1
 \end{equation}
 
 
-where $x_k \in S_k$ is the state of system at $k-th$ time and summarizes past information, $u_k$ is the control or decision variable to be selected in a given nonempty subset $U(x_k) \subset U$ which depends on the current state $x_k$, i.e. $u_k \in U_k(x_k) \forall x_k \in S_k$, $w_k \in W$ is a random parameter whose value is disclosed at time $k$ it's characterized by a probability distribution $P_k(\cdot|x_k,u_k)$ that may depend on $x_k$ and $u_k$ but not on prior values of the random variable $w_{k-1},\ldots,w_0$. $N$ is the horizon or number of times that control is applied
+where $x_k \in S_k$ is the state of system at $k-th$ time and summarizes past information, $u_k$ is the control or decision variable to be selected in a given nonempty subset $U(x_k) \subset U$ which depends on the current state $x_k$, i.e. $u_k \in U_k(x_k) \forall x_k \in S_k$, $w_k \in W$ is a random parameter whose value is disclosed at time $k$ and is characterized by a probability distribution $P_k(\cdot|x_k,u_k)$ that may depend on $x_k$ and $u_k$ but not on prior values of the random variable $w_{k-1},\ldots,w_0$. $N$ is the horizon or number of times that control is applied
 
 The objective is to minimize a cost function $g_k(x_k,u_k,w_k)$ of the form
 
@@ -207,23 +206,23 @@ The cost function is assumed additive, i.e. the cost incurred accumulates over t
 
 \[g_N(x_N)+\sum_{k=0}^{N-1}g_k(x_k,u_k,w_k)\]
 
-Nevertheless, given uncertainty the cost is a random variable, so we fomulate the problem as an optimization of the expected cost 
+Nevertheless, given the cost as a random variable, we formulate the problem as an optimization of the expected cost:
 
 \begin{equation}\label{eq:SDP_expected_cost}
  E\biggr\{g_N(x_N)+\sum_{k=0}^{N-1}g_k(x_k,u_k,w_k)\biggr\}
 \end{equation}
 
-We define \textit{admissible policies} $\pi \in \Pi$, where $\Pi$ is the set of all admissible policies, as a sequence of functions $\mu_k:x_k\rightarrow u_k$, in which $\mu_k$ maps states $x_k$ to controls $u_k=\mu_k(x_k)$ such that $\mu_k(x_k) \in U_k(x_k) \forall x_k \in S_k$.
+We define \textit{admissible policies} $\pi \in \Pi$, where $\Pi$ is the set of all admissible policies, as a sequence of functions $\mu_k:x_k\rightarrow u_k$, in which $\mu_k$ maps state $x_k$ to controls $u_k=\mu_k(x_k)$ such that $\mu_k(x_k) \in U_k(x_k) \forall x_k \in S_k$.
 
 \[\pi={\mu_0,\ldots,\mu_{N-1}}\]
 
-Given a policy $\pi$ and a initial state $x_0$ the equation \ref{eq:system_dynamic_decisions} is becoming in 
+Given a policy $\pi$ and a initial state $x_0$, the equation \ref{eq:system_dynamic_decisions} is rearranged as: 
 
 \begin{equation}\label{eq:system_dynamic_policy}
 x_{k+1}=f_k(x_k,\mu_k(x_k),w_k), k=0,1,\ldots,N-1 
 \end{equation}
 
-making $x_k$ and $w_k$ random variables with probability distributions defined. Hence, is well defined the expected cost function $g_k$ \ref{eq:SDP_expected_cost}, with $k=0,1,\ldots,N$
+making $x_k$ and $w_k$ random variables with probability distributions defined. Hence, the expected cost function $g_k$ \ref{eq:SDP_expected_cost}, with $k=0,1,\ldots,N$ is well defined:
 
 \begin{equation}\label{eq:SDP_expected_cost_policy}
  J_\pi(x_0) = E_{w_k}\biggr\{g_N(x_N)+\sum_{k=0}^{N-1}g_k(x_k,\mu_k(x_k),w_k)\biggr\}
@@ -240,7 +239,7 @@ The SDP model applied to VRPSD is formulated below in the section \ref{sec:SDP_m
 \subsubsection{Finite-Stage Models}%(Ross,1983)
 
 
-Suposse that the states are the integers, and let $A$, a finite set, be the set of all possible actions.
+Suppose that the states are the integers, and let $A$, a finite set, be the set of all possible actions.
 $R(i,a)$ is the reward in $i$th-state given that $a \in A$ action was chosen, and the next state is $j$ with probability $P_ij(a)$.
 Let $V_N(i)$ denote the maximum expected return for an $N$-stage problem that starts in state $i$.
 
@@ -263,23 +262,23 @@ then,
 
 \subsection{Stochastic Dynamic Programming approach for VRPSD}\label{sec:SDP_model_VRPSD}
 
-VRPSD is modeled in the framework of SDP as a stochastic shortest path problem, it's a markov decission process (MDP) where is necesary make decisions under situations where outcomes are partly random reaching an absorbing cost-free termination state in a random number of stages.
+VRPSD is modeled in the framework of SDP as a stochastic shortest path problem; it is a Markov decision process (MDP) where is necesary to make decisions under situations where outcomes are partly random reaching an absorbing cost-free termination state in a random number of stages.
 
 The problem formulation is presented below, based in the Novoa ~\cite{novoa_approximate_2009} and Secomandi ~\cite{secomandi_rollout_2001} notation as a Markov decision model.
 
-The objective of the problem is to find a routing policy such that customer demand is satisfied and minimized expected transportation costs (distance), this policy may order returns to the depot before the vehicle capacity runs out.
+The objective of the problem is to find a routing policy so customer's demand is satisfied and the expected transportation costs (distance) minimized, this policy may order returns to the depot before the vehicle capacity runs out.
 
 \subsubsection{Types of policies}
 
-Secomandi ~\cite{secomandi_comparing_2000} classify the routing policies in three groups, static, dynamics and mixed
+Secomandi ~\cite{secomandi_comparing_2000} classifies the routing policies in three groups, static, dynamics and mixed
 
 \begin{description}
   \item[Static] Static policies describe a sequence $\tau$ of customers to be visited in that order for the vehicle.
-  \item[Dynamic] Dynamic policies provide a policy $\pi$ that given the current state of the system prescribe witch location should be visited next.
+  \item[Dynamic] Dynamic policies provide a policy $\pi$ that given the current state of the system, prescribe which location should be visited next.
   \item[Mixed] Mixed policies combine elements of both static and dynamics policies.
 \end{description}
 
-Mixed policies not only following a sequence $\tau$ of customers but also prescribe decisions dependent of the state that allow proactive replenishments. We ilustrade in the figure \ref{fig:routing_policies} a static policy (left) where a reactive replenishments or resources action carry out when the customer demand is greater than vehicle capacity and it is forced to return to the depot for restocking, while on the right is represented a dynamic policy in which the vehicle can do proactive replenishments going to the station even when the vehicle capacity is not empty.
+Mixed policies not only follow a sequence $\tau$ of customers but also prescribe decisions that dependend on the state that allows proactive replenishments. In the figure \ref{fig:routing_policies}, we ilustrate static policy (left) where reactive replenishment or resource action are carried out when the customer demand is greater than the vehicle capacity, and  is therefore forced to return to the depot for restocking, while on the right image, we have a dynamic policy in which the vehicle can do proactive replenishments, going to the station even when the vehicle capacity is not empty.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -288,11 +287,11 @@ Mixed policies not only following a sequence $\tau$ of customers but also prescr
     \caption{static and mixed routing policies}\label{fig:routing_policies}
 \end{figure}
 
-To represent the system state at stage $k$, the vector $x_k$ is defined as $x_k=(l,q_l, r_1,\ldots,r_n)$ of size $n+2$, where $l \in \{0,1,\ldots,n\}$, is the current location of the vehicle and $q_l \leq Q$ is its capacity available \textit{after} delivery to customer $l$; the elements $r_i$ represents the remaining demand to satisfy to the costumer $i$. A unknown demand is denoted as -, if customer $i$ is visited and its demand has been satisfied completely $r_i$ will take the value 0, otherwise, take any value between 1 and $R$. The initial state of the system $x_0$ is $(0,Q,-,-,\ldots,-)$ and the final state occurs when the vehicle returns to the depot after serving the demands of customers, represented as $(0,Q,0,0,\ldots,0)$. Thus, the number of states in the system is $O(nQR^n)$
+In order to represent the system state at stage $k$, the vector $x_k$ is defined as $x_k=(l,q_l, r_1,\ldots,r_n)$ of size $n+2$, where $l \in \{0,1,\ldots,n\}$, is the current location of the vehicle and $q_l \leq Q$ is its available capacity \textit{after} delivery to customer $l$; the elements $r_i$ represents the remaining demand to satisfy to the costumer $i$. An unknown demand is denoted as -, if customer $i$ is visited and its demand has been completely satisfied, $r_i$ will take the value 0; otherwise, it will take any value between 1 and $R$. The initial state of the system $x_0$ is $(0,Q,-,-,\ldots,-)$ and the final state $x_N$ occurs when the vehicle returns to the depot after serving the demands of customers, represented as $(0,Q,0,0,\ldots,0)$. Thus, the number of states in the system is $O(nQR^n)$
 
-Let $N$ be a random variable representing the number of stages or transitions from initial state to the end, the vector $\pi = {\mu_0, \mu_1,\ldots, \mu_{N-1}}$ is the policy or sequence of functions to optimize, where $\mu_k$ is a function that associates a decision or control $u_k=\mu_k(x_k)$ for each state, $u_k \in U_k(x_k)$ and $U_k(x_k) = \{\{m \in \{1,\ldots,n\}\}|r_m\neq0\}\cup 0\} \times \{a:a \in \{0,1\}\}$. Control $u_k$ is represented as ordered pairs $(m,a)$, $m$ is any costumer not yet served, $m$ is 0 when all demands have been satisfied and the system enters its completion stage, $a$ is 0 if the vehicle visits customers directly and 1 if the vehicle stops first at the depot for resupply.
+Let $N$ be a random variable representing the number of stages or transitions from initial state to the end, the vector $\pi = {\mu_0, \mu_1,\ldots, \mu_{N-1}}$ is the policy or sequence of functions to optimize, where $\mu_k$ is a function that associates a decision or control $u_k=\mu_k(x_k)$ for each state, $u_k \in U_k(x_k)$ and $U_k(x_k) = \{\{m \in \{1,\ldots,n\}\}|r_m\neq0\}\cup 0\} \times \{a:a \in \{0,1\}\}$. Control $u_k$ is represented as ordered pairs $(m,a)$, $m$ is any costumer not yet served, $m$ is 0 when all demands have been satisfied and the system enters its completion stage, $a$ is 0 if the vehicle directly visits customers and 1 if the vehicle first stops at the depot to resupply.
 
-Given a state $x_k=(l,q_l,r_1,\ldots,r_m,\ldots,r_n)$ and a control $u_k$ in which is decided to visit the node $m$ at the next stage, the random variable $D_m$ is realized ($r_m = D_m$ if $r_m$ is unknowed otherwise $r_m \neq ?$) and the remaining demand of the customer $m$ change to $r'_m$ as soon as the capacity of vehicle becomes in $q_m$, where
+Given a state $x_k=(l,q_l,r_1,\ldots,r_m,\ldots,r_n)$ and a control $u_k$ in which it is decided to visit the node $m$ at the next stage, the random variable $D_m$ is realized ($r_m = D_m$ if $r_m$ is unknown; otherwise $r_m \neq ?$) and the remaining demand of the customer $m$ changes to $r'_m$ as soon as the capacity of vehicle becomes $q_m$, where
 
 \begin{equation}\label{eq:q_m}
     q_m = \left \{ \begin{array}{ll}
@@ -342,7 +341,7 @@ If $J_N^*(x)$ is known for all stages, the optimal control $u_k^*$ at each stage
 \sum_{x_{k+1}\in S}p_{x_kx_{k+1}}(u_k)J_N^*(x_{k+1})|x_k=x, \forall x\in S
 \end{multline}
 
-The problem is that $J_N^*(x)$ is unknown and its calculation is a computationally intractable problem given the size of state space. Secomandi ~\cite{secomandi_rollout_2001} point out that compute an optimal policy becomes quickly intractable when $n$ grows beyond 10. The chapter \ref{chap:dp_methodology} deal with approximate this function through of dynamic-programming method efficiently computable.
+The problem is that $J_N^*(x)$ is unknown and its calculation is a computationally intractable problem given the size of state space. Secomandi ~\cite{secomandi_rollout_2001} points out that computing an optimal policy becomes quickly intractable when $n$ grows beyond 10. Chapter \ref{chap:dp_methodology} deals with issue of approximating this function through a dynamic-programming method efficiently computable.
 
 \section{Summary}
 
