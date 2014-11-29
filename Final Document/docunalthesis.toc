@@ -54,6 +54,6 @@
 \contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{31}{chapter.6}
 \contentsline {section}{\tocsection {}{6.1}{Conclusions}}{31}{section.6.1}
 \contentsline {section}{\tocsection {}{6.2}{Perspectives}}{31}{section.6.2}
-\contentsline {chapter}{\tocappendix {Appendix}{A}{Appendix A}}{32}{appendix.A}
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{32}{appendix.A}
 \contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{32}{section.A.1}
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{34}{appendix*.9}
