@@ -48,7 +48,7 @@ where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of avai
 
 
 
-The 160 instances used by Novoa ~\cite{novoa_approximate_2009} was generated following the same method described above. This set is composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size whose number of vertex is greter than 100.
+The 160 instances used by Novoa ~\cite{novoa_approximate_2009} was generated following the same method described above. This set is composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size whose number of vertex is greter than 100. Table \ref{tb:instances_characterization} shows the range of demands for each size instance, where the demand values is the difference between the maximun and minimun demand which some customer can take. In addition, \ref{fig:demands} exhibit the demands mean and variance for each instance.
 
 
 \begin{table}[!h]
@@ -73,35 +73,19 @@ n & 4 & 5 & 7 & 8 & 9 & 15 & 17 & 29 & 33 & Total \\
 \end{table}
 
 
-
-\section{Assess the expected distance for a given policy}
-
-straightforward policy is better than cyclic policy at each one instance tested \ref{fig:avg_distance_cyclic_vs_avg_distance_forward}
-
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=1\textwidth]{Images/Chapter5/cyclic_vs_straightforward_avgdistance_n5_n8.eps}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/demands.eps}
   \end{center}
-    \caption{average distance straightforward tour vs. average distance cyclic tour}\label{fig:avg_distance_cyclic_vs_avg_distance_forward}
+    \caption{Instance demands. Circles area represent the demand variance}\label{fig:demands}
 \end{figure}
+
 
 \subsection{Expected distance algorithm}\label{sec:test_expecteddistance}
 
-Validation of backward expected distance algorithm comparing with the average expected distance of a tour $\tau$, where $\tau$ is assumed as a sorted permutation of the nodes, i.e. $\tau = (1,\ldots,n,0)$. The average expected distance is computed using monte carlo simulation under policy $\pi$ following $\tau$ and considering early replenishments defined by the policy.
 
-\begin{figure}[!htbp]
-  \begin{center}
-   \includegraphics[width=1\textwidth]{Images/Chapter5/avg_vs_expected_distance_tour.eps}
-  \end{center}
-    \caption{average distance tour vs. expected distance tour}\label{fig:avg_distance_vs_expected_distance_tour}
-\end{figure}
 
-\begin{figure}[!htbp]
-  \begin{center}
-   \includegraphics[width=1\textwidth]{Images/Chapter5/time_vs_expected_distance_tour.eps}
-  \end{center}
-    \caption{execution algorithm time vs. expected distance tour}\label{fig:time_distance_vs_expected_distance_tour}
-\end{figure}
+
 
 
 \subsection{Evoulutionary algorithm}
