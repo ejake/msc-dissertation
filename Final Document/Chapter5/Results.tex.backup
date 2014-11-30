@@ -1,6 +1,9 @@
-\chapter{Experiments and Numerical Results}
+\chapter{Experiments and numerical results}
 \label{chap:results}
 %\minitoc
+
+In this chapter we present the computational results obtained for solving the instances selected. 
+
 
 \section{Instances of VRPSD}
 
@@ -101,4 +104,47 @@ Validation of backward expected distance algorithm comparing with the average ex
 
 \subsection{Evoulutionary algorithm}
 
+when local search is applied the evolutionary algorithm stops when the number of iterations is achived.
+
 Both $\mathbf{m}$ 10\% of the iterations  and $\varepsilon$ are $1x10^{-3}$.
+
+Suitable parameters was chosen by experimental results whitout 
+
+In the case of number of iterations $\kappa$ and size of population $\alpha$ the parameters time consumption restrict this since we conclude that a greater value for these increase the solutions explored.
+
+\subsubsection*{Performance of the genetic algorithms}
+
+This section describes the algorithm performance for a specific problem instance with 10 customers and a factor $f'=1$, the customers' location and demand value (known when the vehicle arrive to the customer location) are showed in the figure \ref{fig:customer_n10_f1_s1}.
+
+
+%\begin{figure}[!htbp]
+%  \begin{center}
+%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_customers}
+%  \end{center}
+%    \caption{Instance features: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:customer_n10_f1_s1}
+%\end{figure}
+
+The genetic algorithm outcome for the instance problem described above is presented in the figure \ref{fig:tour_n10_f1_s1}, the red line describes the route, the segmented black line represents returns to the depot for replenishment, this tour was selected as the best solution found in 100 iterations of the GA.
+
+%\begin{figure}[!htbp]
+%  \begin{center}
+%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_tour}
+%  \end{center}
+%      \caption{e.g best tour found by the GA: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:tour_n10_f1_s1}
+%\end{figure}
+
+The figure \ref{fig:improve_n10_f1_s1} shows the improving of the objective function found, the chart shows the lesser total cost history, when a better value is found the line fall, therefore we can see the improving is given among the iteration 25 and 40, after this iterations the algorithm converges and it's not found a better solution.
+
+%\begin{figure}[!htbp]
+%  \begin{center}
+%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_history}
+%  \end{center}
+%      \caption{e.g improvement solution: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:improve_n10_f1_s1}
+%\end{figure}
+
+%\section{Memetic Algorithm}
+
+%GA that use local search
+
+%\section{Non-dominated Genetic Algorithm}
+
