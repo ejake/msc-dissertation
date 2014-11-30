@@ -27,7 +27,7 @@
 \BOOKMARK [1][-]{section.4.1}{4.1. Hybrid evolutionary algorithm}{chapter.4}% 27
 \BOOKMARK [2][-]{subsection.4.1.1}{4.1.1. A basic genetic algorithm for vehicle routing problem with stochastic demands}{section.4.1}% 28
 \BOOKMARK [1][-]{section.4.2}{4.2. Summary}{chapter.4}% 29
-\BOOKMARK [0][-]{chapter.5}{Chapter 5. Experiments and Numerical Results}{}% 30
+\BOOKMARK [0][-]{chapter.5}{Chapter 5. Experiments and numerical results}{}% 30
 \BOOKMARK [1][-]{section.5.1}{5.1. Instances of VRPSD}{chapter.5}% 31
 \BOOKMARK [2][-]{subsection.5.1.1}{5.1.1. Instance generation}{section.5.1}% 32
 \BOOKMARK [1][-]{section.5.2}{5.2. Assess the expected distance for a given policy}{chapter.5}% 33

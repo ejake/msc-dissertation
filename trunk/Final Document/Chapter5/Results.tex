@@ -1,10 +1,13 @@
-\chapter{Experiments and Numerical Results}
+\chapter{Experiments and numerical results}
 \label{chap:results}
 %\minitoc
 
+In this chapter we present the computational results obtained for solving the instances selected. 
+
+
 \section{Instances of VRPSD}
 
-To compare results we are used instances of two diferents sources, the first set of instances was generated following a procedure similar to the used in Secomandi~\cite{secomandi_comparing_2000}, the another set of instances is the used by Novoa ~\cite{novoa_approximate_2009}, Both instance sets are generated using the procedure described on the next section.
+In order to evaluate the algorithms proposed, we select instances of two sources generated following a procedure similar to the used in Secomandi~\cite{secomandi_comparing_2000}. The first set of instances is the used by Novoa ~\cite{novoa_approximate_2009}, while the second was created by us randomly.
 
 \subsection{Instance generation}
 
@@ -24,9 +27,9 @@ The filling rate $f$ is an index of the total expected demand relative to vehicl
 f=\sum_{i=1}^n\frac{E[D_i]}{mQ}
 \end{equation}
 
-where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of available vehicles, when $m = 1$ $f$ can represent approximately the expected number of replenishment needed to serve all customers' demands. It follows that, a priori, in all instances $E[D_i]=(3+6+9)/3=6$, for any customer i, and $Q=6n/f$. $f'=f-1$ is the expected number of route failure in a given instance. Hence, we is defined for this factor $f' \in \{1.0, 1.5, 2.0\}$, following the same factors used by Secomandi~\cite{secomandi_comparing_2000}.
+where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of available vehicles, when $m = 1$, $f$ can represent approximately the expected number of replenishment needed to serve all customers demands. It follows that, a priori, in all instances $E[D_i]=(3+6+9)/3=6$, for any customer i, and $Q=6n/f$. $f'=f-1$ is the expected number of route failure in a given instance. Hence, we is defined for this factor $f' \in \{1.0, 1.5, 2.0\}$, following the same factors used by Secomandi~\cite{secomandi_comparing_2000}.
 
-\begin{table}
+\begin{table}[!h]
   \centering
   \caption{Vehicle capacity for each factor}\label{tb:Q}
 \begin{tabular}{l l l l}
@@ -34,7 +37,7 @@ where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of avai
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   $f'$ &   & $n$ &   \\
   \cline{2-4}
-      & 5 & 10 & 15 \\
+      & 5 & 10 & 20 \\
   \hline
   1.0 & 15 & 30 & 45 \\
   1.5 & 12 & 24 & 36 \\
@@ -43,10 +46,12 @@ where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of avai
 \end{tabular}
 \end{table}
 
-The 160 instances used by Novoa ~\cite{novoa_approximate_2009} are composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size whose number of vertex is greter than 100.
 
 
-\begin{table}
+The 160 instances used by Novoa ~\cite{novoa_approximate_2009} was generated following the same method described above. This set is composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size whose number of vertex is greter than 100.
+
+
+\begin{table}[!h]
 \centering
 \begin{tabular}{| l | c c c c c c c c c | c |}
 \hline
@@ -101,7 +106,13 @@ Validation of backward expected distance algorithm comparing with the average ex
 
 \subsection{Evoulutionary algorithm}
 
+when local search is applied the evolutionary algorithm stops when the number of iterations is achived.
+
 Both $\mathbf{m}$ 10\% of the iterations  and $\varepsilon$ are $1x10^{-3}$.
+
+Suitable parameters was chosen by experimental results whitout 
+
+In the case of number of iterations $\kappa$ and size of population $\alpha$ the parameters time consumption restrict this since we conclude that a greater value for these increase the solutions explored.
 
 \subsubsection*{Performance of the genetic algorithms}
 
