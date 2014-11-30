@@ -2,9 +2,9 @@
 \label{chap:methodology}
 %\minitoc
 
-An evolutionary algorithm is a technique bio-inspired by the evolution of the espicies. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
+An evolutionary algorithm (GA) is a technique bio-inspired by the evolution of the espicies. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
 
-\section{Hybrid genetic algorithm}
+\section{Hybrid evolutionary algorithm}
 
 A hybrid evolutionary algorithms or hybrid genetic algorithms are a very popular techniques that offers practical advantages to deal with complex and hardly optimization problems. Grosan (Grosan, 2007) present a review of hybrid genetic architectures frecuently used. 
 
@@ -82,14 +82,14 @@ where $\alpha$ is a tuneable parameter which should be fixed in the range $(0,1]
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter3/i_30r1_regular.eps}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter3/mvi_20r4_m_regular.eps}
   \end{center}
-    \caption{Basic genetic algorithm applied to instance of 30 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:ga_basic_i_30r1}
+    \caption{Basic genetic algorithm applied to instance of 20 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:ga_basic_mvi_20r4_m}
 \end{figure}
 
 \subsubsection*{Stopping criterion}
 
-Finally, the evolutionary algorithm runs until reach a fixed number or iterations $\kappa$. Nevertheless, it can stop once accopmlish $\mathbf{m}$ number of consecutive iterations whitous a significative change, i.e., $|\Delta^{P_k}_{E'}|\leq \varepsilon$
+Finally, the evolutionary algorithm runs until reach a fixed number or iterations $\kappa$. Nevertheless, it can stop once accopmlish $\mathbf{m}$ number of consecutive iterations whitous a significative change, i.e., $|\Delta^{P_k}_{E'}|\leq \varepsilon$. Both $\mathbf{m}$ and $\varepsilon$ are tuneable parameters.
 
 % \subsubsection{Crossover - EAX}
 
@@ -102,46 +102,18 @@ Finally, the evolutionary algorithm runs until reach a fixed number or iteration
 \subsubsection*{local search}
 
 
-A classic genetic algorithm does not yield competitive results itself, due to simple GA does not exploit problem knowing to produce high quality solutions. To be effective, we combine local search methods.
+A classic genetic algorithm does not yield competitive results itself, due to basic GA does not exploit problem knowing to produce high quality solutions. To be effective, we combine local search methods. Local search can be incorporated in the initial population or among the offspring.
+
+We apply rollout algorithm as local search method. The GA incorporates it in the initialization stage as in each iteration under the best policy obtained. Figure \ref{fig:memetic_mvi_20r4_m} shows the evolutionary algorithm with local search applied to the same instance used by the basic genetic algorithm above and showed in the figure \ref{fig:ga_basic_mvi_20r4_m}
 
 
-Often hybridazation is included in inicialization and reproduction operators.
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter3/mvi_20r4_m_memetic.eps}
+  \end{center}
+    \caption{Memetic algorithm applied to instance of 20 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:memetic_mvi_20r4_m}
+\end{figure}
 
-local search can be incorporated in the initial population or among the offspring.
+\section{Summary}
 
-\subsubsection*{Performance of the genetic algorithms}
-
-This section describes the algorithm performance for a specific problem instance with 10 customers and a factor $f'=1$, the customers' location and demand value (known when the vehicle arrive to the customer location) are showed in the figure \ref{fig:customer_n10_f1_s1}.
-
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_customers}
-%  \end{center}
-%    \caption{Instance features: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:customer_n10_f1_s1}
-%\end{figure}
-
-The genetic algorithm outcome for the instance problem described above is presented in the figure \ref{fig:tour_n10_f1_s1}, the red line describes the route, the segmented black line represents returns to the depot for replenishment, this tour was selected as the best solution found in 100 iterations of the GA.
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_tour}
-%  \end{center}
-%      \caption{e.g best tour found by the GA: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:tour_n10_f1_s1}
-%\end{figure}
-
-The figure \ref{fig:improve_n10_f1_s1} shows the improving of the objective function found, the chart shows the lesser total cost history, when a better value is found the line fall, therefore we can see the improving is given among the iteration 25 and 40, after this iterations the algorithm converges and it's not found a better solution.
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_history}
-%  \end{center}
-%      \caption{e.g improvement solution: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:improve_n10_f1_s1}
-%\end{figure}
-
-%\section{Memetic Algorithm}
-
-%GA that use local search
-
-%\section{Non-dominated Genetic Algorithm}
-
+In this chapter we presented a basic genetic algorithm for vehicle routing problem with stochastic demands. In addition, we showed an hybrid approach integrating the rollout algorithm as local search method in the evolutionary algorithm.

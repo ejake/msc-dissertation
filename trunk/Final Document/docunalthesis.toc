@@ -39,7 +39,7 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{3.2.1.1}{Defining initial policy}}{21}{subsubsection.3.2.1.1}
 \contentsline {section}{\tocsection {}{3.3}{Summary}}{23}{section.3.3}
 \contentsline {chapter}{\tocchapter {Chapter}{4}{Hybrid evolutionary approach}}{24}{chapter.4}
-\contentsline {section}{\tocsection {}{4.1}{Hybrid genetic algorithm}}{24}{section.4.1}
+\contentsline {section}{\tocsection {}{4.1}{Hybrid evolutionary algorithm}}{24}{section.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.1.1}{A basic genetic algorithm for vehicle routing problem with stochastic demands}}{25}{subsection.4.1.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Initialization}}{25}{section*.6}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Crossover}}{26}{section*.7}
@@ -47,12 +47,14 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Selection of the new population}}{26}{section*.9}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Stopping criterion}}{27}{section*.10}
 \contentsline {subsubsection}{\tocsubsubsection {}{}{local search}}{28}{section*.11}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithms}}{28}{section*.12}
+\contentsline {section}{\tocsection {}{4.2}{Summary}}{28}{section.4.2}
 \contentsline {chapter}{\tocchapter {Chapter}{5}{Experiments and Numerical Results}}{29}{chapter.5}
 \contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{29}{section.5.1}
 \contentsline {subsection}{\tocsubsection {}{5.1.1}{Instance generation}}{29}{subsection.5.1.1}
 \contentsline {section}{\tocsection {}{5.2}{Assess the expected distance for a given policy}}{30}{section.5.2}
 \contentsline {subsection}{\tocsubsection {}{5.2.1}{Expected distance algorithm}}{30}{subsection.5.2.1}
+\contentsline {subsection}{\tocsubsection {}{5.2.2}{Evoulutionary algorithm}}{30}{subsection.5.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithms}}{30}{section*.12}
 \contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{33}{chapter.6}
 \contentsline {section}{\tocsection {}{6.1}{Conclusions}}{33}{section.6.1}
 \contentsline {section}{\tocsection {}{6.2}{Perspectives}}{33}{section.6.2}
