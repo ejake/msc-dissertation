@@ -2,9 +2,9 @@
 \label{chap:methodology}
 %\minitoc
 
-An evolutionary algorithm is a technique bio-inspired by the evolution of the espicies. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
+An evolutionary algorithm (GA) is a technique bio-inspired by the evolution of the espicies. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
 
-\section{Hybrid genetic algorithm}
+\section{Hybrid evolutionary algorithm}
 
 A hybrid evolutionary algorithms or hybrid genetic algorithms are a very popular techniques that offers practical advantages to deal with complex and hardly optimization problems. Grosan (Grosan, 2007) present a review of hybrid genetic architectures frecuently used. 
 
@@ -70,10 +70,10 @@ where $\bar{\Gamma}_{P_k}$ is the best expected distance obtained by an individu
 Then, the size of the next population $P_{k+1}$ is computed so:
 
 \begin{equation}\label{eq:population_size}
- |P_{k+1}| = \left \{ \begin{array}{ll}
-  \lfloor  \min\{n(1+\alpha), |P_{k}|(1+\alpha)\} \rfloor, & \text{if } \Delta^{P_k}_{E'} > 0\\
-  \lceil \max\{n\alpha, |P_{k}|\alpha\} \rceil, & \text{if } \Delta^{P_k}_{E'} < 0
-  |P_{k}|, \text{in other case.}
+ ||P_{k+1}|| = \left \{ \begin{array}{ll}
+  \lfloor  \min\{n(1+\alpha), ||P_{k}||(1+\alpha)\} \rfloor, & \text{if } \Delta^{P_k}_{E'} > 0\\
+  \lceil \max\{n\alpha, ||P_{k}||\alpha\} \rceil, & \text{if } \Delta^{P_k}_{E'} < 0
+  ||P_{k}||, \text{in other case.}
   \end{array} \right.
 \end{equation}
 
@@ -82,14 +82,14 @@ where $\alpha$ is a tuneable parameter which should be fixed in the range $(0,1]
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter3/i_30r1_regular.eps}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter3/mvi_20r4_m.regular.eps}
   \end{center}
-    \caption{Basic genetic algorithm applied to instance of 30 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:ga_basic_i_30r1}
+    \caption{Basic genetic algorithm applied to instance of 30 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:ga_basic_mvi_20r4_m}
 \end{figure}
 
 \subsubsection*{Stopping criterion}
 
-Finally, the evolutionary algorithm runs until reach a fixed number or iterations $\kappa$. Nevertheless, it can stop once accopmlish $\mathbb{m}$ number of consecutive iterations whitous a significative change, i.e.,
+Finally, the evolutionary algorithm runs until reach a fixed number or iterations $\kappa$. Nevertheless, it can stop once accopmlish $\mathbf{m}$ number of consecutive iterations whitous a significative change, i.e., $|\Delta^{P_k}_{E'}|\leq \varepsilon$. Both $\mathbf{m}$ and $\varepsilon$ are tuneable parameters.
 
 % \subsubsection{Crossover - EAX}
 
@@ -102,12 +102,12 @@ Finally, the evolutionary algorithm runs until reach a fixed number or iteration
 \subsubsection*{local search}
 
 
-A classic genetic algorithm does not yield competitive results itself, due to simple GA does not exploit problem knowing to produce high quality solutions. To be effective, we combine local search methods.
+A classic genetic algorithm does not yield competitive results itself, due to basic GA does not exploit problem knowing to produce high quality solutions. To be effective, we combine local search methods. Local search can be incorporated in the initial population or among the offspring.
+
+We apply rollout algorithm as local search method. The GA incorporates it in the initialization stage as in each iteration under the best policy obtained.
 
 
-Often hybridazation is included in inicialization and reproduction operators.
 
-local search can be incorporated in the initial population or among the offspring.
 
 \subsubsection*{Performance of the genetic algorithms}
 
