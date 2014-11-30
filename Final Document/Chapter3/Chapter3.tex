@@ -1,36 +1,29 @@
-\chapter{Hybrid Evolutionary approach}
+\chapter{Hybrid evolutionary approach}
 \label{chap:methodology}
 %\minitoc
 
+An evolutionary algorithm is a technique bio-inspired by the evolution of the espicies. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
 
+\section{Hybrid genetic algorithm}
 
-\section{Hybrid Genetic Algorithm}
+A hybrid evolutionary algorithms or hybrid genetic algorithms are a very popular techniques that offers practical advantages to deal with complex and hardly optimization problems. Grosan (Grosan, 2007) present a review of hybrid genetic architectures frecuently used. 
 
-A evolutionary algorithm is a technique bio-inspired by the espicies evolution. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more probability.
+Hybridization can be performed using prior knowledge, heuristics, local search, other techniques. We use it to carry out local search through rollout algorithm. Some times, a hybrid genetic algorithm which combine other technique to local search is known as memetic algorithm.
 
-A hybrid evolutionary algorithm or hybrid genetic algorithm are very popular techniques that offers practical advantages to deal with complex and hardly optimization problems. (Grosan, 2007) present a review of hybrid genetic architectures frecuently used.
+Generally, the purpose of hibridization is:
 
+\begin{itemize}
+ \item Improve the performance of the evolutionary algorithms.
+ \item Improve quality of solutions obtained by evolutionary algorithm
+ \item Incorporate evolutionary algorithm as part of a large system
+\end{itemize}
 
-
-
-hibridization is used for:
-Improve the performance of the evolutionary algorithms
-Improve quality of solutions obtained by evolutionary algorithm
-Incorporate evolutionary algorithm as part of a large system
-
-hybridization can be performed using prior knowledge, heuristics, local search, other techniques
-
-local search is knowed as memetic algorithm
-
-local search can be incorporated in the initial population or among the offsprings
-
-
-``Evolutionary algorithm behavior is determined by the exploitation (improve solution - local search) and exploration (avoid local optimum extending the search space) relationship kept throughout the run''
+Evolutionary algorithm behavior is determined by the exploitation and exploration; In exploitation local search is performed to improve solutions, and exploration avoid local optimum extending the search space, our implementation of memetic algorithm works to keep these relation throughout the run. So, in this application hybridazation not only improve the quality of the solutions obtained by evolutionary algorithm, also is assembly as an framework for rollout algorithm in order to avoid local optimum.
 
 
 \subsection{A basic genetic algorithm for vehicle routing problem with stochastic demands}
 
-A example of a basic GA used to find solutions to VRPSD is showed in general form in figure \ref{fig:ga_basic}. First a initial population is selected, for each individual in the population assess fitness function, since individuals with better fitness function has more chance to reproduce then croossover operators are applied to selected individuals, also mutations can be performed in this stages, generating a offspring with new individuals. Probably, they will be added to new population whether have a fitness competitive respect to the population. So, a selection of individuals is applied to conform the new population, individuals with better fitness have more probability to get it. Until stopping criteriums are resolve, reproduction and selection is applied repeatedly over the population.
+We show an example of basic GA in general form in figure \ref{fig:ga_basic}. First, an initial population is selected and fitness function is assessed for each individual in the population. In order to produce a new population for the next generation, crossover and mutation operators are applied to individuals allowing those who have better fitness function to get more chances to reproduce themselves. In the selection stage, offspring's fitness is evaluated to choose the individuals to integrate the new population; individuals with competitive fitness regarding to the population have more probability to be selected. These steps are repeated until stopping criteriums are resolve.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -39,22 +32,26 @@ A example of a basic GA used to find solutions to VRPSD is showed in general for
     \caption{Basic genetic algorithm}\label{fig:ga_basic}
 \end{figure}
 
-Often hybridazation is included in inicialization and reproduction operators.
+\subsubsection*{Initialization}
 
-What is The fitness function? %answer
+We represent an individual as a policy tour $\pi^\mathcal{C}$ whose fitness is the expected distance $\tilde{J}_{\pi^\mathcal{C}}$ computed using the algorithm $\Gamma$ \ref{algo:expecteddistance}.
 
+
+
+
+\subsubsection*{Crossover}
 The crossover operator consist in selecting two different individuals $I_1$ and $I_2$ with probability dependently of their fitness value respectively, in contrast a random cut point $\gamma$ is selected uniformly $\gamma \in [1,n]$, then a new individual raise of concatenate the part $I_1$ sequence of 1 to the cut point with the part of sequence $I_2$ of cut point to $n$, at some times this process can be inverted, e.g. $I_1 = \{2, 3, 4, 5, 1\}$, $I_2= \{2, 3, 4, 1, 5\}$, then $I_1\times I_2 = \{2, 3, 4, 1, 5\}$. When a element in the crossover process can be generate a unfeasible sequence is corrected.
+
+\subsubsection*{Mutation}
 
 The mutation can happened with probability $\alpha = 0.2$ in the experiments presented in this document, this operator swaps two elements of an tour selected randomly.
 
 
-A classic genetic algorithm does not yield competitive results, due to simple GA does not exploit problem knowing to produce high quality solutions. To be effective, we combine local search methods.
-
-
-We represents individuals as a policy tour
 
 
 Size of population:
+
+%Put a figure to show variable population size
 
 Deprecated:
 Size of population is $\lfloor \alpha \log n \rfloor$ where $\alpha$ is a tuneable parameter which should be fixed depending of computational resources 
@@ -74,6 +71,14 @@ Edge assembly crossover
 Swap
 
 \subsubsection*{local search}
+
+
+A classic genetic algorithm does not yield competitive results itself, due to simple GA does not exploit problem knowing to produce high quality solutions. To be effective, we combine local search methods.
+
+
+Often hybridazation is included in inicialization and reproduction operators.
+
+local search can be incorporated in the initial population or among the offsprings
 
 \subsubsection*{Performance of the genetic algorithm}
 
