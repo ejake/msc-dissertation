@@ -12,10 +12,8 @@
 \contentsline {figure}{\numberline {4.1.2}{\ignorespaces Basic genetic algorithm applied to instance of 20 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }}{27}{figure.4.1.2}
 \contentsline {figure}{\numberline {4.1.3}{\ignorespaces Memetic algorithm applied to instance of 20 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }}{28}{figure.4.1.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1.1}{\ignorespaces Instance demands. Are of the circles represents the demand variance}}{31}{figure.5.1.1}
-\contentsline {figure}{\numberline {5.2.1}{\ignorespaces average distance straightforward tour vs. average distance cyclic tour}}{31}{figure.5.2.1}
-\contentsline {figure}{\numberline {5.2.2}{\ignorespaces average distance tour vs. expected distance tour}}{32}{figure.5.2.2}
-\contentsline {figure}{\numberline {5.2.3}{\ignorespaces execution algorithm time vs. expected distance tour}}{32}{figure.5.2.3}
+\contentsline {figure}{\numberline {5.1.1}{\ignorespaces Instance demands. Circles area represent the demand variance}}{31}{figure.5.1.1}
+\contentsline {figure}{\numberline {5.1.2}{\ignorespaces Expected distance algorithm execution time. Color shows expected distance to arbitrary policy }}{32}{figure.5.1.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
