@@ -13,10 +13,10 @@
 \contentsline {chapter}{\tocchapter {Chapter}{2}{Background}}{5}{chapter.2}
 \contentsline {section}{\tocsection {}{2.1}{A review of Vehicle Routing Problem with Stochastic Demands}}{5}{section.2.1}
 \contentsline {subsection}{\tocsubsection {}{2.1.1}{Application cases}}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{The Traveling Repairman Problem (TRP)}}{6}{section*.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Currier mail services}}{6}{section*.3}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Emergency services}}{7}{section*.4}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Taxi cab services}}{7}{section*.5}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{The Traveling Repairman Problem (TRP)}}{6}{section*.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Currier mail services}}{6}{section*.5}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Emergency services}}{7}{section*.6}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Taxi cab services}}{7}{section*.7}
 \contentsline {subsection}{\tocsubsection {}{2.1.2}{Solution methods}}{7}{subsection.2.1.2}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.1}{Exact methods}}{7}{subsubsection.2.1.2.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.2}{Aproximate methods}}{8}{subsubsection.2.1.2.2}
@@ -41,12 +41,12 @@
 \contentsline {chapter}{\tocchapter {Chapter}{4}{Hybrid evolutionary approach}}{24}{chapter.4}
 \contentsline {section}{\tocsection {}{4.1}{Hybrid evolutionary algorithm}}{24}{section.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.1.1}{A basic genetic algorithm for vehicle routing problem with stochastic demands}}{25}{subsection.4.1.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Initialization}}{25}{section*.6}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Crossover}}{26}{section*.7}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Mutation}}{26}{section*.8}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Selection of the new population}}{26}{section*.9}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Stopping criterion}}{27}{section*.10}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{local search}}{28}{section*.11}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Initialization}}{25}{section*.14}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Crossover}}{26}{section*.15}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Mutation}}{26}{section*.16}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Selection of the new population}}{26}{section*.17}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Stopping criterion}}{27}{section*.19}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{local search}}{28}{section*.20}
 \contentsline {section}{\tocsection {}{4.2}{Summary}}{28}{section.4.2}
 \contentsline {chapter}{\tocchapter {Chapter}{5}{Experiments and numerical results}}{29}{chapter.5}
 \contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{29}{section.5.1}
@@ -54,11 +54,12 @@
 \contentsline {subsection}{\tocsubsection {}{5.1.2}{Expected distance algorithm}}{30}{subsection.5.1.2}
 \contentsline {subsection}{\tocsubsection {}{5.1.3}{Rollout algorithm}}{30}{subsection.5.1.3}
 \contentsline {subsection}{\tocsubsection {}{5.1.4}{Evoulutionary approach}}{30}{subsection.5.1.4}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithms}}{31}{section*.12}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithms}}{31}{section*.33}
 \contentsline {subsection}{\tocsubsection {}{5.1.5}{Comparative results}}{32}{subsection.5.1.5}
-\contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{45}{chapter.6}
-\contentsline {section}{\tocsection {}{6.1}{Conclusions}}{45}{section.6.1}
-\contentsline {section}{\tocsection {}{6.2}{Perspectives}}{45}{section.6.2}
-\contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{46}{appendix.A}
-\contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{46}{section.A.1}
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{48}{appendix*.13}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{44}{chapter.6}
+\contentsline {section}{\tocsection {}{6.1}{Conclusions}}{44}{section.6.1}
+\contentsline {section}{\tocsection {}{6.2}{Perspectives}}{44}{section.6.2}
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{45}{appendix.A}
+\contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{45}{section.A.1}
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Results}}{47}{appendix.A}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{48}{appendix*.40}

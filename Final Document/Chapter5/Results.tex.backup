@@ -48,8 +48,9 @@ where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of avai
 
 
 
-The 160 instances used by Novoa ~\cite{novoa_approximate_2009} was generated following the same method described above. This set is composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size whose number of vertex is greter than 100. Table \ref{tb:instances_characterization} shows the range of demands for each size instance, where the demand values is the difference between the maximun and minimun demand which some customer can take. In addition, \ref{fig:demands} exhibit the demands mean and variance for each instance.
+The 160 instances used by Novoa ~\cite{novoa_approximate_2009} was generated following the same method described above. This set is composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size whose number of vertex is greter than 100. Table \ref{tb:instances_characterization} shows the range of demands for each size instance, where the demand values is the difference between the maximun and minimun demand which some customer can take. In addition, \ref{fig:demands} exhibit the demands mean and variance for each instance and in the figure \ref{fig:instances} we classify each instance according to number of vertices $n$ and demand range which is computed such as demand values in th table \ref{tb:instances_characterization}.
 
+In addition, we represent the instances used in the experimental analysis in the figure \ref{fig:instances}, where  as an 
 
 \begin{table}[!h]
 \centering
@@ -72,6 +73,14 @@ n & 4 & 5 & 7 & 8 & 9 & 15 & 17 & 29 & 33 & Total \\
 \caption{Instances characterization}\label{tb:instances_characterization}
 \end{table}
 
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.8\textwidth]{Images/Chapter5/instances.eps}
+  \end{center}
+    \caption{Instance demands.}\label{fig:instances}
+\end{figure}
+
+
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -79,7 +88,6 @@ n & 4 & 5 & 7 & 8 & 9 & 15 & 17 & 29 & 33 & Total \\
   \end{center}
     \caption{Instance demands. Circles area represent the demand variance}\label{fig:demands}
 \end{figure}
-
 
 \subsection{Expected distance algorithm}\label{sec:test_expecteddistance}
 
@@ -120,9 +128,9 @@ In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by a
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/ra_time.eps}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_ra.eps}
   \end{center}
-    \caption{execution time to accomplish rollout algorithm}\label{fig:expected_distance3D_time}
+    \caption{Performance rollout algorithm}\label{fig:compare_expected_distance_ra}
 \end{figure}
 
 \subsection{Evoulutionary approach}
@@ -135,9 +143,19 @@ Suitable parameters was chosen by experimental results whitout
 
 In the case of number of iterations $\kappa$ and size of population $\alpha$ the parameters time consumption restrict this since we conclude that a greater value for these increase the solutions explored.
 
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_ga.eps}
+  \end{center}
+    \caption{Performance ga}\label{fig:compare_expected_distance_ga}
+\end{figure}
 
-
-
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_memetic.eps}
+  \end{center}
+    \caption{Performance Memetic}\label{fig:compare_expected_distance_memetic}
+\end{figure}
 
 \subsubsection*{Performance of the genetic algorithms}
 
@@ -191,12 +209,7 @@ The figure \ref{fig:improve_n10_f1_s1} shows the improving of the objective func
     \caption{Boxplot for expected distance ra,ga,Memetic}\label{fig:comparative_results_box}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/comparative_results_matrix.eps}
-  \end{center}
-    \caption{Scatter matrix comparing results and times}\label{fig:comparative_results_matrix}
-\end{figure}
+
 
 %subfigures:
 
