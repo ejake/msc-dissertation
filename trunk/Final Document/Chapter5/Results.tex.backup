@@ -90,7 +90,7 @@ instances with
     \caption{Instance demands. Circles area represents the demand variance}\label{fig:demands}
 \end{figure}
 
-\subsection{Expected distance algorithm}\label{sec:test_expecteddistance}
+\section{Expected distance algorithm}\label{sec:test_expecteddistance}
 
 
 In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by algorithm $\Gamma$ \ref{algo:expecteddistance} to compute the expected distance for each instance. As expected, An higher value of $n$ and $Q$ increase the computational cost to compute expected distance. However, the figure \ref{fig:expected_distance3D_time} shows that the demands distribution affect the algorithm performance.
@@ -110,9 +110,11 @@ In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by a
     \caption{Expected distance algorithm  $\Gamma$ performance}\label{fig:expected_distance3D}
 \end{figure}
 
+\clearpage
 
-\subsection{Rollout algorithm}
+\section{Rollout algorithm}
 
+In figure \ref{fig:ra_gamma_time_x2}, we put togeter the running time obtained by rollout algorithm and $\Gamma$ algorithm. Thus, we show experimentally the computational cost of rollout algorithm since this apply $O(n^2)$ times the $\Gamma$ algorithm.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -121,19 +123,6 @@ In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by a
     \caption{Performance rollout algorithm vs. $\Gamma$ algorithm}\label{fig:ra_gamma_time_x2}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/ra_gamma_time.eps}
-  \end{center}
-    \caption{Performance rollout algorithm vs. $\Gamma$ algorithm}\label{fig:ra_gamma_time}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/ra_time.eps}
-  \end{center}
-    \caption{execution time to accomplish rollout algorithm}\label{fig:expected_distance3D_time}
-\end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -142,13 +131,16 @@ In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by a
     \caption{Performance rollout algorithm}\label{fig:compare_expected_distance_ra}
 \end{figure}
 
-\subsection{Evoulutionary approach}
+\section{Evoulutionary approach}
 
-when local search is applied the evolutionary algorithm stops when the number of iterations is achived.
+We establish the values for the tunable parameters of genetic algorithm as a result of experimental obsevations. We selected a stratified sample of 10 instances and run between 100 and 10 times the basic genetic algorithm for each instance in the sample to compute a policy solution. Finally, we select the values for the parameters where the genetic algorithm otained the best average outcome.
+
+Hence, $\varepsilon$ are $1x10^{-3}$, $Prob_m = 0.$. 
+
+Others parameters were fixed to agree computational capability, such that  number of iterations $\kappa$ and size of population $\alpha$ since we recognize that a greater value for these increase the solutions explored. In concordace with the computational resoure available, we take $\kappa = 60$ and $\alpha = 0.5$
 
 Both $\mathbf{m}$ 10\% of the iterations  and $\varepsilon$ are $1x10^{-3}$.
 
-Suitable parameters was chosen by experimental results whitout 
 
 In the case of number of iterations $\kappa$ and size of population $\alpha$ the parameters time consumption restrict this since we conclude that a greater value for these increase the solutions explored.
 
@@ -168,33 +160,7 @@ In the case of number of iterations $\kappa$ and size of population $\alpha$ the
 
 \subsubsection*{Performance of the genetic algorithms}
 
-This section describes the algorithm performance for a specific problem instance with 10 customers and a factor $f'=1$, the customers' location and demand value (known when the vehicle arrive to the customer location) are showed in the figure \ref{fig:customer_n10_f1_s1}.
-
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_customers}
-%  \end{center}
-%    \caption{Instance features: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:customer_n10_f1_s1}
-%\end{figure}
-
-The genetic algorithm outcome for the instance problem described above is presented in the figure \ref{fig:tour_n10_f1_s1}, the red line describes the route, the segmented black line represents returns to the depot for replenishment, this tour was selected as the best solution found in 100 iterations of the GA.
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_tour}
-%  \end{center}
-%      \caption{e.g best tour found by the GA: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:tour_n10_f1_s1}
-%\end{figure}
-
-The figure \ref{fig:improve_n10_f1_s1} shows the improving of the objective function found, the chart shows the lesser total cost history, when a better value is found the line fall, therefore we can see the improving is given among the iteration 25 and 40, after this iterations the algorithm converges and it's not found a better solution.
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_history}
-%  \end{center}
-%      \caption{e.g improvement solution: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:improve_n10_f1_s1}
-%\end{figure}
+when local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm.
 
 %\section{Memetic Algorithm}
 
@@ -202,7 +168,7 @@ The figure \ref{fig:improve_n10_f1_s1} shows the improving of the objective func
 
 %\section{Non-dominated Genetic Algorithm}
 
-\subsection{Comparative results}
+\section{Comparative results}
 
 \begin{figure}[!htbp]
   \begin{center}
