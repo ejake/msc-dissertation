@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.20)  2 DEC 2014 14:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.20)  2 DEC 2014 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,7 +985,7 @@ LaTeX Warning: Reference `fig:customer_n10_f1_s1' on page 33 undefined on input
  line 159.
 
 
-Underfull \vbox (badness 1810) has occurred while \output is active []
+Underfull \vbox (badness 1067) has occurred while \output is active []
 
  [33
 
@@ -1042,25 +1042,25 @@ Package pdftex.def Info: Images/Chapter5/comparative_results_box-eps-converted-
 to.pdf used on input line 204.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
 Package epstopdf Info: Source file: <Images/Chapter5/compare_times_evol.eps>
-(epstopdf)                    date: 2014-12-02 11:48:05
-(epstopdf)                    size: 24760 bytes
+(epstopdf)                    date: 2014-12-02 15:10:49
+(epstopdf)                    size: 35923 bytes
 (epstopdf)             Output file: <Images/Chapter5/compare_times_evol-eps-con
 verted-to.pdf>
-(epstopdf)                    date: 2014-12-02 12:06:46
-(epstopdf)                    size: 18295 bytes
+(epstopdf)                    date: 2014-12-02 15:10:55
+(epstopdf)                    size: 16319 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/compare_ti
 mes_evol-eps-converted-to.pdf Images/Chapter5/compare_times_evol.eps>
 (epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/compare_times_evol-eps-converted-to.pdf, id=733, 449.68pt x 33
-8.26375pt>
+<Images/Chapter5/compare_times_evol-eps-converted-to.pdf, id=733, 493.845pt x 3
+28.22626pt>
 File: Images/Chapter5/compare_times_evol-eps-converted-to.pdf Graphic file (typ
 e pdf)
  <use Images/Chapter5/compare_times_evol-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/compare_times_evol-eps-converted-to.pd
 f used on input line 215.
-(pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
+(pdftex.def)             Requested size: 399.47397pt x 265.5012pt.
 Package epstopdf Info: Source file: <Images/Chapter5/compare_times_ra.eps>
 (epstopdf)                    date: 2014-12-02 11:48:05
 (epstopdf)                    size: 18958 bytes
@@ -1235,7 +1235,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `docunalthesis.out' has not changed.
-(rerunfilecheck)             Checksum: FD0A0B44A3D404C20580424E01567295;3195.
+(rerunfilecheck)             Checksum: 71CD8CE72C8A5E2711922F21DD630CD5;3159.
 
 
 LaTeX Warning: There were undefined references.
@@ -1247,8 +1247,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
  11577 strings out of 493304
- 171754 string characters out of 6139870
- 295212 words of memory out of 5000000
+ 171714 string characters out of 6139870
+ 295202 words of memory out of 5000000
  14392 multiletter control sequences out of 15000+600000
  22088 words of font info for 62 fonts, out of 8000000 for 9000
  1118 hyphenation exceptions out of 8191
@@ -1275,7 +1275,7 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb
 >
-Output written on docunalthesis.pdf (60 pages, 1153956 bytes).
+Output written on docunalthesis.pdf (60 pages, 1151172 bytes).
 PDF statistics:
  1001 PDF objects out of 1200 (max. 8388607)
  866 compressed objects within 9 object streams
