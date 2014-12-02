@@ -17,10 +17,11 @@
 \usepackage{algorithm2e}
 %\usepackage[ruled,vlined]{algorithm2e}
 %\usepackage{minitoc}
-%\usepackage{caption}
-%\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{amsthm}
 % \usepackage{epstopdf}
+\usepackage{lscape}
 
 %%Es mejor usar \newcommand que \def. El primero hace ciertas validaciones
 \newcommand\deq{\stackrel{{}_{\delta}{}}{\raisebox{-0.4ex}[+0.5ex][-8.2ex]{$=$}}}
@@ -41,7 +42,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Title page
 
-\Titulo{An hybrid evolutionary algorithm for stochastic vehicle routing problem with stochastic demands}
+%\Titulo{A hybrid evolutionary algorithm for vehicle routing problem with stochastic demands}
+\Titulo{A hybrid local rollout dynamic programming global evolutionary algorithm for the vehicle routing problem with stochastic demands}
 
 \Autor{Robinson A. Jaque P.}
 
@@ -80,17 +82,17 @@
 \onehalfspacing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %ABSTRACT
-% \begin{resumen}
-% Abstract here
-% \\
-% \end{resumen}
+\begin{resumen}
+In this work we propose a hybrid dynamic programming-evolutionary algorithm to solve the vehicle routing problem with stochastic demands, it is a well known NP-hard problem where uncertainty enhances the computational efforts required to obtain a feasible and near-optimal solution. We develop an evolutionary technique where a rollout dynamic programming algorithm is applied as local search method to improve the quality of solutions. Motivated by computational considerations, the rollout algorithm can be applied partially, so, this finds competitive solutions in large instances for which the global rollout dynamic programming strategy is time unfeasible.
+\\
+\end{resumen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %ACKNOWLEDGEMENTS
-% \begin{Reconocimientos}
-% Last thing to do :-)\\
+\begin{Reconocimientos}
+Last thing to do :-)\\
 
-% \end{Reconocimientos}
+\end{Reconocimientos}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %DEDICATION
@@ -121,7 +123,7 @@ To Hari
 \CuerpoDeLaTesis
 
 %////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-% \include{Chapter1/Chapter1}
+ \include{Chapter1/Chapter1}
 
 %Outline
 %1. Introduction
@@ -133,23 +135,27 @@ To Hari
 %7. Bibliography
 
 %//Preliminars
-% \include{Chapter2/Preliminars}
+ \include{Chapter2/Preliminars}
 
 %////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 %Stochastic dynamic programming
-% \include{Chapter4/Chapter4}
+ \include{Chapter4/Chapter4}
 %////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 %hybrid GA
-% \include{Chapter3/Chapter3}
+ \include{Chapter3/Chapter3}
 %////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 %Results
-% \include{Chapter5/Results}
+ \include{Chapter5/Results}
 
 %Discussion of results, conclussion and future works
-% \include{Chapter6/Conclusions}
+ \include{Chapter6/Conclusions}
 
-
+ %Appendixes
+ %Appendix 1: Algorithms detailed
+ \include{Appendix/Appendix1}
+ %Appendix 2: Results
+ \include{Appendix/Appendix2}
 %---------------------------------------------------------------------------------------------------------------
 %Bibliography---------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------------
@@ -157,9 +163,9 @@ To Hari
 {
 %\footnotesize
 %\nocite{*}
-% \bibliographystyle{plain}
-% \bibliography{officialbiblio}
-% }
+\bibliographystyle{plain}
+\bibliography{officialbiblio}
+}
 %FIN DEL DOC
 
 \end{document}
