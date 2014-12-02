@@ -75,11 +75,18 @@ n & 4 & 5 & 7 & 8 & 9 & 15 & 17 & 29 & 33 & Total \\
 
 \begin{figure}[!htbp]
   \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/instances.eps}
+  \end{center}
+    \caption{Instance demands}\label{fig:instances}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+  \begin{center}
    \includegraphics[width=0.9\textwidth]{Images/Chapter5/demands.eps}
   \end{center}
     \caption{Instance demands. Circles area represent the demand variance}\label{fig:demands}
 \end{figure}
-
 
 \subsection{Expected distance algorithm}\label{sec:test_expecteddistance}
 
@@ -118,7 +125,14 @@ In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by a
     \caption{execution time to accomplish rollout algorithm}\label{fig:expected_distance3D_time}
 \end{figure}
 
-\subsection{Evoulutionary algorithm}
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_ra.eps}
+  \end{center}
+    \caption{Performance rollout algorithm}\label{fig:compare_expected_distance_ra}
+\end{figure}
+
+\subsection{Evoulutionary approach}
 
 when local search is applied the evolutionary algorithm stops when the number of iterations is achived.
 
@@ -127,6 +141,20 @@ Both $\mathbf{m}$ 10\% of the iterations  and $\varepsilon$ are $1x10^{-3}$.
 Suitable parameters was chosen by experimental results whitout 
 
 In the case of number of iterations $\kappa$ and size of population $\alpha$ the parameters time consumption restrict this since we conclude that a greater value for these increase the solutions explored.
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_ga.eps}
+  \end{center}
+    \caption{Performance ga}\label{fig:compare_expected_distance_ga}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_memetic.eps}
+  \end{center}
+    \caption{Performance Memetic}\label{fig:compare_expected_distance_memetic}
+\end{figure}
 
 \subsubsection*{Performance of the genetic algorithms}
 
@@ -164,3 +192,41 @@ The figure \ref{fig:improve_n10_f1_s1} shows the improving of the objective func
 
 %\section{Non-dominated Genetic Algorithm}
 
+\subsection{Comparative results}
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/comparative_results.eps}
+  \end{center}
+    \caption{Compared results ra,ga,Memetic}\label{fig:comparative_results}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/comparative_results_box.eps}
+  \end{center}
+    \caption{Boxplot for expected distance ra,ga,Memetic}\label{fig:comparative_results_box}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/comparative_results_matrix.eps}
+  \end{center}
+    \caption{Scatter matrix comparing results and times}\label{fig:comparative_results_matrix}
+\end{figure}
+
+%subfigures:
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_times_evol.eps}
+  \end{center}
+    \caption{Time performance evolutionary algorithms}\label{fig:compare_times_evol}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_times_ra.eps}
+  \end{center}
+    \caption{Time performance evolutionary algorithms}\label{fig:compare_times_ra}
+\end{figure}
