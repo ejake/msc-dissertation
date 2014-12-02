@@ -52,9 +52,9 @@
 \contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{29}{section.5.1}
 \contentsline {subsection}{\tocsubsection {}{5.1.1}{Instance generation}}{29}{subsection.5.1.1}
 \contentsline {subsection}{\tocsubsection {}{5.1.2}{Expected distance algorithm}}{30}{subsection.5.1.2}
-\contentsline {subsection}{\tocsubsection {}{5.1.3}{Rollout algorithm}}{32}{subsection.5.1.3}
-\contentsline {subsection}{\tocsubsection {}{5.1.4}{Evoulutionary approach}}{32}{subsection.5.1.4}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithms}}{33}{section*.31}
+\contentsline {subsection}{\tocsubsection {}{5.1.3}{Rollout algorithm}}{33}{subsection.5.1.3}
+\contentsline {subsection}{\tocsubsection {}{5.1.4}{Evoulutionary approach}}{33}{subsection.5.1.4}
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithms}}{34}{section*.31}
 \contentsline {subsection}{\tocsubsection {}{5.1.5}{Comparative results}}{34}{subsection.5.1.5}
 \contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{41}{chapter.6}
 \contentsline {section}{\tocsection {}{6.1}{Conclusions}}{41}{section.6.1}

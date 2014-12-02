@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.20)  2 DEC 2014 14:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.20)  2 DEC 2014 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,6 +886,10 @@ le (type pdf)
 Package pdftex.def Info: Images/Chapter5/expected_distance3D_range-eps-converte
 d-to.pdf used on input line 105.
 (pdftex.def)             Requested size: 310.70273pt x 212.85187pt.
+ [30]
+[31 <./Images/Chapter5/instances-eps-converted-to.pdf> <./Images/Chapter5/deman
+ds-eps-converted-to.pdf>] [32 <./Images/Chapter5/expected_distance3D-eps-conver
+ted-to.pdf> <./Images/Chapter5/expected_distance3D_range-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/ra_gamma_time_x2.eps>
 (epstopdf)                    date: 2014-12-01 21:41:53
 (epstopdf)                    size: 28269 bytes
@@ -895,16 +899,16 @@ rted-to.pdf>
 (epstopdf)                    size: 15626 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/ra_gamma_t
 ime_x2-eps-converted-to.pdf Images/Chapter5/ra_gamma_time_x2.eps>
-(epstopdf)             \includegraphics on input line 119.
+(epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf, id=681, 562.1pt x 475.7
+<Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf, id=717, 562.1pt x 475.7
 775pt>
 File: Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf 
-used on input line 119.
+used on input line 120.
 (pdftex.def)             Requested size: 399.47397pt x 338.12381pt.
 Package epstopdf Info: Source file: <Images/Chapter5/compare_expected_distance_
 ra.eps>
@@ -917,21 +921,18 @@ ra-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/compare_ex
 pected_distance_ra-eps-converted-to.pdf Images/Chapter5/compare_expected_distan
 ce_ra.eps>
-(epstopdf)             \includegraphics on input line 127.
+(epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/compare_expected_distance_ra-eps-converted-to.pdf, id=682, 449
+<Images/Chapter5/compare_expected_distance_ra-eps-converted-to.pdf, id=718, 449
 .68pt x 338.26375pt>
 File: Images/Chapter5/compare_expected_distance_ra-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use Images/Chapter5/compare_expected_distance_ra-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/compare_expected_distance_ra-eps-conve
-rted-to.pdf used on input line 127.
+rted-to.pdf used on input line 128.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
-
-[30] [31 <./Images/Chapter5/instances-eps-converted-to.pdf> <./Images/Chapter5/
-demands-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/compare_expected_distance_
 ga.eps>
 (epstopdf)                    date: 2014-12-02 11:48:05
@@ -943,21 +944,18 @@ ga-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/compare_ex
 pected_distance_ga-eps-converted-to.pdf Images/Chapter5/compare_expected_distan
 ce_ga.eps>
-(epstopdf)             \includegraphics on input line 144.
+(epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/compare_expected_distance_ga-eps-converted-to.pdf, id=702, 449
+<Images/Chapter5/compare_expected_distance_ga-eps-converted-to.pdf, id=719, 449
 .68pt x 338.26375pt>
 File: Images/Chapter5/compare_expected_distance_ga-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use Images/Chapter5/compare_expected_distance_ga-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/compare_expected_distance_ga-eps-conve
-rted-to.pdf used on input line 144.
+rted-to.pdf used on input line 145.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
-
-[32 <./Images/Chapter5/expected_distance3D-eps-converted-to.pdf> <./Images/Chap
-ter5/expected_distance3D_range-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/compare_expected_distance_
 memetic.eps>
 (epstopdf)                    date: 2014-12-02 11:48:05
@@ -969,7 +967,7 @@ memetic-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/compare_ex
 pected_distance_memetic-eps-converted-to.pdf Images/Chapter5/compare_expected_d
 istance_memetic.eps>
-(epstopdf)             \includegraphics on input line 151.
+(epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
 <Images/Chapter5/compare_expected_distance_memetic-eps-converted-to.pdf, id=720
@@ -979,22 +977,27 @@ aphic file (type pdf)
 
 <use Images/Chapter5/compare_expected_distance_memetic-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/compare_expected_distance_memetic-eps-
-converted-to.pdf used on input line 151.
+converted-to.pdf used on input line 152.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
 
 
 LaTeX Warning: Reference `fig:customer_n10_f1_s1' on page 33 undefined on input
- line 158.
+ line 159.
 
 
-LaTeX Warning: Reference `fig:tour_n10_f1_s1' on page 33 undefined on input lin
-e 168.
+Underfull \vbox (badness 1810) has occurred while \output is active []
+
+ [33
+
+ <./Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:tour_n10_f1_s1' on page 34 undefined on input lin
+e 169.
 
 
-LaTeX Warning: Reference `fig:improve_n10_f1_s1' on page 33 undefined on input 
-line 177.
+LaTeX Warning: Reference `fig:improve_n10_f1_s1' on page 34 undefined on input 
+line 178.
 
-[33 <./Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/comparative_results.eps>
 (epstopdf)                    date: 2014-12-02 10:14:13
 (epstopdf)                    size: 36275 bytes
@@ -1004,16 +1007,16 @@ nverted-to.pdf>
 (epstopdf)                    size: 19322 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/comparativ
 e_results-eps-converted-to.pdf Images/Chapter5/comparative_results.eps>
-(epstopdf)             \includegraphics on input line 196.
+(epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/comparative_results-eps-converted-to.pdf, id=732, 449.68pt x 3
+<Images/Chapter5/comparative_results-eps-converted-to.pdf, id=731, 449.68pt x 3
 38.26375pt>
 File: Images/Chapter5/comparative_results-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use Images/Chapter5/comparative_results-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/comparative_results-eps-converted-to.p
-df used on input line 196.
+df used on input line 197.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
 Package epstopdf Info: Source file: <Images/Chapter5/comparative_results_box.ep
 s>
@@ -1026,17 +1029,17 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/comparativ
 e_results_box-eps-converted-to.pdf Images/Chapter5/comparative_results_box.eps>
 
-(epstopdf)             \includegraphics on input line 203.
+(epstopdf)             \includegraphics on input line 204.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/comparative_results_box-eps-converted-to.pdf, id=733, 449.68pt
+<Images/Chapter5/comparative_results_box-eps-converted-to.pdf, id=732, 449.68pt
  x 338.26375pt>
 File: Images/Chapter5/comparative_results_box-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use Images/Chapter5/comparative_results_box-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/comparative_results_box-eps-converted-
-to.pdf used on input line 203.
+to.pdf used on input line 204.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
 Package epstopdf Info: Source file: <Images/Chapter5/compare_times_evol.eps>
 (epstopdf)                    date: 2014-12-02 11:48:05
@@ -1047,16 +1050,16 @@ verted-to.pdf>
 (epstopdf)                    size: 18295 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/compare_ti
 mes_evol-eps-converted-to.pdf Images/Chapter5/compare_times_evol.eps>
-(epstopdf)             \includegraphics on input line 214.
+(epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/compare_times_evol-eps-converted-to.pdf, id=734, 449.68pt x 33
+<Images/Chapter5/compare_times_evol-eps-converted-to.pdf, id=733, 449.68pt x 33
 8.26375pt>
 File: Images/Chapter5/compare_times_evol-eps-converted-to.pdf Graphic file (typ
 e pdf)
  <use Images/Chapter5/compare_times_evol-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/compare_times_evol-eps-converted-to.pd
-f used on input line 214.
+f used on input line 215.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
 Package epstopdf Info: Source file: <Images/Chapter5/compare_times_ra.eps>
 (epstopdf)                    date: 2014-12-02 11:48:05
@@ -1067,16 +1070,16 @@ rted-to.pdf>
 (epstopdf)                    size: 8461 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/compare_ti
 mes_ra-eps-converted-to.pdf Images/Chapter5/compare_times_ra.eps>
-(epstopdf)             \includegraphics on input line 221.
+(epstopdf)             \includegraphics on input line 222.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/compare_times_ra-eps-converted-to.pdf, id=735, 449.68pt x 338.
+<Images/Chapter5/compare_times_ra-eps-converted-to.pdf, id=734, 449.68pt x 338.
 26375pt>
 File: Images/Chapter5/compare_times_ra-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use Images/Chapter5/compare_times_ra-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/compare_times_ra-eps-converted-to.pdf 
-used on input line 221.
+used on input line 222.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
 ) [34 <./Images/Chapter5/compare_expected_distance_ra-eps-converted-to.pdf>] [3
 5 <./Images/Chapter5/compare_expected_distance_ga-eps-converted-to.pdf>] [36 <.
@@ -1155,14 +1158,10 @@ ile (type pdf)
 <use Images/Chapter5/comparative_results_matrix-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/comparative_results_matrix-eps-convert
 ed-to.pdf used on input line 9.
-(pdftex.def)             Requested size: 710.18349pt x 472.03943pt.
-
-Overfull \hbox (87.06815pt too wide) in paragraph at lines 9--10
- [] 
- []
+(pdftex.def)             Requested size: 621.40547pt x 413.03137pt.
 
 
-LaTeX Warning: Float too large for page by 60.0764pt on input line 12.
+LaTeX Warning: Float too large for page by 0.06834pt on input line 12.
 
 [45 <./Images/Chapter5/comparative_results_matrix-eps-converted-to.pdf>]
 
@@ -1249,7 +1248,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
 Here is how much of TeX's memory you used:
  11577 strings out of 493304
  171754 string characters out of 6139870
- 296212 words of memory out of 5000000
+ 295212 words of memory out of 5000000
  14392 multiletter control sequences out of 15000+600000
  22088 words of font info for 62 fonts, out of 8000000 for 9000
  1118 hyphenation exceptions out of 8191
@@ -1276,7 +1275,7 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb
 >
-Output written on docunalthesis.pdf (60 pages, 1153988 bytes).
+Output written on docunalthesis.pdf (60 pages, 1153956 bytes).
 PDF statistics:
  1001 PDF objects out of 1200 (max. 8388607)
  866 compressed objects within 9 object streams
