@@ -21,6 +21,14 @@ ylabel('Running time')
 set(gca,'XLim',[0 160]);
 
 
+ms = sort(m,1);
+figure
+plot([1:159],m(:,6),'*-',[1:159],m(:,8),'x-')
+legend('ga','memetic','Location','northwest');
+xlabel('instance')
+ylabel('Running time')
+
+
 %ra
 scatter3(m(:,4),m(:,1),m(:,2),m(:,3),m(:,5),'fill')
 zlabel('Q')
