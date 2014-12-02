@@ -13,20 +13,20 @@
 \contentsline {figure}{\numberline {4.1.3}{\ignorespaces Memetic algorithm applied to instance of 20 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. \relax }}{28}{figure.caption.21}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1.1}{\ignorespaces Instance demands.\relax }}{31}{figure.caption.24}
-\contentsline {figure}{\numberline {5.1.2}{\ignorespaces Instance demands. Circles area represent the demand variance\relax }}{32}{figure.caption.25}
-\contentsline {figure}{\numberline {5.1.3}{\ignorespaces Expected distance algorithm execution time. Color shows expected distance to arbitrary policy \relax }}{33}{figure.caption.26}
-\contentsline {figure}{\numberline {5.1.4}{\ignorespaces Performance rollout algorithm vs. $\Gamma $ algorithm\relax }}{34}{figure.caption.27}
-\contentsline {figure}{\numberline {5.1.5}{\ignorespaces Performance rollout algorithm vs. $\Gamma $ algorithm\relax }}{35}{figure.caption.28}
-\contentsline {figure}{\numberline {5.1.6}{\ignorespaces execution time to accomplish rollout algorithm\relax }}{36}{figure.caption.29}
-\contentsline {figure}{\numberline {5.1.7}{\ignorespaces Performance rollout algorithm\relax }}{37}{figure.caption.30}
-\contentsline {figure}{\numberline {5.1.8}{\ignorespaces Performance ga\relax }}{38}{figure.caption.31}
-\contentsline {figure}{\numberline {5.1.9}{\ignorespaces Performance Memetic\relax }}{39}{figure.caption.32}
-\contentsline {figure}{\numberline {5.1.10}{\ignorespaces Compared results ra,ga,Memetic\relax }}{40}{figure.caption.34}
-\contentsline {figure}{\numberline {5.1.11}{\ignorespaces Boxplot for expected distance ra,ga,Memetic\relax }}{41}{figure.caption.35}
-\contentsline {figure}{\numberline {5.1.12}{\ignorespaces Time performance evolutionary algorithms\relax }}{42}{figure.caption.36}
-\contentsline {figure}{\numberline {5.1.13}{\ignorespaces Time performance evolutionary algorithms\relax }}{43}{figure.caption.37}
+\contentsline {figure}{\numberline {5.1.2}{\ignorespaces Instance demands. Circles area represents the demand variance\relax }}{31}{figure.caption.25}
+\contentsline {figure}{\numberline {5.1.3}{\ignorespaces Expected distance algorithm $\Gamma $ performance\relax }}{32}{figure.caption.26}
+\contentsline {figure}{\numberline {5.1.4}{\ignorespaces Performance rollout algorithm vs. $\Gamma $ algorithm\relax }}{33}{figure.caption.27}
+\contentsline {figure}{\numberline {5.1.5}{\ignorespaces Performance rollout algorithm\relax }}{34}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1.6}{\ignorespaces Performance ga\relax }}{35}{figure.caption.29}
+\contentsline {figure}{\numberline {5.1.7}{\ignorespaces Performance Memetic\relax }}{36}{figure.caption.30}
+\contentsline {figure}{\numberline {5.1.8}{\ignorespaces Compared results ra,ga,Memetic\relax }}{37}{figure.caption.32}
+\contentsline {figure}{\numberline {5.1.9}{\ignorespaces Boxplot for expected distance ra,ga,Memetic\relax }}{38}{figure.caption.33}
+\contentsline {figure}{\numberline {5.1.10}{\ignorespaces Time performance evolutionary algorithms\relax }}{39}{figure.caption.34}
+\contentsline {figure}{\numberline {5.1.11}{\ignorespaces Time performance evolutionary algorithms\relax }}{40}{figure.caption.35}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.0.1}{\ignorespaces Scatter matrix comparing results and times\relax }}{47}{figure.caption.39}
+\contentsline {figure}{\numberline {A.0.1}{\ignorespaces Scatter matrix comparing results and times\relax }}{45}{figure.caption.37}
+\contentsline {figure}{\numberline {A.0.2}{\ignorespaces Performance rollout algorithm vs. $\Gamma $ algorithm\relax }}{46}{figure.caption.38}
+\contentsline {figure}{\numberline {A.0.3}{\ignorespaces execution time to accomplish rollout algorithm\relax }}{47}{figure.caption.39}
 \addvspace {10\p@ }

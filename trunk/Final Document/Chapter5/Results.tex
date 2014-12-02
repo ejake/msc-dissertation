@@ -74,7 +74,7 @@ n & 4 & 5 & 7 & 8 & 9 & 15 & 17 & 29 & 33 & Total \\
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.8\textwidth]{Images/Chapter5/instances.eps}
+   \includegraphics[width=0.6\textwidth]{Images/Chapter5/instances.eps}
   \end{center}
     \caption{Instance demands.}\label{fig:instances}
 \end{figure}
@@ -85,7 +85,7 @@ instances with
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/demands.eps}
+   \includegraphics[width=0.8\textwidth]{Images/Chapter5/demands.eps}
   \end{center}
     \caption{Instance demands. Circles area represents the demand variance}\label{fig:demands}
 \end{figure}
@@ -93,14 +93,21 @@ instances with
 \subsection{Expected distance algorithm}\label{sec:test_expecteddistance}
 
 
-In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by algorithm $\Gamma$ \ref{algo:expecteddistance} to compute the expected distance for each instance. As expected, An higher value of $n$ and $Q$ increase the computational cost to compute expected distance.
-
+In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by algorithm $\Gamma$ \ref{algo:expecteddistance} to compute the expected distance for each instance. As expected, An higher value of $n$ and $Q$ increase the computational cost to compute expected distance. However, the figure \ref{fig:expected_distance3D_time} shows that the demands distribution affect the algorithm performance.
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/expected_distance3D.eps}
+  \begin{subfigure}[h]{1\textwidth}
+   \includegraphics[width=0.7\textwidth]{Images/Chapter5/expected_distance3D.eps}
+   \caption{Color shows expected distance to an arbitrary policy }\label{fig:expected_distance3D_time}
+  \end{subfigure}
+  \begin{subfigure}[h]{1\textwidth}
+   \includegraphics[width=0.7\textwidth]{Images/Chapter5/expected_distance3D_range.eps}
+   \caption{color represents demand disribution}\label{fig:expected_distance3D_range_time}
+  \end{subfigure}
+   
   \end{center}
-    \caption{Expected distance algorithm execution time. Color shows expected distance to arbitrary policy }\label{fig:expected_distance3D_time}
+    \caption{Expected distance algorithm  $\Gamma$ performance}\label{fig:expected_distance3D}
 \end{figure}
 
 
@@ -114,19 +121,6 @@ In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by a
     \caption{Performance rollout algorithm vs. $\Gamma$ algorithm}\label{fig:ra_gamma_time_x2}
 \end{figure}
 
-\begin{figure}[!htbp]
-  \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/ra_gamma_time.eps}
-  \end{center}
-    \caption{Performance rollout algorithm vs. $\Gamma$ algorithm}\label{fig:ra_gamma_time}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/ra_time.eps}
-  \end{center}
-    \caption{execution time to accomplish rollout algorithm}\label{fig:expected_distance3D_time}
-\end{figure}
 
 \begin{figure}[!htbp]
   \begin{center}
