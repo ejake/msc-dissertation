@@ -30,10 +30,10 @@
 \BOOKMARK [0][-]{chapter.5}{Chapter 5. Experiments and numerical results}{}% 30
 \BOOKMARK [1][-]{section.5.1}{5.1. Instances of VRPSD}{chapter.5}% 31
 \BOOKMARK [2][-]{subsection.5.1.1}{5.1.1. Instance generation}{section.5.1}% 32
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2. Expected distance algorithm}{section.5.1}% 33
-\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3. Rollout algorithm}{section.5.1}% 34
-\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4. Evoulutionary approach}{section.5.1}% 35
-\BOOKMARK [2][-]{subsection.5.1.5}{5.1.5. Comparative results}{section.5.1}% 36
+\BOOKMARK [1][-]{section.5.2}{5.2. Expected distance algorithm}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.3}{5.3. Rollout algorithm}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.4}{5.4. Evoulutionary approach}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.5}{5.5. Comparative results}{chapter.5}% 36
 \BOOKMARK [0][-]{chapter.6}{Chapter 6. Conclusions}{}% 37
 \BOOKMARK [1][-]{section.6.1}{6.1. Conclusions}{chapter.6}% 38
 \BOOKMARK [1][-]{section.6.2}{6.2. Perspectives}{chapter.6}% 39
