@@ -1,8 +1,8 @@
 \select@language {english}
 \select@language {english}
 \contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{vii}{Doc-Start}
-\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{viii}{Doc-Start}
-\contentsline {chapter}{\tocchapter {Chapter}{}{Notation}}{ix}{chapter*.1}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{ix}{Doc-Start}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Notation}}{x}{chapter*.1}
 \contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\tocsection {}{1.1}{Introduction}}{1}{section.1.1}
 \contentsline {section}{\tocsection {}{1.2}{Proposal}}{3}{section.1.2}
@@ -54,13 +54,12 @@
 \contentsline {section}{\tocsection {}{5.2}{Expected distance algorithm}}{30}{section.5.2}
 \contentsline {section}{\tocsection {}{5.3}{Rollout algorithm}}{33}{section.5.3}
 \contentsline {section}{\tocsection {}{5.4}{Evoulutionary approach}}{33}{section.5.4}
-\contentsline {subsubsection}{\tocsubsubsection {}{}{Performance of the genetic algorithms}}{34}{section*.31}
-\contentsline {section}{\tocsection {}{5.5}{Comparative results}}{34}{section.5.5}
-\contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{41}{chapter.6}
-\contentsline {section}{\tocsection {}{6.1}{Conclusions}}{41}{section.6.1}
-\contentsline {section}{\tocsection {}{6.2}{Perspectives}}{41}{section.6.2}
-\contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{42}{appendix.A}
-\contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{42}{section.A.1}
-\contentsline {chapter}{\tocappendix {Appendix}{A}{Results}}{44}{appendix.A}
-\contentsline {subsection}{\tocsubsection {}{A.0.1}{Peformance rollout algorithm}}{46}{subsection.A.0.1}
+\contentsline {subsection}{\tocsubsection {}{5.4.1}{Evolutionary algorithms performance}}{34}{subsection.5.4.1}
+\contentsline {section}{\tocsection {}{5.5}{Comparative results}}{35}{section.5.5}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{39}{chapter.6}
+\contentsline {section}{\tocsection {}{}{Perspectives}}{40}{section*.34}
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{41}{appendix.A}
+\contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{41}{section.A.1}
+\contentsline {chapter}{\tocappendix {Appendix}{B}{Results}}{43}{appendix.B}
+\contentsline {subsection}{\tocsubsection {}{B.0.1}{Peformance rollout algorithm}}{45}{subsection.B.0.1}
 \contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{48}{appendix*.40}
