@@ -57,7 +57,6 @@
 \contentsline {subsection}{\tocsubsection {}{5.4.1}{Evolutionary algorithms performance}}{34}{subsection.5.4.1}
 \contentsline {section}{\tocsection {}{5.5}{Comparative results}}{35}{section.5.5}
 \contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{39}{chapter.6}
-\contentsline {section}{\tocsection {}{}{Perspectives}}{40}{section*.34}
 \contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{41}{appendix.A}
 \contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{41}{section.A.1}
 \contentsline {chapter}{\tocappendix {Appendix}{B}{Results}}{43}{appendix.B}
