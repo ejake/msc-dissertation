@@ -2,7 +2,6 @@
 \label{chap:conclusions}
 %\minitoc
 
-\section{Conclusions}
 
 Although the hybridization approach increases the computational time cost, this effort is rewarded in many cases given that the quality of the solutions is improved than if we apply the rollout algorithm alone. 
 
@@ -24,4 +23,24 @@ Focus local search improve the quality solutions and the convergency.
 
 when local search is applied the evolutionary algorithm stops when the number of iterations is achived.
 
-\section{Perspectives}
+In the behavior of the genetic algorithms with small and medium instances, we observe that if local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm where often complete the maximun counting of iterations without significative change. This can be observed in the figure \ref{fig:ga_basic_mvi_20r4_m} in comparison with the figure \ref{fig:memetic_mvi_20r4_m}. We expected that local search accelerate the convergence of solution in the memetic algorithm.
+
+In spite of that basic genetic algorithm often expend less time, the hybrid approach finds a solution employing less time for many large instances. Memetic algorithm can perform less iterations since obtain an unbeatable solution early inducing the algorithm to stop to accomplish the number of iterations whitout significative change. %this contradice 
+
+
+when instance size increase also grow the distance between the quality of solutions finded by memetic algorithm and the solutions computed by others.
+
+Not only memetic algorithm obtained better results than others algorithms implemented, also its outcomes have less variability
+
+ra is inexpensive
+
+memetic consume similar running time in large instances than basic genetic algorithm but it obtain better results.
+
+genetic algorithm is more inexpensive than memetic in small and medium instances
+
+ra is better than basic genetic since it obtain better results employing less computational resources.
+
+
+
+
+\section*{Perspectives}

@@ -133,49 +133,52 @@ In figure \ref{fig:ra_gamma_time_x2}, we put togeter the running time obtained b
 
 \section{Evoulutionary approach}
 
-We establish the values for the tunable parameters of genetic algorithm as a result of experimental obsevations. We selected a stratified sample of 10 instances and run between 100 and 10 times the basic genetic algorithm for each instance in the sample to compute a policy solution. Finally, we select the values for the parameters where the genetic algorithm otained the best average outcome.
+We establish the values for the tunable parameters of genetic algorithm as a result of experimental obsevations. We selected a stratified sample of 10 instances and run basic genetic algorithm between 100 and 10 times the for each instance in the sample to compute a policy solution. Finally, we select the values for the parameters where the genetic algorithm otained the best average outcome.
 
-Hence, $\varepsilon$ are $1x10^{-3}$, $Prob_m = 0.$. 
+Hence, we define the probability of mutation as $Prob_m = 0.04$ and the maximun counting of consecutive iterations without significative changing $\mathcal{m}$ as 10\% of the number of iterations and the stoping criterion to determine an significative as $\varepsilon = 1x10^{-3}$.
 
 Others parameters were fixed to agree computational capability, such that  number of iterations $\kappa$ and size of population $\alpha$ since we recognize that a greater value for these increase the solutions explored. In concordace with the computational resoure available, we take $\kappa = 60$ and $\alpha = 0.5$
 
-Both $\mathbf{m}$ 10\% of the iterations  and $\varepsilon$ are $1x10^{-3}$.
+\subsection{Evolutionary algorithms performance}
 
+In the figure \ref{fig:compare_expected_distance_ga}, we show the basic genetic algorithm outcomes for each problem instance.  For small instances the average expected value is 7.44 computed in an average time 1979 seconds (s), while medium and large size instances the average expected distance is 16.74 and 36.03 computed in an average time of 13033 s and 96357 s, respectively.
 
-In the case of number of iterations $\kappa$ and size of population $\alpha$ the parameters time consumption restrict this since we conclude that a greater value for these increase the solutions explored.
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_ga.eps}
+   \includegraphics[width=0.7\textwidth]{Images/Chapter5/compare_expected_distance_ga.eps}
   \end{center}
-    \caption{Performance ga}\label{fig:compare_expected_distance_ga}
+    \caption{Performance basic genetic algorithm}\label{fig:compare_expected_distance_ga}
 \end{figure}
+
+
+Memetic algorithm finds better average results than basic genetic algorithm. Since that the hybrid genetic algorithm with rollout local search obtained an expected distance of 6.15, 10.99 and 16.67, to small, medium and large size instances, respectively. However these were computed longer, 
+11441, 70460 and 123663 average seconds. Figure \ref{fig:compare_expected_distance_memetic} shows the expected distance computed for each instance in contrast with the running time expended.
+
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_expected_distance_memetic.eps}
+   \includegraphics[width=0.7\textwidth]{Images/Chapter5/compare_expected_distance_memetic.eps}
   \end{center}
-    \caption{Performance Memetic}\label{fig:compare_expected_distance_memetic}
+    \caption{Performance memetic algorithm}\label{fig:compare_expected_distance_memetic}
 \end{figure}
 
-\subsubsection*{Performance of the genetic algorithms}
 
-when local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm.
+In the behavior of the genetic algorithms, we observe that if local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm where often complete the maximun counting of iterations without significative change. This can be observed in the figure \ref{fig:ga_basic_mvi_20r4_m} in comparison with the figure \ref{fig:memetic_mvi_20r4_m}.
 
-%\section{Memetic Algorithm}
-
-%GA that use local search
-
-%\section{Non-dominated Genetic Algorithm}
 
 \section{Comparative results}
 
+We observe in the figure \ref{fig:comparative_results} as hybrid evolutionary algorithm beat both basic genetic algorithm as rollout algorithm. In fact, when instance size increase also grow the distance between the quality of solutions finded by memetic algorithm and the solutions computed by others.
+
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/comparative_results.eps}
+   \includegraphics[width=0.8\textwidth]{Images/Chapter5/comparative_results.eps}
   \end{center}
-    \caption{Compared results ra,ga,Memetic}\label{fig:comparative_results}
+    \caption{Expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)}\label{fig:comparative_results}
 \end{figure}
+
+Indeed, Not only memetic algorithm obtained better results than others algorithms implemented, also its outcomes have less variability, we observe this fact in the figure \ref{fig:comparative_results_box} where the hybrid evolutionary exhibit less variance in contrast with other techniques.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -190,7 +193,7 @@ when local search is applied the evolutionary algorithm stops when the number of
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter5/compare_times_evol.eps}
+   \includegraphics[width=0.8\textwidth]{Images/Chapter5/compare_times_evol.eps}
   \end{center}
     \caption{Time performance evolutionary algorithms}\label{fig:compare_times_evol}
 \end{figure}

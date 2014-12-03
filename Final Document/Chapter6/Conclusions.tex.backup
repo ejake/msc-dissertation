@@ -22,4 +22,23 @@ Evaluate expected distance consume a lot of execution time, efficiently approxim
 
 Focus local search improve the quality solutions and the convergency.
 
+when local search is applied the evolutionary algorithm stops when the number of iterations is achived.
+
+In the behavior of the genetics algorithms, we observe that if local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm where often complete the maximun counting of iterations without significative change. This can be observed in the figure \ref{fig:ga_basic_mvi_20r4_m} in comparison with the figure \ref{fig:memetic_mvi_20r4_m}.
+
+
+
+when instance size increase also grow the distance between the quality of solutions finded by memetic algorithm and the solutions computed by others.
+
+Not only memetic algorithm obtained better results than others algorithms implemented, also its outcomes have less variability
+
+ra is inexpensive
+
+memetic consume similar running time in large instances than basic genetic algorithm but it obtain better results.
+
+genetic algorithm is more inexpensive than memetic in small and medium instances
+
+ra is better than basic genetic since it obtain better results employing less computational resources.
+
+
 \section{Perspectives}
