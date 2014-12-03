@@ -20,8 +20,8 @@
 \contentsline {figure}{\numberline {5.4.1}{\ignorespaces Performance basic genetic algorithm\relax }}{35}{figure.caption.29}
 \contentsline {figure}{\numberline {5.4.2}{\ignorespaces Performance memetic algorithm\relax }}{36}{figure.caption.30}
 \contentsline {figure}{\numberline {5.5.1}{\ignorespaces Expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)\relax }}{36}{figure.caption.31}
-\contentsline {figure}{\numberline {5.5.2}{\ignorespaces Boxplot for expected distance ra,ga,Memetic\relax }}{37}{figure.caption.32}
-\contentsline {figure}{\numberline {5.5.3}{\ignorespaces Time performance evolutionary algorithms\relax }}{38}{figure.caption.33}
+\contentsline {figure}{\numberline {5.5.2}{\ignorespaces Boxplot for expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)\relax }}{37}{figure.caption.32}
+\contentsline {figure}{\numberline {5.5.3}{\ignorespaces Time performance evolutionary algorithms\relax }}{38}{figure.caption.34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

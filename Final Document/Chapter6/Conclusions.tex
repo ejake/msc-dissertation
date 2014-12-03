@@ -3,44 +3,30 @@
 %\minitoc
 
 
-Although the hybridization approach increases the computational time cost, this effort is rewarded in many cases given that the quality of the solutions is improved than if we apply the rollout algorithm alone. 
-
-Hence, since the local searchis performed every time a new solution is generated.
-
-Often memetic algorithms employ long runnig times because local search is the most time-consuming component. For this reason, we partialy apply the rollout algorithm in large instances to reduce the time consumption to compute the solution.
-
-Although the genetic operators attempt to explore by extending the search space to avoid local optimum. This operators by themselves do not improve the solutions. So, it is necessary to focus on local search to improve the quality solutions and the convergence.
-
-To evaluate expected distance consume a lot of computational time, so an efficient approximation improves the algorithm performance.
-
-Given that local search is performed every time a new solution si generated often memetic algorithms employ long runnig times. 
-
-Local search is the most time-consuming component.
-
-Evaluate expected distance consume a lot of execution time, efficiently approximation improve the algorithm performance.
-
-Focus local search improve the quality solutions and the convergency.
-
-when local search is applied the evolutionary algorithm stops when the number of iterations is achived.
-
-In the behavior of the genetic algorithms with small and medium instances, we observe that if local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm where often complete the maximun counting of iterations without significative change. This can be observed in the figure \ref{fig:ga_basic_mvi_20r4_m} in comparison with the figure \ref{fig:memetic_mvi_20r4_m}. We expected that local search accelerate the convergence of solution in the memetic algorithm.
-
-In spite of that basic genetic algorithm often expend less time, the hybrid approach finds a solution employing less time for many large instances. Memetic algorithm can perform less iterations since obtain an unbeatable solution early inducing the algorithm to stop to accomplish the number of iterations whitout significative change. %this contradice 
-
-
-when instance size increase also grow the distance between the quality of solutions finded by memetic algorithm and the solutions computed by others.
-
-Not only memetic algorithm obtained better results than others algorithms implemented, also its outcomes have less variability
-
-ra is inexpensive
-
-memetic consume similar running time in large instances than basic genetic algorithm but it obtain better results.
-
-genetic algorithm is more inexpensive than memetic in small and medium instances
-
-ra is better than basic genetic since it obtain better results employing less computational resources.
+\begin{itemize}
+ \item Although the genetic operators attempt to explore by extending the search space to avoid local optimum. This operators by themselves do not improve the solutions. So, it is necessary to focus on local search to improve the quality solutions and the convergence.
+ \item When the instances size increase, the distance between the quality of solutions found by memetic algorithm and the solutions computed by others algorithms increase as well.
+ \item Not only the memetic algorithm's results are better than others algorithms' results, its outcomes have also less variability.
+ \item The memetic consumes similar running time in large instances than basic genetic algorithm but its results are better.
+ \item Although the hybridization approach increases the computational time cost, this effort is rewarded in many cases given that the quality of the solutions is better than if we apply the rollout algorithm alone. 
+ \item The rollout algorithm is inexpensive in comparison with others techniques.
+ \item The genetic algorithm is more inexpensive than the memetic one in small and medium instances.
+ \item The rollout is better than the basic genetic algorithm since it obtains better results by employing less computational resources.
+%resources 
+ \item Local search is the most time-consuming component.
+ \item The expected distance evaluation consumes a lot of execution time. An efficient approximation improves the algorithm performance.
+%convergence
+ \item In the behavior of the genetic algorithms with small and medium instances, we observe that if local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than with the basic genetic algorithm which often completes the maximun counting of iterations without significative change. This contrast with the behavior that we expected since local search accelerates the solution convergence in the memetic algorithm. However, we do observe this behavior in large instances.
+ %Contrast
+ \item Despite that the basic genetic algorithm often expends less time, the hybrid approach finds a solution employing less time for many large instances. The memetic algorithm can perform less iterations since it obtains an unbeatable solution earlier. This induces the algorithm to stop  because it accomplishes the number of iterations whitout significative change.
+ 
+\end{itemize}
 
 
 
 
-\section*{Perspectives}
+%\section*{Perspectives}
+
+% To evaluate expected distance consume a lot of computational time, so an efficient approximation improves the algorithm performance.
+
+% Implement algorithm to work in parallel computing
