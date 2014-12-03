@@ -5,44 +5,44 @@
 
 \section{Dynamic approach for VRPSD}
 
-Dynamic programming is based on principle of optimality formuled by Bellman ~\cite{bellman_theory_1954}
+Dynamic programming is based on the principle of optimality formuled by Bellman ~\cite{bellman_theory_1954}
 
 \begin{quote}
  \textit{An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.}
 \end{quote}
 
-Following to Bertsekas ~\cite{bertsekas_dynamic_1995} the principle of optimality point out that an optimal policy can be constructed backward, first finding an optimal policy for the \textit{tail subproblem} involving the last stage, then extending the optimal policy to the problem regard with the last two stages, and continuing until cover the whole problem in the first stage, hence a optimal policy is constructed for the entire problem.
+Following Bertsekas ~\cite{bertsekas_dynamic_1995}, the principle of optimality points out that an optimal policy can be constructed backwards, first finding an optimal policy for the \textit{tail subproblem} involving the last stage, then extending the optimal policy to the problem regarding the last two stages, and continuing until cover the whole problem in the first stage; hence, an optimal policy is constructed for the entire problem.
 
 \begin{multline}
  J^*(x_0) = \min\limits_{u_k^*\in U_k(x_k)}E_{w_k}\biggr\{g_k(x_k,u_k^*,w_k)+J^*_{k+1}(f(x_k,u_k^*,w_k))\biggr\},\\
 \forall k=0,1,\ldots,N-1
 \end{multline}
 
-However, the exact assesing of $J^*$ is computationally infeasible given the size of the state space. Therefore, is necessary approximate it function for generate good, but not necessarily optimal policies.
+However, the exact assesing of $J^*$ is computationally infeasible given the size of the state space. Therefore, it is necessary to approximate this function to generate good, but not necessarily optimal policies.
 
-Let $\tilde{J}_k$ be an approximation of $J^*_k$, then a control can $\tilde{u}_k$ be assesed
+Let $\tilde{J}_k$ be an approximation of $J^*_k$, then a control $\tilde{u}_k$ can be assesed as:
 
 \begin{equation}\label{eq:control_aprox}
 \tilde{u}_k=\tilde{\mu}_k(x_k)=\arg \min\limits_{u\in U_k(x_k)} \biggr\{ g(x_k,u_k,x_{k+1}) + \sum_{x_{k+1}\in S}p_{x_kx_{k+1}}\biggr\}
 \end{equation}
 
-The following section \ref{sec:expecteddistance} discuss the computation of $\tilde{J}_k$
+The following section \ref{sec:expecteddistance} discusses the computation of $\tilde{J}_k$.
 
 \subsection{Expected distance}\label{sec:expecteddistance}
 
-The expected distance $\tilde{J}$ or \textit{cost-to-go} is computed based on the algorithm propossed by Secomandi ~\cite{secomandi_rollout_2001}. We implemented the algorithm $\Gamma$ represented below \ref{algo:expecteddistance} to compute expected distance in $O(nRQ)$ time and $O(nQ)$ space.
+The expected distance $\tilde{J}$ or \textit{cost-to-go} is computed based on the algorithm propossed by Secomandi ~\cite{secomandi_rollout_2001}. We implemented the algorithm $\Gamma$ represented below (algorithm \ref{algo:expecteddistance}) to compute expected distance in $O(nRQ)$ time and $O(nQ)$ space.
 
 \begin{algorithm}
 \SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
  \Input{tour $\tau_{1\times n+2}$, $d_{n+1\times n+1}$ distance, $x$ state}
-\Output{$E$ expected distance of an apriori solution $\tau$ (base sequence)}
+\Output{$E$ expected distance of an \textit{a priori} solution $\tau$ (base sequence)}
 $l = x_1$\;
 $q_l = x_2$\;
-\If(is the last customer on $\tau$){ $l = n$ }{%if l == tau(instance.n+1)
+\If(it is the last customer on $\tau$){ $l = n$ }{%if l == tau(instance.n+1)
   $E = d(\tau(l+1)+1,1)$\;%d(n,0)
 }
 \Else{
-  \If(is the first node \textit{depot} in the tour $\tau$){l=0}{
+  \If(it is the first node \textit{depot} in the tour $\tau$){l=0}{
     E = $\Gamma ( \tau, l+1, q_l)$\;
   }
   \Else{
@@ -60,26 +60,22 @@ $q_l = x_2$\;
 \caption{Expected distance algorithm $E = \Gamma(\tau,l,q_i)$}\label{algo:expecteddistance}
 \end{algorithm}
 
-This algorithm was validated comparing the outcomes with the expected distance computed by an exhaustive algorithm applied to small instances. In addition, larger instances was benchmarked using monte carlo simulation to asses expected distance.
+This algorithm was validated comparing the outcomes with the expected distance computed by an exhaustive algorithm applied to small instances. In addition, larger instances were benchmarked using the monte carlo simulation to asses the expected distance.
 
-If the vehicle capacity is depleted, the methods used to compute the expected distance take into account that the vehicle can go to the depot for proactive restocking with less cost than to visit the customer first which makes the route fail, as we show in \ref{th:proactive_restocking}.
+If the vehicle capacity is depleted, the methods used to compute the expected distance take into account that the vehicle can go to the depot for proactive restocking with less cost than to visit the customer first, which makes the route fail, as shown in \ref{th:proactive_restocking}.
 
 \begin{theorem}\label{th:proactive_restocking}%check redaction
- if $q_l=0$ then the vehicle must go first to the depot for replenishment and later visit the next customer on the route, it is better than it visit the next customer to know its demand and go to the depot for replanishment after.
+ if $q_l=0$ then the vehicle must go first to the depot for replenishment and later visit the next customer on the route; this is better than visiting the next customer to know its demand and then going to the depot for replanishment.
 \end{theorem}
 
 \begin{proof}
 Given the current state $x_k=(l,0,r_1,\ldots, r_n)$ where the vehicle capacity is depleted, i.e. $q_l = 0$, assume that the next customer to be visited on the route is $l'$. If the customer is visited first, then the vehicle must go to depot for replenishment and go back to $l'$ to satisfy its demand, so the distance is $\delta(l,l')+2\delta(l',0)$. Otherwise, if a proactive restocking of the vehicle is performed then the total distance is $\delta(l,0)+\delta(0,l')$.
-Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triangular inequality $\delta(l,0) \leq \delta(l,l')+\delta(l',0)$ proving \ref{th:proactive_restocking}
+Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$, then by triangular inequality: $\delta(l,0) \leq \delta(l,l')+\delta(l',0)$, hence, proving \ref{th:proactive_restocking}
 \end{proof}
 
 \begin{lemma}%chech redaction
  The theorem \ref{th:proactive_restocking} can be generalized for all $q_l \geq D_i'$ where $D_i'$ is the demand of the customer $i$ who is the next on the tour.
 \end{lemma}
-
-
-
-
 
 
 %\section{Probabilistic policy}
@@ -94,31 +90,31 @@ Assume $\delta(l,0)+\delta(0,l') \leq \delta(l,l')+2\delta(l',0)$ then by triang
 
 \section{Policy iteration}
 
-The policy iteration algorithm is a dynamic programming technnique, it generates a sequence of stationary policies, each with improved cost over the preceding one. The algorithm describe the following sequence of steps \ref{algo:policy_iteration_general}:
+The policy iteration algorithm is a dynamic programming technnique, it generates a sequence of stationary policies, each with improved cost over the preceding one. The algorithm describe the following sequence of algorithm \ref{algo:policy_iteration_general}:
 
 \begin{algorithm}
  \textbf{1. Initialization:} Guess an initial stationary policy $\pi_0$\\
  \textbf{2. Policy evaluation:} Given the stationary policy $\pi_k$ compute the corresponding cost function $J_{\pi_k}$\\
  \textbf{3. Policy improvement:} Obtain a new stationary policy $\pi_{k+1}$\\
- Repeat step 2 to 3\\
+ \textbf{4.} Repeat steps 2 to 3\\
  \caption{Policy iteration algorithm}\label{algo:policy_iteration_general}
 \end{algorithm}
 
-If the policy evaluation step compute $J_{\pi_k}(x)$ for all states $x \in S$ and the algorithm runs until  $J_{\pi_m} = J_{\pi_{m+1}}$, $\forall x \in S$ then the algorithm finds the optimal policy $\pi^*$. In contrast, when $|S|$ is too large this algorithm is inpractical; although these steps can be approximated to deal with large-scale systems despite that convergence to optimal solution is not guaranteed.
+If the policy evaluation step computes $J_{\pi_k}(x)$ for all states $x \in S$, and the algorithm runs until  $J_{\pi_m} = J_{\pi_{m+1}}$, $\forall x \in S$, then the algorithm finds the optimal policy $\pi^*$. In contrast, when $|S|$ is too large this algorithm is inpractical, although these steps can be approximated to deal with large-scale systems; this despite that convergence to optimal solution is not guaranteed.
 
 
 \subsection{Rollout algorithm}
 %\subsection{One-step rollout algorithm}
 
-The rollout algorithm is an approximate policy iteration technnique, used to to increase the effectiveness of a heuristic by iteratively applying it, or rolling it out, at each decision stage (Goodson, 2010). The algorithm require to know a base policy $\pi$ for the problem. Also assume that the cost-to-go of this base policy from any given state $x$ can be easily computed (Secomandi, 2000). Thus, it build a policy $\pi$ starting from any given state and following an \textit{a priori} solution to VRPSD.
+The rollout algorithm is an approximate policy iteration technnique, used to increase the effectiveness of a heuristic by iteratively applying it, or rolling it out, at each decision stage (Goodson, 2010). The algorithm requires to know a base policy $\pi$ for the problem. It may also be assumed that the cost-to-go of this base policy from any given state $x$ can be easily computed (Secomandi, 2000). Thus, a policy $\pi$ is build starting from any given state and following an \textit{a priori} solution to VRPSD.
 
 
 \subsubsection{Defining initial policy}\label{sec:initial_policy}
 
 
-Cyclic heuristic $\mathcal{C}$ shifts $\tau$ to obtain an permutation keeping an cyclic order. It builds the cyclic tour that start at $l$ and follow $\tau$ cyclically, so, $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represent an apriori policy $\pi^\mathcal{C}$. Cyclic heuristic was propossed by Bertsimas 92  and improved by himsel 95 and later used by a many authors because it is simple, inexpensive and sequentially consistent (Secomandi dissertation, 1998)
+Cyclic heuristic $\mathcal{C}$ shifts $\tau$ to obtain an permutation keeping an cyclic order. It builds the cyclic tour that starts at $l$ and follows $\tau$ cyclically; hence, $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represents an \textit{a priori} policy $\pi^\mathcal{C}$. Cyclic heuristic was propossed by Bertsimas 92  and improved by himself 95; it was later used by many authors because it is simple, inexpensive and sequentially consistent (Secomandi dissertation, 1998)
 
-Following cyclic heuristic the rollout algorithm \ref{algo:rollout} describe a fixed number of iterations given an instance of the problem changing $\tau$ after the first state. Since there are a transition of $x_l$ state to $x_{l+1}$, is only shifted the segment of $\tau$ that follow to $l$, maintaining in this section the customers still no visited or with demand different to $0$. Since that already fully served customers are assumed to be skipped in $\tau^\mathcal{C}_l$.
+Following cyclic heuristic, the rollout algorithm \ref{algo:rollout} describes a fixed number of iterations given an instance of the problem changing $\tau$ after the first state. Since there is a transition of $x_l$ state to $x_{l+1}$, only the segment of $\tau$ that follows to $l$ is shifted, maintaining in this section the customers still not visited or with demand different to $0$. Once this is fully served, customers are assumed to be skipped in $\tau^\mathcal{C}_l$.
 
 %(Solution alternatives for following \tau in rollout algorithm)
 %This is a topic that must be discussed with the group
@@ -126,11 +122,11 @@ Following cyclic heuristic the rollout algorithm \ref{algo:rollout} describe a f
 
 
 %Option 2
-In order to compute rollout policy controls, the control which define the first customer $l_1$ to be visited by $\tilde{\pi}^\mathcal{C}$ is found as:
+In order to compute rollout policy controls, the control which defines the first customer $l_1$ to be visited by $\tilde{\pi}^\mathcal{C}$ is found by:
 
 \[\mu_0(x_0) = u_0 = (l_1,0) = \arg\min\limits_{l \in V-\{0\}} \{\tilde{J}_{\pi_0}(x_0)\}\]
 
-where the expected length $\tilde{J}_{\pi_0}(x_0)$ of ${\pi_0}$ which follow the cylcic tour $\tau^\mathcal{C}_l=(0,l,l+1,\ldots,1,n,\ldots,l-1,0)$, in the initial state $x_0$, is computed using the algorithm $\Gamma$ \ref{algo:expecteddistance}. Hence, the system moves to next state visiting the customer $l_1$ directrly who is fully served since $q_0 = Q$ and $r_l \leq Q$.
+where the expected length $\tilde{J}_{\pi_0}(x_0)$ of ${\pi_0}$ that follows the cylcic tour $\tau^\mathcal{C}_l=(0,l,l+1,\ldots,1,n,\ldots,l-1,0)$, in the initial state $x_0$, is computed using the algorithm $\Gamma$ \ref{algo:expecteddistance}. Hence, the system moves to the next state visiting the customer $l_1$ directrly, which is fully served since $q_0 = Q$ and $r_l \leq Q$.
 
 
  
@@ -152,19 +148,19 @@ Roll out $\pi_k$ since $\tilde{\mu_k}$ to $\mu_{N-1}$ following cyclic heuristic
 \end{algorithm}
 
 
-For some state $x_k = (k,q_k,r_1,\ldots,r_n)$, $\tilde{J}^0_{\pi_k}(x_k)$ compute the expected distance of move the vehicle directly to the next customer following the policy ${\pi_k}$ thereafter.
+For some state $x_k = (k,q_k,r_1,\ldots,r_n)$, $\tilde{J}^0_{\pi_k}(x_k)$, compute the expected distance in order to move the vehicle directly to the next customer following the policy ${\pi_k}$ thereafter:
 
 \begin{equation}\label{ra:Cost2Go0}%Review notation
  \tilde{J}^0_{\pi_k}(x_k)=d(\tau_l,m)+\sum_{k=0}^{q_l}p_m(k)\Gamma(\tau,l+1,q_l-k)+\sum_{k=q_l+1}^{K_m}2d(0,m)p_m(k)\Gamma(\tau,l+1,q_l+Q-k)%Review if \Gamma(\tau,l+1,q_l+Q-k) or \Gamma(\tau,l+1,Q-k)
 \end{equation}
 
-While $\tilde{J}^1_{\pi_k}(x_k)$ assess the expected distance performing an proactive replanishment before of move the vehicle to the next customer following the policy ${\pi_k}$ thereafter.
+On the other hand, $\tilde{J}^1_{\pi_k}(x_k)$ assesses the expected distance performing an proactive replanishment before moving the vehicle to the next customer following the policy ${\pi_k}$ thereafter:
 
 \begin{equation}\label{ra:Cost2Go1}%Review notation
  \tilde{J}^1_{\pi_k}(x_k)=d(0,\tau_l)+d(0,m)+\sum_{k=0}^{K_m}p_m(k)\Gamma(\tau,l+1,Q-k)
 \end{equation}
 
-Thus, the control $\tilde{\mu_k}$ which decides to visit the customer $l$ is computed as follows depending on the smaller cost:
+Thus, the control $\tilde{\mu_k}$ which decides to visit the customer $l$ is computed as follows depending on the smallest cost:
 
 \begin{equation}\label{eq:costg}
     \tilde{\mu_k} = \left \{ \begin{array}{ll}
@@ -176,13 +172,13 @@ Thus, the control $\tilde{\mu_k}$ which decides to visit the customer $l$ is com
 
 %complexity
 
-Rollout explore $\frac{1}{2}n(n+1)$ different policies with an computational cost of $O(nRQ)$ in order to evaluate the expected distance for each one, hence, the rollout algorithm runs in $O(n^3RQ)$ time.
+The rollout algorithm explores $\frac{1}{2}n(n+1)$ different policies with a computational cost of $O(nRQ)$ in order to evaluate the expected distance for each one; hence, the rollout algorithm runs in $O(n^3RQ)$ time.
 
 % \subsubsection{Partial rollout algorithm}
 
 \section{Summary}
 
-Rollout algorithm is an approximate atochastic dynamic programming technnique implemented to improve a \textit{a priori} policy. We use cyclic heuristic as base policy since it is simple, inexpensive and sequentially consistent. Finally. we describe the rollout algorithm and point out the computational complexity to perform it.
+The rollout algorithm is an approximate atochastic dynamic programming technnique implemented to improve a \textit{a priori} policy. We use cyclic heuristic as base policy since it is simple, inexpensive and sequentially consistent. Finally. we describe the rollout algorithm and point out the computational complexity to perform it.
 
 
 

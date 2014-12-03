@@ -2,23 +2,23 @@
 \label{chap:methodology}
 %\minitoc
 
-An evolutionary algorithm (GA) is a technique bio-inspired by the evolution of the espicies. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
+An evolutionary algorithm (GA) is a technique bio-inspired in the evolution of the spicies. It was proposed by John Holland, early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
 
 \section{Hybrid evolutionary algorithm}
 
-A hybrid evolutionary algorithms or hybrid genetic algorithms are a very popular techniques that offers practical advantages to deal with complex and hardly optimization problems. Grosan (Grosan, 2007) present a review of hybrid genetic architectures frecuently used. 
+Hybrid evolutionary algorithms or hybrid genetic algorithms are very popular techniques that offer practical advantages to deal with complex and hardly optimization problems. Grosan (Grosan, 2007) presents a review of hybrid genetic architectures frecuently used. 
 
-Hybridization can be performed using prior knowledge, heuristics, local search, other techniques. We use it to carry out local search through rollout algorithm. Some times, a hybrid genetic algorithm which combine other technique to local search is known as memetic algorithm.
+Hybridization can be performed using prior knowledge, heuristics, local search, and other techniques. We use it to carry out local search through rollout algorithm. Sometimes, a hybrid genetic algorithm which combine other technique to local search is known as memetic algorithm.
 
 Generally, the purpose of hibridization is:
 
 \begin{itemize}
- \item Improve the performance of the evolutionary algorithms.
- \item Improve quality of solutions obtained by evolutionary algorithm
- \item Incorporate evolutionary algorithm as part of a large system
+ \item To improve the performance of the evolutionary algorithms.
+ \item To improve quality of solutions obtained by evolutionary algorithm
+ \item To incorporate evolutionary algorithm as part of a large system
 \end{itemize}
 
-Evolutionary algorithm behavior is determined by the exploitation and exploration; In exploitation local search is performed to improve solutions, and exploration avoid local optimum extending the search space, our implementation of memetic algorithm works to keep these relation throughout the run. So, in this application hybridazation not only improve the quality of the solutions obtained by evolutionary algorithm, also is assembly as an framework for rollout algorithm in order to avoid local optimum.
+Evolutionary algorithm behaviour is determined by the exploitation and exploration. In exploitation, local search is performed to improve solutions; in exploration, to avoid local optimum extending the search space, our implementation of memetic algorithm works to keep these relation throughout the run. Hence, in this application, the hybridazation not only improves the quality of the solutions obtained by evolutionary algorithm, but also  assembles as a framework for rollout algorithm in order to avoid local optimum.
 
 
 \subsection{A basic genetic algorithm for vehicle routing problem with stochastic demands}
