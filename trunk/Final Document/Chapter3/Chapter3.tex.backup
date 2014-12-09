@@ -2,28 +2,28 @@
 \label{chap:methodology}
 %\minitoc
 
-An evolutionary algorithm (GA) is a technique bio-inspired by the evolution of the espicies. It was proposed by John Holland early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
+An evolutionary algorithm (GA) is a technique bio-inspired in the evolution of the spicies. It was proposed by John Holland, early in the 70's (Holland, 1975). This algorithm seeks to evolve a population of individuals that represent solutions to the problem through genetic operators such as crossover, mutations and selection. The population generated in each iteration is evaluated and then the individuals with a better fitness are chosen for the next generation with more chance.
 
 \section{Hybrid evolutionary algorithm}
 
-A hybrid evolutionary algorithms or hybrid genetic algorithms are a very popular techniques that offers practical advantages to deal with complex and hardly optimization problems. Grosan (Grosan, 2007) present a review of hybrid genetic architectures frecuently used. 
+Hybrid evolutionary algorithms or hybrid genetic algorithms are very popular techniques that offer practical advantages to deal with complex and hardly optimization problems. Grosan (Grosan, 2007) presents a review of hybrid genetic architectures frecuently used. 
 
-Hybridization can be performed using prior knowledge, heuristics, local search, other techniques. We use it to carry out local search through rollout algorithm. Some times, a hybrid genetic algorithm which combine other technique to local search is known as memetic algorithm.
+Hybridization can be performed using prior knowledge, heuristics, local search, and other techniques. We use it to carry out local search through rollout algorithm. Sometimes, a hybrid genetic algorithm which combine other technique to local search is known as memetic algorithm.
 
 Generally, the purpose of hibridization is:
 
 \begin{itemize}
- \item Improve the performance of the evolutionary algorithms.
- \item Improve quality of solutions obtained by evolutionary algorithm
- \item Incorporate evolutionary algorithm as part of a large system
+ \item To improve the performance of the evolutionary algorithms.
+ \item To improve quality of solutions obtained by evolutionary algorithm
+ \item To incorporate evolutionary algorithm as part of a large system
 \end{itemize}
 
-Evolutionary algorithm behavior is determined by the exploitation and exploration; In exploitation local search is performed to improve solutions, and exploration avoid local optimum extending the search space, our implementation of memetic algorithm works to keep these relation throughout the run. So, in this application hybridazation not only improve the quality of the solutions obtained by evolutionary algorithm, also is assembly as an framework for rollout algorithm in order to avoid local optimum.
+Evolutionary algorithm behaviour is determined by the exploitation and exploration. In exploitation, local search is performed to improve solutions; in exploration, to avoid local optimum extending the search space, our implementation of memetic algorithm works to keep these relation throughout the run. Hence, in this application, the hybridazation not only improves the quality of the solutions obtained by evolutionary algorithm, but also  assembles as a framework for rollout algorithm in order to avoid local optimum.
 
 
 \subsection{A basic genetic algorithm for vehicle routing problem with stochastic demands}
 
-We show an example of basic GA in general form in figure \ref{fig:ga_basic}. First, an initial population is selected and fitness function is assessed for each individual in the population. In order to produce a new population for the next generation, crossover and mutation operators are applied to individuals allowing those who have better fitness function to get more chances to reproduce themselves. In the selection stage, offspring's fitness is evaluated to choose the individuals to integrate the new population; individuals with competitive fitness regarding to the population have more probability to be selected. These steps are repeated until stopping criteriums are resolve.
+In figure \ref{fig:ga_basic} we show an example of a basic GA in general form. First, an initial population is selected and a fitness function is assessed for each individual in the population. In order to produce a new population for the next generation, crossover and mutation operators are applied to individuals, allowing those who have better fitness function to have more chances to reproduce themselves. In the selection stage, offspring's fitness is evaluated to choose the individuals which will integrate the new population; individuals with competitive fitness regarding population, have a higher probability to be selected. These steps are repeated until stopping criteriums are resolved.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -34,28 +34,28 @@ We show an example of basic GA in general form in figure \ref{fig:ga_basic}. Fir
 
 \subsubsection*{Initialization}
 
-We represent an individual in the population as a policy tour $\pi^\mathcal{C}$ whose fitness is the expected distance $\tilde{J}_{\pi^\mathcal{C}}$ computed using the algorithm $\Gamma$ \ref{algo:expecteddistance}.
+We represent an individual in the population as a policy tour $\pi^\mathcal{C}$, whose fitness is the expected distance $\tilde{J}_{\pi^\mathcal{C}}$, computed using the algorithm $\Gamma$ \ref{algo:expecteddistance}.
 
-The initial population $P_0$ with an fixed size $|P_0| = n$, is obtained using the cyclic heuristic in $O(n)$ time. It performs in order to reduce the computational cost since we can evaluate fitness to $P_0$ in $O(n)$ time when rollout is accomplished under some individual in the population.
+The initial population $P_0$ with a fixed size $|P_0| = n$, is obtained using the cyclic heuristic in $O(n)$ time. It performs in this way to reduce the computational cost, since we can evaluate fitness to $P_0$ in $O(n)$ time when rollout is accomplished under some individual in the population.
 
 
 \subsubsection*{Crossover}
 
-The crossover operator $\circledast$ consist in to select two different individuals $I^{P_k}_i$ and $I^{P_k}_j$ with probability dependently of their fitness value respectively; meanwhile, a random cut point $\rho \in [1,n]$ is selected uniformly. So, a new individual raise to concatenate the subsequence $I^{P_k}_i[1..\rho]$ with the subsequence $I^{P_k}_j[\rho+1,..,n]$. 
+The crossover operator $\circledast$ consists in the selection of two different individuals $I^{P_k}_i$ and $I^{P_k}_j$ with probability dependent on their fitness value, respectively; meanwhile, a random cut point $\rho \in [1,n]$ is uniformly selected in order to combine the parents' sequences to obtain a new sequence. Hence, a new individual raise to concatenate the subsequence $I^{P_k}_i[1..\rho]$ with the subsequence $I^{P_k}_j[\rho+1,..,n]$. 
 
-A crossover operation can yield an new individual that represents an unfeasible policy. However, we implement this operator to run in time $O(n^2)$ and guaraneeing only feasible solutions as a result.
+A crossover operation can yield a new individual that represents an unfeasible policy. However, we implement this operator to run in time $O(n^2)$ and guarantee only feasible solutions as a result.
 
 
 \subsubsection*{Mutation}
 
-This operator performs three types of mutation with same probability to produce and individual in the offspring: swap two elements of policy selected randomly, flip a random subsequence of policy or shift the policy an random number of times.
+This operator performs three types of mutation with the same probability to produce and individual in the offspring: swap two elements of policy randomly selected, flip a random subsequence of policy or shift the policy a random number of times.
 
-The mutation of an individual can happened with probability $Prob_m = 0.04$ in the experiments presented in this document and it compute in $O(1)$ time.
+The mutation of an individual can happen with probability $Prob_m = 0.04$ in the experiments presented in this document, and compute in $O(1)$ time.
 
 
 \subsubsection*{Selection of the new population}
 
-New population originates as a result of crossover and mutation operators. However, the evolutionary algorithm also obtain individuals to the offspring performing the cyclic heuristic. Hence, those who have better fitness can be choosen with more chance to integrate the new population.
+New population originates as a result of crossover and mutation operators. Furthermore, the evolutionary algorithm also obtain individuals to the offspring performing the cyclic heuristic. Hence, those who have a better fitness can be chosen with more chance to integrate the new population.
 
 In order to punish generation which dicrease the fitness and reward to those who increase this value respect to the previos generation the size or number of individuals available to the next generation changes.
 
@@ -82,9 +82,9 @@ where $\alpha$ is a tuneable parameter which should be fixed in the range $(0,1]
 
 \begin{figure}[!htbp]
   \begin{center}
-   \includegraphics[width=0.9\textwidth]{Images/Chapter3/mvi_20r4_m.regular.eps}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter3/mvi_20r4_m_regular.eps}
   \end{center}
-    \caption{Basic genetic algorithm applied to instance of 30 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:ga_basic_mvi_20r4_m}
+    \caption{Basic genetic algorithm applied to instance of 20 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:ga_basic_mvi_20r4_m}
 \end{figure}
 
 \subsubsection*{Stopping criterion}
@@ -104,44 +104,16 @@ Finally, the evolutionary algorithm runs until reach a fixed number or iteration
 
 A classic genetic algorithm does not yield competitive results itself, due to basic GA does not exploit problem knowing to produce high quality solutions. To be effective, we combine local search methods. Local search can be incorporated in the initial population or among the offspring.
 
-We apply rollout algorithm as local search method. The GA incorporates it in the initialization stage as in each iteration under the best policy obtained.
+We apply rollout algorithm as local search method. The GA incorporates it in the initialization stage as in each iteration under the best policy obtained. Figure \ref{fig:memetic_mvi_20r4_m} shows the evolutionary algorithm with local search applied to the same instance used by the basic genetic algorithm above and showed in the figure \ref{fig:ga_basic_mvi_20r4_m}
 
 
+\begin{figure}[!htbp]
+  \begin{center}
+   \includegraphics[width=0.9\textwidth]{Images/Chapter3/mvi_20r4_m_memetic.eps}
+  \end{center}
+    \caption{Memetic algorithm applied to instance of 20 customers. The second image in the first row ilustrate the last population and the next image shows the best solution finded. }\label{fig:memetic_mvi_20r4_m}
+\end{figure}
 
+\section{Summary}
 
-\subsubsection*{Performance of the genetic algorithms}
-
-This section describes the algorithm performance for a specific problem instance with 10 customers and a factor $f'=1$, the customers' location and demand value (known when the vehicle arrive to the customer location) are showed in the figure \ref{fig:customer_n10_f1_s1}.
-
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_customers}
-%  \end{center}
-%    \caption{Instance features: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:customer_n10_f1_s1}
-%\end{figure}
-
-The genetic algorithm outcome for the instance problem described above is presented in the figure \ref{fig:tour_n10_f1_s1}, the red line describes the route, the segmented black line represents returns to the depot for replenishment, this tour was selected as the best solution found in 100 iterations of the GA.
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_tour}
-%  \end{center}
-%      \caption{e.g best tour found by the GA: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:tour_n10_f1_s1}
-%\end{figure}
-
-The figure \ref{fig:improve_n10_f1_s1} shows the improving of the objective function found, the chart shows the lesser total cost history, when a better value is found the line fall, therefore we can see the improving is given among the iteration 25 and 40, after this iterations the algorithm converges and it's not found a better solution.
-
-%\begin{figure}[!htbp]
-%  \begin{center}
-%    \includegraphics[width=0.9\textwidth]{Chapitre3/n10_f1_s1_history}
-%  \end{center}
-%      \caption{e.g improvement solution: $n = 10$, $seed = 1$, $f' = 1$}\label{fig:improve_n10_f1_s1}
-%\end{figure}
-
-%\section{Memetic Algorithm}
-
-%GA that use local search
-
-%\section{Non-dominated Genetic Algorithm}
-
+In this chapter we presented a basic genetic algorithm for vehicle routing problem with stochastic demands. In addition, we showed an hybrid approach integrating the rollout algorithm as local search method in the evolutionary algorithm.
