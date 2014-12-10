@@ -2,18 +2,18 @@
 \label{chap:results}
 %\minitoc
 
-In this chapter we present the computational results obtained for solving the instances selected. 
+In this chapter we present the computational results obtained when solving the instances selected. 
 
 
-\section{Instances of VRPSD}
+\section{VRPSD instances}
 
-In order to evaluate the algorithms proposed, we select instances of two sources generated following a procedure similar to the used in Secomandi~\cite{secomandi_comparing_2000}. The first set of instances is the used by Novoa ~\cite{novoa_approximate_2009}, while the second was created by us randomly.
+In order to evaluate the algorithms proposed, we selected instances of two sources generated following a procedure similar to the one used in Secomandi~\cite{secomandi_comparing_2000}. The first set of instances is the one used by Novoa ~\cite{novoa_approximate_2009}, while the second one was created by us, randomly.
 
 \subsection{Instance generation}
 
-The set of instances contain 45 different instances resulting from combine three number of customers $n \in \{5,10,20\}$, three vehicle capacities given for $f'$ factor and five different assignments for customer locations and demand distribution for each one, the assignments result from changing the random seeds.
+The set of instances contains 45 different instances resulting from the combination of three number of customers $n \in \{5,10,20\}$, three vehicle capacities given for $f'$ factor and five different assignments for customer locations and demand distribution for each one, the assignments result from changing the random seeds.
 
-The customers' demands are both discrete and distributed uniformly in this posible sets $U[1,5]$, $U[3,9]$, $U[6,12]$, in each instance, each customer is assigned to any of the three groups with equal probability. Customers' locations are random points in $[0, 1]^2$, with the depot fixed at $(0,0)$.%, e.g. figure \ref{fig:instance_n5_f1_s1}.
+The customers' demands are both discrete and uniformly distributed in this possible sets $U[1,5]$, $U[3,9]$, $U[6,12]$, in each instance, each customer is assigned to any of the three groups with equal probability. Customers' locations are random points in $[0, 1]^2$, with the depot fixed at $(0,0)$.%, e.g. figure \ref{fig:instance_n5_f1_s1}.
 
 %\begin{figure}[h]
   % Requires \usepackage{graphicx}
@@ -187,7 +187,7 @@ Indeed, Not only memetic algorithm obtained better results than others algorithm
     \caption{Boxplot for expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)}\label{fig:comparative_results_box}
 \end{figure}
 
-We affirm this results in the table \ref{tb:diferences_expected_distance}
+We ratify this results in the table \ref{tb:diferences_expected_distance}, which tabulate descriptive statistics to explain the difference between the expected distance computed by each algorithm. In general, basic genetic algorithm beats rollout algorithm except for instances of 5 and 8 customers (small), and 150 customers (large), as well.
 
 \begin{table}
 \begin{tabular}{l c c c c c c c}
