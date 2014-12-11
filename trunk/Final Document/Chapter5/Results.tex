@@ -140,7 +140,7 @@ Other parameters were fixed to agree with computational capability, such as the 
 
 \subsection{Evolutionary algorithms performance}
 
-In the figure \ref{fig:compare_expected_distance_ga}, we show the basic genetic algorithm outcomes for each problem instance.  For small instances the average expected value is 7.44 computed in an average time 1979 seconds (s), while medium and large size instances the average expected distance is 16.74 and 36.03 computed in an average time of 13033 s and 96357 s, respectively.
+In Figure \ref{fig:compare_expected_distance_ga}, we show the basic genetic algorithm outcomes for each problem instance.  For small instances the average expected value is 7.44 computed in an average time of 1979 seconds (s), while in medium and large size instances the average expected distance is 16.74 and 36.03 computed in an average time of 13033 s and 96357 s, respectively.
 
 
 \begin{figure}[!htbp]
@@ -151,8 +151,7 @@ In the figure \ref{fig:compare_expected_distance_ga}, we show the basic genetic 
 \end{figure}
 
 
-Memetic algorithm finds better average results than basic genetic algorithm. Since that the hybrid genetic algorithm with rollout local search obtained an expected distance of 6.15, 10.99 and 16.67, to small, medium and large size instances, respectively. However these were computed longer, 
-11441, 70460 and 123663 average seconds. Figure \ref{fig:compare_expected_distance_memetic} shows the expected distance computed for each instance in contrast with the running time expended.
+The memetic algorithm finds better average results than the basic genetic algorithm. Due to this, the hybrid genetic algorithm with rollout local search obtained an expected distance of 6.15, 10.99 and 16.67, for small, medium and large size instances, respectively. However, these were computed longer: 11441, 70460 and 123663 average seconds. Figure \ref{fig:compare_expected_distance_memetic} shows the expected distance computed for each instance in contrast with the running time expended.
 
 
 \begin{figure}[!htbp]
@@ -163,12 +162,12 @@ Memetic algorithm finds better average results than basic genetic algorithm. Sin
 \end{figure}
 
 
-In the behavior of the genetic algorithms, we observe that if local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm where often complete the maximun counting of iterations without significative change. This can be observed in the figure \ref{fig:ga_basic_mvi_20r4_m} in comparison with the figure \ref{fig:memetic_mvi_20r4_m}.
+In the behaviour of the genetic algorithms, we observe that if local search is applied, the evolutionary algorithm stops when the number of iterations is achieved, while the basic genetic algorithm often completes the maximum counting of iterations without significant change. This can be observed in Figure \ref{fig:ga_basic_mvi_20r4_m} in comparison to Figure \ref{fig:memetic_mvi_20r4_m}.
 
 
 \section{Comparative results}
 
-We observe in the figure \ref{fig:comparative_results} as hybrid evolutionary algorithm beat both basic genetic algorithm as rollout algorithm. In fact, when instance size increase also grow the distance between the quality of solutions finded by memetic algorithm and the solutions computed by others.
+In the Figure \ref{fig:comparative_results}, we observe that the hybrid evolutionary algorithm beats both basic genetic algorithm as the rollout algorithm. In fact, when instance size increases, the distance between the quality of solutions found by the memetic algorithm and the solutions computed by others also grows.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -177,7 +176,8 @@ We observe in the figure \ref{fig:comparative_results} as hybrid evolutionary al
     \caption{Expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)}\label{fig:comparative_results}
 \end{figure}
 
-Indeed, Not only memetic algorithm obtained better results than others algorithms implemented, also its outcomes have less variability, we observe this fact in the figure \ref{fig:comparative_results_box} where the hybrid evolutionary exhibit less variance in contrast with other techniques.
+
+Indeed, not only memetic algorithm obtained better results than other algorithms implemented, also its outcomes had have less variability. We can observe this fact in Figure \ref{fig:comparative_results_box}, where the hybrid evolutionary exhibits less variance in contrast with other techniques.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -186,7 +186,7 @@ Indeed, Not only memetic algorithm obtained better results than others algorithm
     \caption{Boxplot for expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)}\label{fig:comparative_results_box}
 \end{figure}
 
-We ratify this results in the table \ref{tb:diferences_expected_distance}, which tabulate descriptive statistics to explain the difference between the expected distance computed by each algorithm. In general, basic genetic algorithm beats rollout algorithm except for instances of 5 and 8 customers (small), and 150 customers (large), as well.
+We ratify these results in Table \ref{tb:diferences_expected_distance}, which tabulates descriptive statistics in order to explain the difference between the expected distance computed by each algorithm. In general, the basic genetic algorithm beats the rollout algorithm except, for instances of 5 and 8 customers (small), as well as for 150 customers (large).
 
 \begin{table}
 \begin{tabular}{l c c c c c c c}
@@ -214,7 +214,7 @@ large &  & 3.479 & 4.323 & 15.88 & 8.708 & 19.359 & 6.037\\
 All &  & 1.548 & 3.027 & 6.549 & 8.16 & 8.096 & 8.601\\
 \hline
 \end{tabular}
-\caption{Diferences between expected distances computed by rollout algorithm, basic genetic algorithm and memetic algorithm}\label{tb:diferences_expected_distance}
+\caption{Differences between expected distances computed by the rollout algorithm, the basic genetic algorithm and the memetic algorithm.}\label{tb:diferences_expected_distance}
 \end{table}
 
 In the figure \ref{fig:compare_times_evol}, we compare the execution time consumed by the evolutionary algorithms. In spite of that basic genetic algorithm often expend less time, the hybrid approach finds a solution employing less time for many large instances.
