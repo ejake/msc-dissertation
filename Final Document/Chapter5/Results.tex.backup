@@ -13,7 +13,7 @@ In order to evaluate the algorithms proposed, we selected instances of two sourc
 
 The set of instances contains 45 different instances resulting from the combination of three number of customers $n \in \{5,10,20\}$, three vehicle capacities given for $f'$ factor and five different assignments for customer locations and demand distribution for each one, the assignments result from changing the random seeds.
 
-The customers' demands are both discrete and uniformly distributed in this possible sets $U[1,5]$, $U[3,9]$, $U[6,12]$, in each instance, each customer is assigned to any of the three groups with equal probability. Customers' locations are random points in $[0, 1]^2$, with the depot fixed at $(0,0)$.%, e.g. figure \ref{fig:instance_n5_f1_s1}.
+The customers' demands are both discrete and uniformly distributed in this possible sets $U[1,5]$, $U[3,9]$, $U[6,12]$; in each instance, each customer is assigned to any of the three groups with equal probability. Customers' locations are random points in $[0, 1]^2$, with the depot fixed at $(0,0)$.%, e.g. figure \ref{fig:instance_n5_f1_s1}.
 
 %\begin{figure}[h]
   % Requires \usepackage{graphicx}
@@ -27,7 +27,7 @@ The filling rate $f$ is an index of the total expected demand relative to vehicl
 f=\sum_{i=1}^n\frac{E[D_i]}{mQ}
 \end{equation}
 
-where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of available vehicles, when $m = 1$, $f$ can represent approximately the expected number of replenishment needed to serve all customers demands. It follows that, a priori, in all instances $E[D_i]=(3+6+9)/3=6$, for any customer i, and $Q=6n/f$. $f'=f-1$ is the expected number of route failure in a given instance. Hence, we is defined for this factor $f' \in \{1.0, 1.5, 2.0\}$, following the same factors used by Secomandi~\cite{secomandi_comparing_2000}.
+where $E[D_i]$ is the expected demand of customer $i$ and $m$ is the number of available vehicles, when $m = 1$; $f$ can represent approximately the expected number of replenishment needed to serve all customer demands. It follows that, a priori, in all instances $E[D_i]=(3+6+9)/3=6$, for any customer i, and $Q=6n/f$. $f'=f-1$ is the expected number of route failure in a given instance. Therefore, our instances are defined for this factor $f' \in \{1.0, 1.5, 2.0\}$, following the same factors used by Secomandi~\cite{secomandi_comparing_2000}.
 
 \begin{table}[!h]
   \centering
@@ -48,7 +48,7 @@ where $E[D_i]$ is the expected demand of customer $i$, $m$ is the number of avai
 
 
 
-The 160 instances used by Novoa ~\cite{novoa_approximate_2009} was generated following the same method described above. This set is composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size whose number of vertex is greter than 100. Table \ref{tb:instances_characterization} shows the range of demands for each size instance, where the demand values is the difference between the maximun and minimun demand which some customer can take. In addition, \ref{fig:demands} exhibit the demands mean and variance for each instance and in the figure \ref{fig:instances} we classify each instance according to number of vertices $n$ and demand range which is computed such as demand values in th table \ref{tb:instances_characterization}.
+The 160 instances used by Novoa ~\cite{novoa_approximate_2009} were generated following the same method described above. This set is composed by 70 small size instances (5 to 20 vertex), 60 medium size (30 to 60 vertex) and 30 instances of large size with a number of vertices greater than 100. Table \ref{tb:instances_characterization} shows the range of demands for each size instance, where the demand value is the difference between the maximun and minimun demand that some customers can take. In addition, Figure \ref{fig:demands} exhibits the demands mean and variance for each instance, and in Figure \ref{fig:instances} we classify each instance according to number of vertices $n$ and demand range, which is computed as demand values in Table \ref{tb:instances_characterization}.
 
 
 \begin{table}[!h]
@@ -79,9 +79,6 @@ n & 4 & 5 & 7 & 8 & 9 & 15 & 17 & 29 & 33 & Total \\
     \caption{Instance demands.}\label{fig:instances}
 \end{figure}
 
-instances with 
-
-
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -93,7 +90,7 @@ instances with
 \section{Expected distance algorithm}\label{sec:test_expecteddistance}
 
 
-In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by algorithm $\Gamma$ \ref{algo:expecteddistance} to compute the expected distance for each instance. As expected, An higher value of $n$ and $Q$ increase the computational cost to compute expected distance. However, the figure \ref{fig:expected_distance3D_time} shows that the demands distribution affect the algorithm performance.
+In Figure \ref{fig:expected_distance3D_time}, we show the time taken by algorithm $\Gamma$ \ref{algo:expecteddistance} to compute the expected distance for each instance. As expected, a higher value of $n$ and $Q$ increases the computational cost to compute expected distance. However, Figure \ref{fig:expected_distance3D_time} shows that the demands distribution affect the algorithm performance.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -114,7 +111,7 @@ In the figure \ref{fig:expected_distance3D_time}, we show the time consumed by a
 
 \section{Rollout algorithm}
 
-In figure \ref{fig:ra_gamma_time_x2}, we put togeter the running time obtained by rollout algorithm and $\Gamma$ algorithm. Thus, we show experimentally the computational cost of rollout algorithm since this apply $O(n^2)$ times the $\Gamma$ algorithm.
+In figure \ref{fig:ra_gamma_time_x2}, we put together the running time obtained by the rollout algorithm and $\Gamma$ algorithm. Thus, we experimentally show  the computational cost of the rollout algorithm since this apply $O(n^2)$ times the $\Gamma$ algorithm.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -133,15 +130,17 @@ In figure \ref{fig:ra_gamma_time_x2}, we put togeter the running time obtained b
 
 \section{Evoulutionary approach}
 
-We establish the values for the tunable parameters of genetic algorithm as a result of experimental obsevations. We selected a stratified sample of 10 instances and run basic genetic algorithm between 100 and 10 times the for each instance in the sample to compute a policy solution. Finally, we select the values for the parameters where the genetic algorithm otained the best average outcome.
+We established the values for the tunable parameters of the genetic algorithm as a result of experimental observations. We selected a stratified sample of 10 instances and ran the basic genetic algorithm between 100 and 10 times for each instance in the sample in order to compute a policy solution. Finally, we selected the values for the parameters where the genetic algorithm obtained the best average outcome.
 
-Hence, we define the probability of mutation as $Prob_m = 0.04$ and the maximun counting of consecutive iterations without significative changing $\mathcal{m}$ as 10\% of the number of iterations and the stoping criterion to determine an significative as $\varepsilon = 1x10^{-3}$.
+Hence, we defined the probability of mutation as $Prob_m = 0.04$ and the maximun counting of consecutive iterations without significant changing $\mathcal{m}$ as 10\% of the number of iterations and, the stoping criterion to determine a significance as $\varepsilon = 1x10^{-3}$.
 
-Others parameters were fixed to agree computational capability, such that  number of iterations $\kappa$ and size of population $\alpha$ since we recognize that a greater value for these increase the solutions explored. In concordace with the computational resoure available, we take $\kappa = 60$ and $\alpha = 0.5$
+Other parameters were fixed to agree with computational capability, such as the number of iterations $\kappa$ and size of population $\alpha$, since we recognized that a greater value for these increases the solutions explored. In concordance with the computational resoure available, we took $\kappa = 60$ and $\alpha = 0.5$
+
+%stilish correction continue here
 
 \subsection{Evolutionary algorithms performance}
 
-In the figure \ref{fig:compare_expected_distance_ga}, we show the basic genetic algorithm outcomes for each problem instance.  For small instances the average expected value is 7.44 computed in an average time 1979 seconds (s), while medium and large size instances the average expected distance is 16.74 and 36.03 computed in an average time of 13033 s and 96357 s, respectively.
+In Figure \ref{fig:compare_expected_distance_ga}, we show the basic genetic algorithm outcomes for each problem instance.  For small instances the average expected value is 7.44 computed in an average time of 1979 seconds (s), while in medium and large size instances the average expected distance is 16.74 and 36.03 computed in an average time of 13033 s and 96357 s, respectively.
 
 
 \begin{figure}[!htbp]
@@ -152,8 +151,7 @@ In the figure \ref{fig:compare_expected_distance_ga}, we show the basic genetic 
 \end{figure}
 
 
-Memetic algorithm finds better average results than basic genetic algorithm. Since that the hybrid genetic algorithm with rollout local search obtained an expected distance of 6.15, 10.99 and 16.67, to small, medium and large size instances, respectively. However these were computed longer, 
-11441, 70460 and 123663 average seconds. Figure \ref{fig:compare_expected_distance_memetic} shows the expected distance computed for each instance in contrast with the running time expended.
+The memetic algorithm finds better average results than the basic genetic algorithm. Due to this, the hybrid genetic algorithm with rollout local search obtained an expected distance of 6.15, 10.99 and 16.67, for small, medium and large size instances, respectively. However, these were computed longer: 11441, 70460 and 123663 average seconds. Figure \ref{fig:compare_expected_distance_memetic} shows the expected distance computed for each instance in contrast with the running time expended.
 
 
 \begin{figure}[!htbp]
@@ -164,12 +162,12 @@ Memetic algorithm finds better average results than basic genetic algorithm. Sin
 \end{figure}
 
 
-In the behavior of the genetic algorithms, we observe that if local search is applied the evolutionary algorithm stops when the number of iterations is achived, rather than basic genetic algorithm where often complete the maximun counting of iterations without significative change. This can be observed in the figure \ref{fig:ga_basic_mvi_20r4_m} in comparison with the figure \ref{fig:memetic_mvi_20r4_m}.
+In the behaviour of the genetic algorithms, we observe that if local search is applied, the evolutionary algorithm stops when the number of iterations is achieved, while the basic genetic algorithm often completes the maximum counting of iterations without significant change. This can be observed in Figure \ref{fig:ga_basic_mvi_20r4_m} in comparison to Figure \ref{fig:memetic_mvi_20r4_m}.
 
 
 \section{Comparative results}
 
-We observe in the figure \ref{fig:comparative_results} as hybrid evolutionary algorithm beat both basic genetic algorithm as rollout algorithm. In fact, when instance size increase also grow the distance between the quality of solutions finded by memetic algorithm and the solutions computed by others.
+In the Figure \ref{fig:comparative_results}, we observe that the hybrid evolutionary algorithm beats both basic genetic algorithm as the rollout algorithm. In fact, when instance size increases, the distance between the quality of solutions found by the memetic algorithm and the solutions computed by others also grows.
 
 \begin{figure}[!htbp]
   \begin{center}
@@ -178,7 +176,7 @@ We observe in the figure \ref{fig:comparative_results} as hybrid evolutionary al
     \caption{Expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)}\label{fig:comparative_results}
 \end{figure}
 
-Indeed, Not only memetic algorithm obtained better results than others algorithms implemented, also its outcomes have less variability, we observe this fact in the figure \ref{fig:comparative_results_box} where the hybrid evolutionary exhibit less variance in contrast with other techniques.
+Indeed, not only memetic algorithm obtained better results than other algorithms implemented, also its outcomes had have less variability. We can observe this fact in Figure \ref{fig:comparative_results_box}, where the hybrid evolutionary exhibits less variance in contrast with other techniques.
 
 \begin{figure}[!htbp]
   \begin{center}
