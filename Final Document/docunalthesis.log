@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  11 DEC 2014 11:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  11 DEC 2014 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1246,7 +1246,7 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb
 >
-Output written on docunalthesis.pdf (61 pages, 1157107 bytes).
+Output written on docunalthesis.pdf (61 pages, 1157140 bytes).
 PDF statistics:
  1016 PDF objects out of 1200 (max. 8388607)
  880 compressed objects within 9 object streams
