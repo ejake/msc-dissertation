@@ -49,13 +49,13 @@
 \contentsline {subsubsection}{\tocsubsubsection {}{}{Local search}}{28}{section*.20}
 \contentsline {section}{\tocsection {}{4.2}{Summary}}{28}{section.4.2}
 \contentsline {chapter}{\tocchapter {Chapter}{5}{Experiments and numerical results}}{29}{chapter.5}
-\contentsline {section}{\tocsection {}{5.1}{Instances of VRPSD}}{29}{section.5.1}
+\contentsline {section}{\tocsection {}{5.1}{VRPSD instances}}{29}{section.5.1}
 \contentsline {subsection}{\tocsubsection {}{5.1.1}{Instance generation}}{29}{subsection.5.1.1}
 \contentsline {section}{\tocsection {}{5.2}{Expected distance algorithm}}{30}{section.5.2}
 \contentsline {section}{\tocsection {}{5.3}{Rollout algorithm}}{33}{section.5.3}
 \contentsline {section}{\tocsection {}{5.4}{Evoulutionary approach}}{33}{section.5.4}
 \contentsline {subsection}{\tocsubsection {}{5.4.1}{Evolutionary algorithms performance}}{34}{subsection.5.4.1}
-\contentsline {section}{\tocsection {}{5.5}{Comparative results}}{35}{section.5.5}
+\contentsline {section}{\tocsection {}{5.5}{Comparative results}}{36}{section.5.5}
 \contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{39}{chapter.6}
 \contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{41}{appendix.A}
 \contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{41}{section.A.1}
