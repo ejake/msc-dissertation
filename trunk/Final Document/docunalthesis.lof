@@ -18,7 +18,7 @@
 \contentsline {figure}{\numberline {5.3.1}{\ignorespaces Performance rollout algorithm vs. $\Gamma $ algorithm\relax }}{33}{figure.caption.27}
 \contentsline {figure}{\numberline {5.3.2}{\ignorespaces Performance rollout algorithm\relax }}{34}{figure.caption.28}
 \contentsline {figure}{\numberline {5.4.1}{\ignorespaces Performance basic genetic algorithm\relax }}{35}{figure.caption.29}
-\contentsline {figure}{\numberline {5.4.2}{\ignorespaces Performance memetic algorithm\relax }}{36}{figure.caption.30}
+\contentsline {figure}{\numberline {5.4.2}{\ignorespaces Performance memetic algorithm\relax }}{35}{figure.caption.30}
 \contentsline {figure}{\numberline {5.5.1}{\ignorespaces Expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)\relax }}{36}{figure.caption.31}
 \contentsline {figure}{\numberline {5.5.2}{\ignorespaces Boxplot for expected distance computed by rollout algorithm (ra) , basic genetic algorithm (ga) and hybrid evolutionary algorithm (memetic)\relax }}{37}{figure.caption.32}
 \contentsline {figure}{\numberline {5.5.3}{\ignorespaces Time performance evolutionary algorithms\relax }}{38}{figure.caption.34}
