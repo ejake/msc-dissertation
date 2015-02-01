@@ -43,15 +43,16 @@
 %Title page
 
 %\Titulo{A hybrid evolutionary algorithm for vehicle routing problem with stochastic demands}
-\Titulo{A hybrid local rollout dynamic programming global evolutionary algorithm for the vehicle routing problem with stochastic demands}
+%\Titulo{A hybrid local rollout dynamic programming global evolutionary algorithm for the vehicle routing problem with stochastic demands}
+\Titulo{A hybrid evolutionary algorithm for vehicle routing problem with stochastic demands}
 
 \Autor{Robinson A. Jaque P.}
 
 \CodigoAutor{299800}
 
-\AnoGrado{2011}
+\AnoGrado{2014}
 
-\MesGrado{Junio}
+\MesGrado{Marzo}
 
 \Grado{Master of Sciences}
 
@@ -63,7 +64,7 @@
 
 \Sede{Bogota D.C.}
 
-\Tutor{Germ\'an Hern\'andez, Ph.D.}
+\Tutor{Germ\'an J. Hern\'andez, Ph.D.}
 
 \TituloTutor{Associated Professor}
 
@@ -90,7 +91,14 @@ In this work we propose a hybrid dynamic programming-evolutionary algorithm to s
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %ACKNOWLEDGEMENTS
 \begin{Reconocimientos}
-Last thing to do :-)\\
+
+I am very grateful with everyone who contributed to accomplish this process. I really appreciate your patience and support.
+my girlfriend, family and friends
+my advisor German
+my 
+
+	
+\\
 
 \end{Reconocimientos}
 
@@ -155,7 +163,7 @@ To Hari
  %Appendix 1: Algorithms detailed
  \include{Appendix/Appendix1}
  %Appendix 2: Results
- \include{Appendix/Appendix2}
+ %\include{Appendix/Appendix2}
 %---------------------------------------------------------------------------------------------------------------
 %Bibliography---------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------------
