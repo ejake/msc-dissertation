@@ -18,8 +18,14 @@ Dimitri~P. Bertsekas.
 
 \bibitem{Bertsekas1997}
 Dimitri~P. Bertsekas.
-\newblock {\em {Differential Training Of Rollout Policies}}.
+\newblock {\em Differential Training Of Rollout Policies}.
 \newblock 1997.
+
+\bibitem{Bertsekas1996}
+D.P. Bertsekas and J.N. Tsitsiklis.
+\newblock Neuro-dynamic programming.
+\newblock In {\em Proceedings of 1995 34th IEEE Conference on Decision and
+  Control}, volume~1, pages 560--564. IEEE.
 
 \bibitem{bertsimas_vehicle_1992}
 Dimitris~J. Bertsimas.
@@ -61,6 +67,15 @@ Christian~H. Christiansen and Jens Lysgaard.
 \newblock A branch-and-price algorithm for the capacitated vehicle routing
   problem with stochastic demands.
 \newblock {\em Operations Research Letters}, 35(6):773--781, November 2007.
+
+\bibitem{CrinaGrosan2007}
+Ajith~Abraham {Crina Grosan}.
+\newblock Hybrid evolutionary algorithms: Methodologies, architectures, and
+  reviews.
+\newblock In Ajith Abraham, Crina Grosan, and Hisao Ishibuchi, editors, {\em
+  Hybrid Evolutionary Algorithms}, volume~75 of {\em Studies in Computational
+  Intelligence}, chapter~1, pages pp 1--17. Springer Berlin Heidelberg, Berlin,
+  Heidelberg, 2007.
 
 \bibitem{Dantzing1959}
 G.~B. Dantzing and J.~H. Ramser.
@@ -114,11 +129,29 @@ Michel Gendreau, Gilbert Laporte, and Ren Sguin.
 \newblock Stochastic vehicle routing.
 \newblock {\em European Journal of Operational Research}, 88(1):3--12, 1996.
 
+\bibitem{Goodson2010}
+JC~Goodson.
+\newblock {\em Solution methodologies for vehicle routing problems with
+  stochastic demand}.
+\newblock PhD thesis, 2010.
+
+\bibitem{Goodson2013}
+JC~Goodson.
+\newblock {Rollout policies for dynamic solutions to the multivehicle routing
+  problem with stochastic demand and duration limits}.
+\newblock {\em Operations Research}, 61(1):pp. 138--154, 2013.
+
 \bibitem{haghani_dynamic_2005}
 Ali Haghani and Soojung Jung.
 \newblock A dynamic vehicle routing problem with time-dependent travel times.
 \newblock {\em Computers \& Operations Research}, 32(11):2959--2986, November
   2005.
+
+\bibitem{Holland1975}
+John~Henry Holland.
+\newblock {\em Adaptation in natural and artificial systems: an introductory
+  analysis with applications to biology, control, and artificial intelligence}.
+\newblock University of Michigan Press, 1975.
 
 \bibitem{Markovic_2005}
 Ivana Cavar Ton?i~Cari? {Hrvoje Markovic}.
@@ -137,6 +170,11 @@ Gilbert Laporte, Fran\c{C}ois~V. Louveaux, and Luc {Van Hamme}.
 \newblock An integer l-shaped algorithm for the capacitated vehicle routing
   problem with stochastic demands.
 \newblock {\em Operations Research}, 50(3):415--423, May 2002.
+
+\bibitem{Lenstra1981}
+J.~K. Lenstra and A.~H. G.~Rinnooy Kan.
+\newblock Complexity of vehicle routing and scheduling problems.
+\newblock {\em Networks}, 11(2):221--227, January 1981.
 
 \bibitem{mendoza_memetic_2010}
 Jorge~E. Mendoza, Bruno Castanier, Christelle Gu{\'e}ret, Andr{\'e}s~L.

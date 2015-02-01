@@ -106,13 +106,13 @@ If the policy evaluation step computes $J_{\pi_k}(x)$ for all states $x \in S$, 
 \subsection{Rollout algorithm}
 %\subsection{One-step rollout algorithm}
 
-The rollout algorithm is an approximate policy iteration technnique, used to increase the effectiveness of a heuristic by iteratively applying it, or rolling it out, at each decision stage (Goodson, 2010). The algorithm requires to know a base policy $\pi$ for the problem. It may also be assumed that the cost-to-go of this base policy from any given state $x$ can be easily computed (Secomandi, 2000). Thus, a policy $\pi$ is build starting from any given state and following an \textit{a priori} solution to VRPSD.
+The rollout algorithm is an approximate policy iteration technnique, used to increase the effectiveness of a heuristic by iteratively applying it, or rolling it out, at each decision stage \cite{Goodson2010}. The algorithm requires to know a base policy $\pi$ for the problem. It may also be assumed that the cost-to-go of this base policy from any given state $x$ can be easily computed \cite{secomandi_comparing_2000}. Thus, a policy $\pi$ is build starting from any given state and following an \textit{a priori} solution to VRPSD.
 
 
 \subsubsection{Defining initial policy}\label{sec:initial_policy}
 
 
-Cyclic heuristic $\mathcal{C}$ shifts $\tau$ to obtain an permutation keeping an cyclic order. It builds the cyclic tour that starts at $l$ and follows $\tau$ cyclically; hence, $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represents an \textit{a priori} policy $\pi^\mathcal{C}$. Cyclic heuristic was propossed by Bertsimas 92  and improved by himself 95; it was later used by many authors because it is simple, inexpensive and sequentially consistent (Secomandi dissertation, 1998)
+Cyclic heuristic $\mathcal{C}$ shifts $\tau$ to obtain an permutation keeping an cyclic order. It builds the cyclic tour that starts at $l$ and follows $\tau$ cyclically; hence, $\tau^\mathcal{C}_l = (l, l+1, \ldots , n , 1 , \ldots , l-1, 0)$ represents an \textit{a priori} policy $\pi^\mathcal{C}$. Cyclic heuristic was propossed by Bertsimas 92  and improved by himself 95; it was later used by many authors because it is simple, inexpensive and sequentially consistent \cite{Secomandi_1998}%(Secomandi dissertation, 1998)
 
 Following cyclic heuristic, the rollout algorithm \ref{algo:rollout} describes a fixed number of iterations given an instance of the problem changing $\tau$ after the first state. Since there is a transition of $x_l$ state to $x_{l+1}$, only the segment of $\tau$ that follows to $l$ is shifted, maintaining in this section the customers still not visited or with demand different to $0$. Once this is fully served, customers are assumed to be skipped in $\tau^\mathcal{C}_l$.
 

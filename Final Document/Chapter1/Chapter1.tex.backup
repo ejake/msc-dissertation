@@ -47,17 +47,24 @@ To design and test a hybrid evolutionary algorithm - Stochastic Dynamic Optimiza
 
 \begin{enumerate}
  \item To analyze the alternatives for modeling and representing the problem, and select the most computationally convenient one.
- \item Design evolutionary and stochastic dynamic optimization operators algorithm to solve VRPSD.
- \item Implement the designed algorithm.
- \item Select benchmarking problems instances and alternative algorithms for testing.
- \item Develop experimental analyses and comparisons.
+ \item To design evolutionary and stochastic dynamic optimization operator algorithm to solve VRPSD.
+ \item To implement the designed algorithm.
+ \item To select benchmarking problems instances and alternative algorithms for testing.
+ \item To develop experimental analyses and comparisons.
 \end{enumerate}
 
 \section{Contributions}
 
-The evolutionary algorithms haven't been broadly used to solve the vehicle routing problem with stochastic demands, thus a hybrid evolutionary algorithm which combine stochastic dynamic optimization operators is proposed, it contribute with a new methodology to deal with the problem.
+The evolutionary algorithms have not been broadly used to solve the vehicle routing problem with stochastic demands; thus, a hybrid evolutionary algorithm which combine stochastic dynamic optimization operators is proposed. This contribute with a new methodology to deal with the problem.
+
+\subsection{Divulgation}
+
+
+We presented this work in Euro Conference in Stochastic programming - ECSP 2014,
+
+a paper titled ``A hybrid local rollout dynamic programming global evolutionary algorithm for the vehicle routing problem with stochastic demands''. An special Issue in the journal INFORMATICA with contributions presented  at this Conference will be published.
 
 \section{Outline}
 
-In this first chapter was carried out a summary of the issues to be addressed, in chapter 2 presents the background and is presented the state of the art of the VRPSD, chapter 3 presents the Methodology used and presents the proposed algorithm, the chapter 4 presents the experiments, the numerical results and compare and discuss the results comparing with the outcomes obtained by other authors, finally in chapter 5 presents the conclusions of the study.
+In this first chapter a summary of the issues to be addressed was carried out, in chapter 2 presents the background and the state of the art of the VRPSD; chapter 3 presents the methodology used and the proposed algorithm. Chapter 4 presents the experiments and the numerical results and compares and discuss the results. Finally, chapter 5 presents the conclusions of the study.
 
