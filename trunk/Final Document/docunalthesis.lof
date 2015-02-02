@@ -14,7 +14,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1.1}{\ignorespaces Instance demands.\relax }}{31}{figure.caption.24}
 \contentsline {figure}{\numberline {5.1.2}{\ignorespaces Instance demands. Circles area represents the demand variance\relax }}{31}{figure.caption.25}
-\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Expected distance algorithm $\Gamma $ performance\relax }}{32}{figure.caption.26}
+\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Expected distance algorithm $\Gamma $ performance.\relax }}{32}{figure.caption.26}
 \contentsline {figure}{\numberline {5.3.1}{\ignorespaces Performance rollout algorithm vs. $\Gamma $ algorithm\relax }}{33}{figure.caption.27}
 \contentsline {figure}{\numberline {5.3.2}{\ignorespaces Performance rollout algorithm\relax }}{34}{figure.caption.28}
 \contentsline {figure}{\numberline {5.4.1}{\ignorespaces Performance basic genetic algorithm\relax }}{35}{figure.caption.29}
@@ -24,9 +24,5 @@
 \contentsline {figure}{\numberline {5.5.3}{\ignorespaces Time performance evolutionary algorithms\relax }}{38}{figure.caption.34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.0.1}{\ignorespaces Scatter matrix comparing results and times\relax }}{44}{figure.caption.36}
-\contentsline {figure}{\numberline {B.0.2}{\ignorespaces Time performance evolutionary algorithms\relax }}{45}{figure.caption.37}
-\contentsline {figure}{\numberline {B.0.3}{\ignorespaces Performance rollout algorithm vs. $\Gamma $ algorithm\relax }}{46}{figure.caption.38}
-\contentsline {figure}{\numberline {B.0.4}{\ignorespaces execution time to accomplish rollout algorithm\relax }}{47}{figure.caption.39}
+\contentsline {figure}{\numberline {A.0.1}{\ignorespaces Scatter matrix comparing results and times\relax }}{42}{figure.caption.35}
 \addvspace {10\p@ }

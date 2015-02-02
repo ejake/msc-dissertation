@@ -140,7 +140,7 @@ These models are based on the premise that stochastic optimization problems are 
 
 \subsubsection{Stochastic programming with resources}
 
-In SPRs, the aim is to determine a first stage solution that minimizes the expected cost of the second stage solution: this is made up of the cost of the first stage solution, plus the expected net recourse cost. SPRs are typically more difficult to solve than CCPs, but their objective function is more meaningful ~\cite{gendreau_stochastic_1996}.
+The aim in SPRs is to determine a first stage solution that minimizes the second stage solution expected cost. This is made up with the first stage solution cost plus the next expected recourse cost. SPRs are typically more difficult to solve than CCPs but their objective function is more meaningful ~\cite{gendreau_stochastic_1996}.
 
 
 Yang ~\cite{yang_stochastic_2000} propose two heuristic methods to solve the problem and Laporte \textit{et.al.}  ~\cite{laporte_integer_2002} and Gendrau \textit{et.al.} ~\cite{gendreau_exact_1995} propose an \textit{L-shape} method to find optimal solutions, i.e. a branch-and-cut algorithm adjusted for the stochastic approach. Below, we present the model formulated by ~\cite{Dror_2005} based on the Laporte model ,although allowing proactive replenishments of the vehicle in a single route, supported on Yang's affirmation, this is more efficient than multiple routes.
