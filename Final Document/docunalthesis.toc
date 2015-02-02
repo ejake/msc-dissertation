@@ -1,8 +1,8 @@
 \select@language {english}
 \select@language {english}
 \contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{vii}{Doc-Start}
-\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{ix}{Doc-Start}
-\contentsline {chapter}{\tocchapter {Chapter}{}{Notation}}{x}{chapter*.1}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{viii}{Doc-Start}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Notation}}{ix}{chapter*.1}
 \contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{1}{chapter.1}
 \contentsline {section}{\tocsection {}{1.1}{Introduction}}{1}{section.1.1}
 \contentsline {section}{\tocsection {}{1.2}{Proposal}}{3}{section.1.2}
@@ -58,8 +58,5 @@
 \contentsline {subsection}{\tocsubsection {}{5.4.1}{Evolutionary algorithms performance}}{34}{subsection.5.4.1}
 \contentsline {section}{\tocsection {}{5.5}{Comparative results}}{36}{section.5.5}
 \contentsline {chapter}{\tocchapter {Chapter}{6}{Conclusions}}{39}{chapter.6}
-\contentsline {chapter}{\tocappendix {Appendix}{A}{Algorithms}}{41}{appendix.A}
-\contentsline {section}{\tocsection {}{A.1}{Algorithms detaileds}}{41}{section.A.1}
-\contentsline {chapter}{\tocappendix {Appendix}{B}{Results}}{43}{appendix.B}
-\contentsline {subsection}{\tocsubsection {}{B.0.1}{Peformance rollout algorithm}}{45}{subsection.B.0.1}
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{48}{appendix*.40}
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Results}}{41}{appendix.A}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{43}{appendix*.36}

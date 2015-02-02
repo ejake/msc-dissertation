@@ -4,7 +4,7 @@
 
 \section{Introduction}
 
-The classic issue about Vehicle Routing Problem (VRP) is a well known \textit{NP-hard} ~\cite{Lenstra_1981} optimization problem of high importance in different logistics; it consists in delivery goods to a set of customers geographically dispersed, using a fleet of vehicles that begin its route in the central depot. The problem consists in assigning to each vehicle a route with the objective of minimizing the transportation cost.
+The classic issue about Vehicle Routing Problem (VRP) is a well known \textit{NP-hard} ~\cite{Lenstra1981} optimization problem of high importance in different logistics; it consists in delivery goods to a set of customers geographically dispersed, using a fleet of vehicles that begin its route in the central depot. The problem consists in assigning to each vehicle a route with the objective of minimizing the transportation cost.
 
 The cost generated in the transport of goods, such as the size of the fleet of vehicles maintenance, combustible, and so on, are significant due to the fact that to the transport processes are involved at all stages of production processes, accounting for 10\% to 20\% of the final product cost~\cite{toth_vehicle_2001}.
 
@@ -60,9 +60,7 @@ The evolutionary algorithms have not been broadly used to solve the vehicle rout
 \subsection{Divulgation}
 
 
-We presented this work in Euro Conference in Stochastic programming - ECSP 2014,
-
-a paper titled ``A hybrid local rollout dynamic programming global evolutionary algorithm for the vehicle routing problem with stochastic demands''. An special Issue in the journal INFORMATICA with contributions presented  at this Conference will be published.
+We presented this work at the Euro Conference in Stochastic programming - ECSP 2014 which took place in Paris at Octuber of 2014. The  paper presented, titled ``A hybrid local rollout dynamic programming global evolutionary algorithm for the vehicle routing problem with stochastic demands'' will be published in an special Issue of the journal INFORMATICA with contributions presented  at this Conference.
 
 \section{Outline}
 
