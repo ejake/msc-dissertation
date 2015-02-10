@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  1 FEB 2015 20:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  10 FEB 2015 10:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -862,25 +862,25 @@ d-to.pdf used on input line 102.
 ds-eps-converted-to.pdf>] [32 <./Images/Chapter5/expected_distance3D-eps-conver
 ted-to.pdf> <./Images/Chapter5/expected_distance3D_range-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/ra_gamma_time_x2.eps>
-(epstopdf)                    date: 2014-12-01 16:02:59
-(epstopdf)                    size: 28269 bytes
+(epstopdf)                    date: 2015-02-10 10:16:48
+(epstopdf)                    size: 35871 bytes
 (epstopdf)             Output file: <Images/Chapter5/ra_gamma_time_x2-eps-conve
 rted-to.pdf>
-(epstopdf)                    date: 2014-12-09 17:42:52
-(epstopdf)                    size: 15626 bytes
+(epstopdf)                    date: 2015-02-10 10:20:15
+(epstopdf)                    size: 23308 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Chapter5/ra_gamma_t
 ime_x2-eps-converted-to.pdf Images/Chapter5/ra_gamma_time_x2.eps>
 (epstopdf)             \includegraphics on input line 118.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf, id=718, 562.1pt x 475.7
-775pt>
+<Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf, id=718, 449.68pt x 338.
+26375pt>
 File: Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Chapter5/ra_gamma_time_x2-eps-converted-to.pdf 
 used on input line 118.
-(pdftex.def)             Requested size: 399.47397pt x 338.12381pt.
+(pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
 Package epstopdf Info: Source file: <Images/Chapter5/compare_expected_distance_
 ra.eps>
 (epstopdf)                    date: 2014-12-02 11:30:55
@@ -931,8 +931,6 @@ File: Images/Chapter5/compare_expected_distance_ga-eps-converted-to.pdf Graphic
 Package pdftex.def Info: Images/Chapter5/compare_expected_distance_ga-eps-conve
 rted-to.pdf used on input line 148.
 (pdftex.def)             Requested size: 310.70273pt x 233.7274pt.
-
-[34 <./Images/Chapter5/compare_expected_distance_ra-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/compare_expected_distance_
 memetic.eps>
 (epstopdf)                    date: 2014-12-02 11:34:43
@@ -947,7 +945,7 @@ istance_memetic.eps>
 (epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/compare_expected_distance_memetic-eps-converted-to.pdf, id=743
+<Images/Chapter5/compare_expected_distance_memetic-eps-converted-to.pdf, id=733
 , 449.68pt x 338.26375pt>
 File: Images/Chapter5/compare_expected_distance_memetic-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -957,6 +955,7 @@ Package pdftex.def Info: Images/Chapter5/compare_expected_distance_memetic-eps-
 converted-to.pdf used on input line 159.
 (pdftex.def)             Requested size: 310.70273pt x 233.7274pt.
 
+[34 <./Images/Chapter5/compare_expected_distance_ra-eps-converted-to.pdf>]
 [35 <./Images/Chapter5/compare_expected_distance_ga-eps-converted-to.pdf> <./Im
 ages/Chapter5/compare_expected_distance_memetic-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/comparative_results.eps>
@@ -1002,7 +1001,6 @@ File: Images/Chapter5/comparative_results_box-eps-converted-to.pdf Graphic file
 Package pdftex.def Info: Images/Chapter5/comparative_results_box-eps-converted-
 to.pdf used on input line 184.
 (pdftex.def)             Requested size: 399.47397pt x 300.51183pt.
- [36 <./Images/Chapter5/comparative_results-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Chapter5/compare_times_evol.eps>
 (epstopdf)                    date: 2014-12-02 15:24:13
 (epstopdf)                    size: 35901 bytes
@@ -1015,7 +1013,7 @@ mes_evol-eps-converted-to.pdf Images/Chapter5/compare_times_evol.eps>
 (epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Chapter5/compare_times_evol-eps-converted-to.pdf, id=777, 493.845pt x 3
+<Images/Chapter5/compare_times_evol-eps-converted-to.pdf, id=768, 493.845pt x 3
 28.22626pt>
 File: Images/Chapter5/compare_times_evol-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -1023,13 +1021,13 @@ e pdf)
 Package pdftex.def Info: Images/Chapter5/compare_times_evol-eps-converted-to.pd
 f used on input line 226.
 (pdftex.def)             Requested size: 355.09174pt x 236.00218pt.
-)
-[37 <./Images/Chapter5/comparative_results_box-eps-converted-to.pdf>] [38 <./Im
-ages/Chapter5/compare_times_evol-eps-converted-to.pdf>]
+
+[36 <./Images/Chapter5/comparative_results-eps-converted-to.pdf>] [37 <./Images
+/Chapter5/comparative_results_box-eps-converted-to.pdf>]) [38 <./Images/Chapter
+5/compare_times_evol-eps-converted-to.pdf>]
 \openout2 = `Chapter6/Conclusions.aux'.
 
-
-(./Chapter6/Conclusions.tex
+ (./Chapter6/Conclusions.tex
 Chapter 6
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1115,7 +1113,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
 Here is how much of TeX's memory you used:
  11540 strings out of 493304
  170694 string characters out of 6139871
- 295074 words of memory out of 5000000
+ 295075 words of memory out of 5000000
  14374 multiletter control sequences out of 15000+600000
  22088 words of font info for 62 fonts, out of 8000000 for 9000
  1118 hyphenation exceptions out of 8191
@@ -1142,7 +1140,7 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb
 >
-Output written on docunalthesis.pdf (55 pages, 1135498 bytes).
+Output written on docunalthesis.pdf (55 pages, 1143240 bytes).
 PDF statistics:
  966 PDF objects out of 1000 (max. 8388607)
  842 compressed objects within 9 object streams

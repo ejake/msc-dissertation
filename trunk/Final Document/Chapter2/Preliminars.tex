@@ -327,7 +327,7 @@ Incurring in a transition cost $g(x_k,u_k,x_{k+1})$
     \end{array} \right.
  \end{equation}
 
-The objective of the problem is to find a policy $\pi$ that minimizes the cost of transport $J_N^\pi$ (\ref{eq:SDP_obj_VRPSD}) in the $N$-stages or the expected cost to complete a given initial state. The optimal cost of transport in the $N$-stage $x$ is  $J_N^*(x) = min_{\pi\in \Pi}J_N^\pi(x)$, where $\Pi$ is the set of admissible policies. 
+The objective of the problem is to find a policy $\pi$ that minimizes the cost of transport $J_N^\pi$ (\ref{eq:SDP_obj_VRPSD}) in the $N$-stages or the expected cost to complete given an initial state. The optimal cost of transport in the $N$-stage $x$ is  $J_N^*(x) = min_{\pi\in \Pi}J_N^\pi(x)$, where $\Pi$ is the set of admissible policies. 
 
 \begin{equation}\label{eq:SDP_obj_VRPSD}
  J_N^\pi(x_0)=E\biggr\{\sum_{k=0}^{N-1}g(x_k,\mu_k(x_k),x_{k+1})\biggr\}
