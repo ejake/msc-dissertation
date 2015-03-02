@@ -23,7 +23,7 @@ However, the exact assesing of $J^*$ is computationally infeasible given the siz
 Let $\tilde{J}_k$ be an approximation of $J^*_k$, then a control $\tilde{u}_k$ can be assesed as:
 
 \begin{equation}\label{eq:control_aprox}
-\tilde{u}_k=\tilde{\mu}_k(x_k)=\arg \min\limits_{u\in U_k(x_k)} \biggr\{ g(x_k,u_k,x_{k+1}) + \sum_{x_{k+1}\in S}p_{x_kx_{k+1}}\biggr\}
+\tilde{u}_k=\tilde{\mu}_k(x_k)=\arg \min\limits_{u\in U_k(x_k)} \biggr\{ g(x_k,u_k,x_{k+1}) + \sum_{x_{k+1}\in S}p_{x_kx_{k+1}}\tilde{J}_k\biggr\}
 \end{equation}
 
 The following section \ref{sec:expecteddistance} discusses the computation of $\tilde{J}_k$.
