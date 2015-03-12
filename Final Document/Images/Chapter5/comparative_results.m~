@@ -1,8 +1,9 @@
 % Comparative results
-m = dlmread('/media/andres/DATA/Documents/Seminario de Investigacion/VRP/Outcomes/Consolidate outcomes - forecasting.csv',',',1,1);
+%m = dlmread('/media/andres/DATA/Documents/Seminario de Investigacion/VRP/Outcomes/Consolidate outcomes - forecasting.csv',',',1,1);
+m = dlmread('/home/ajaque/Documents/Seminario de Investigacion/VRP/Outcomes/Consolidate outcomes - forecasting.csv',',',1,1);
 
 figure
-plot(m(:,1),m(:,5),'o',m(:,1),m(:,7),'*',m(:,1),m(:,9),'x')
+plot(m(:,1),m(:,5),'o',m(:,1),m(:,7),'+',m(:,1),m(:,9),'x')
 xlabel('n')
 ylabel('Expected distance')
 legend('rollout','ga','memetic','Location','northwest');
@@ -23,8 +24,10 @@ set(gca,'XLim',[0 160]);
 
 ms = sort(m,1);
 figure
-
-
+plot([1:159],m(:,6),'*-',[1:159],m(:,8),'x-')
+legend('ga','memetic','Location','northwest');
+xlabel('instance')
+ylabel('Running time')
 
 
 %ra
